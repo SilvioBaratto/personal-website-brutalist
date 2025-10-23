@@ -61,7 +61,7 @@ app.post('/api/chatbot/stream', async (req, res) => {
         res.write(`data: ${JSON.stringify(chunk)}\n\n`);
 
         // Small delay between words for streaming effect
-        await new Promise(resolve => setTimeout(resolve, 30));
+        await new Promise(resolve => setTimeout(resolve, 5));
       }
 
       res.write('data: [DONE]\n\n');
