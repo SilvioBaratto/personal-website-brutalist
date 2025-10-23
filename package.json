@@ -31,7 +31,11 @@
     "@angular/platform-server": "^20.3.0",
     "@angular/router": "^20.3.0",
     "@angular/ssr": "^20.3.3",
+    "@boundaryml/baml": "^0.211.2",
+    "@tailwindcss/postcss": "^4.1.15",
+    "dotenv": "^17.2.3",
     "express": "^5.1.0",
+    "postcss": "^8.5.6",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
@@ -48,6 +52,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "tailwindcss": "^4.1.15",
     "typescript": "~5.9.2"
   }
 }

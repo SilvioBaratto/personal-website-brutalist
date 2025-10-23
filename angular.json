@@ -18,7 +18,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/assets",
+                "output": "/assets/"
               }
             ],
             "styles": [
@@ -28,7 +29,11 @@
             "outputMode": "server",
             "ssr": {
               "entry": "src/server.ts"
-            }
+            },
+            "externalDependencies": [
+              "@boundaryml/baml",
+              "@boundaryml/baml-darwin-arm64"
+            ]
           },
           "configurations": {
             "production": {
@@ -76,7 +81,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/assets",
+                "output": "/assets/"
               }
             ],
             "styles": [
@@ -86,5 +92,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "b221dbb1-1013-4447-9312-cf174afc541f"
   }
 }

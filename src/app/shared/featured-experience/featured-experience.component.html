@@ -1,0 +1,48 @@
+<section class="py-16 sm:py-20 lg:py-24 relative bg-gradient-to-b from-transparent via-white/50 to-transparent">
+  <!-- Gradient overlay for depth -->
+  <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/30 via-transparent to-purple-50/20 pointer-events-none"></div>
+
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative">
+    <!-- Section Header -->
+    <div class="text-center mb-12 sm:mb-16 lg:mb-20">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
+        Featured Experience
+      </h2>
+      <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto">
+        Trusted by leading organizations across Europe
+      </p>
+    </div>
+
+    <!-- Experience Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+      @for (company of companies; track company.name) {
+        <article class="group relative bg-white/80 backdrop-blur-sm rounded-xl p-6 sm:p-7 lg:p-8 border border-gray-200 hover:border-transparent hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col h-full">
+          <!-- Gradient border effect on hover -->
+          <div class="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+          <div class="absolute inset-[1px] rounded-xl bg-white group-hover:bg-white/95 transition-colors duration-300 -z-10"></div>
+
+          <!-- Gradient accent overlay on hover -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-500/5 via-indigo-500/3 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+
+          <!-- Company Name -->
+          <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:via-indigo-600 group-hover:to-purple-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+            {{ company.name }}
+          </h3>
+
+          <!-- Role -->
+          <p class="text-sm sm:text-base font-medium text-gray-700 mb-2 leading-relaxed">
+            {{ company.role }}
+          </p>
+
+          <!-- Period -->
+          <p class="text-xs sm:text-sm text-gray-500 mb-6">
+            {{ company.period }}
+          </p>
+
+          <!-- Decorative gradient accent bar -->
+          <div class="h-0.5 w-12 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-full group-hover:w-full transition-all duration-500 mt-auto"></div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

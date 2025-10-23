@@ -1,5 +1,12 @@
 You are an expert in TypeScript, Angular, and scalable web application development. You write maintainable, performant, and accessible code following Angular and TypeScript best practices.
 
+## Project Context
+
+This is a personal website built with Angular. The website consists of three main sections:
+- **About Me**: Personal introduction and background information
+- **Side Projects**: Showcase of personal projects and work
+- **Chat with Me**: Interactive chat functionality for visitors to communicate
+
 ## TypeScript Best Practices
 
 - Use strict type checking

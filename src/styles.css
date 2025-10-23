@@ -1,1 +1,126 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@theme {
+  /* Custom brand colors */
+  --color-brand-900: oklch(0.25 0.08 265);
+  --color-brand-800: oklch(0.30 0.08 265);
+  --color-brand-700: oklch(0.35 0.08 265);
+
+  /* Enhanced blue accent colors for better contrast */
+  --color-blue-600: oklch(0.55 0.17 250);
+  --color-blue-700: oklch(0.48 0.17 250);
+
+  /* Animation durations */
+  --animate-fade-in: fade-in 0.2s ease-in-out;
+}
+
+/* Custom animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-10px);
+  }
+  75% {
+    transform: translateY(-30px) translateX(5px);
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+  /* Fix for mobile Safari fixed positioning */
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Ensure consistent font rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Fix for mobile Safari fixed positioning */
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Focus visible styles for better keyboard navigation */
+*:focus-visible {
+  outline: 2px solid theme('colors.blue.600');
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar styles for webkit browsers */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: theme('colors.gray.100');
+}
+
+::-webkit-scrollbar-thumb {
+  background: theme('colors.gray.400');
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.gray.500');
+}
+
+/* Ensure proper text selection color */
+::selection {
+  background-color: theme('colors.blue.100');
+  color: theme('colors.brand.900');
+}
+
+/* Utility for text balance (better line breaks) */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Radial gradient utility */
+.bg-gradient-radial {
+  background-image: radial-gradient(var(--tw-gradient-stops));
+}
+
+/* Gradient animation utilities */
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Mobile Safari fixed positioning fix */
+@supports (-webkit-touch-callout: none) {
+  /* iOS Safari specific */
+  app-header {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}

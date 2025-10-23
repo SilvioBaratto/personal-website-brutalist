@@ -1,0 +1,151 @@
+<header class="bg-white/98 shadow-sm w-full" style="-webkit-transform: translateZ(0); transform: translateZ(0);">
+  <!-- Gradient Background Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-r from-blue-50/30 via-purple-50/20 to-pink-50/10 pointer-events-none"></div>
+
+  <!-- Gradient Border Bottom -->
+  <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-200/60 via-indigo-300/50 via-purple-200/60 to-transparent pointer-events-none"></div>
+
+  <nav class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <div class="flex items-center justify-between h-16 sm:h-20 relative">
+      <!-- Logo with Gradient -->
+      <a
+        href="/"
+        class="group text-xl sm:text-2xl font-bold transition-all duration-300"
+        aria-label="Silvio Baratto - Home"
+      >
+        <span class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent group-hover:from-blue-500 group-hover:via-indigo-500 group-hover:to-purple-500 transition-all duration-300">Silvio</span><span class="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent group-hover:from-indigo-500 group-hover:to-purple-500 transition-all duration-300">Baratto</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden lg:flex items-center gap-2 xl:gap-3">
+        <a
+          routerLink="/about"
+          class="group relative px-3 xl:px-4 py-2 text-sm xl:text-base font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-blue-600 overflow-hidden"
+        >
+          <span class="relative z-10">About</span>
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-50/60 via-indigo-50/50 to-purple-50/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+        </a>
+        <a
+          routerLink="/side-projects"
+          class="group relative px-3 xl:px-4 py-2 text-sm xl:text-base font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-blue-600 overflow-hidden"
+        >
+          <span class="relative z-10">Side Projects</span>
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-50/60 via-indigo-50/50 to-purple-50/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+        </a>
+        <a
+          routerLink="/chatbot"
+          class="group relative px-3 xl:px-4 py-2 text-sm xl:text-base font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-blue-600 whitespace-nowrap overflow-hidden"
+        >
+          <span class="relative z-10">Chat with Assistant</span>
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-50/60 via-indigo-50/50 to-purple-50/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+        </a>
+        <a
+          routerLink="/curriculum"
+          class="group relative px-3 xl:px-4 py-2 text-sm xl:text-base font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-blue-600 overflow-hidden"
+        >
+          <span class="relative z-10">Curriculum</span>
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-50/60 via-indigo-50/50 to-purple-50/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+        </a>
+        <a
+          routerLink="/contact"
+          class="ml-2 px-4 xl:px-5 py-2.5 text-sm xl:text-base font-semibold bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 text-white rounded-lg transition-all duration-300 hover:from-blue-500 hover:via-indigo-500 hover:to-purple-500 hover:shadow-lg hover:shadow-purple-500/30 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 whitespace-nowrap shadow-md"
+        >
+          Contact Me
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button
+        (click)="toggleMobileMenu()"
+        class="lg:hidden flex items-center justify-center w-12 h-12 p-2 focus:outline-none focus:ring-2 focus:ring-gray-400 relative hover:bg-gray-100 transition-colors rounded-lg"
+        [attr.aria-label]="mobileMenuOpen() ? 'Close navigation menu' : 'Open navigation menu'"
+        [attr.aria-expanded]="mobileMenuOpen()"
+        style="z-index: 10000;"
+        type="button"
+      >
+        <svg
+          class="w-6 h-6 pointer-events-none text-gray-900"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          @if (mobileMenuOpen()) {
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          } @else {
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          }
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    @if (mobileMenuOpen()) {
+      <div class="lg:hidden py-4 relative animate-fade-in overflow-hidden">
+        <!-- Gradient Border Top -->
+        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-200/60 via-indigo-300/50 via-purple-200/60 to-transparent"></div>
+
+        <!-- Subtle Gradient Background -->
+        <div class="absolute inset-0 bg-gradient-to-b from-blue-50/20 via-purple-50/10 to-transparent pointer-events-none"></div>
+
+        <div class="flex flex-col gap-2 relative">
+          <!-- Navigation Sections with Gradient Hover Effects -->
+          <a
+            routerLink="/about"
+            (click)="closeMobileMenu()"
+            class="group relative min-h-11 px-4 py-3 text-base font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-blue-600 flex items-center gap-3 overflow-hidden"
+          >
+            <span class="relative z-10">About</span>
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-50/60 via-indigo-50/50 to-purple-50/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+          </a>
+
+          <a
+            routerLink="/side-projects"
+            (click)="closeMobileMenu()"
+            class="group relative min-h-11 px-4 py-3 text-base font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-blue-600 flex items-center gap-3 overflow-hidden"
+          >
+            <span class="relative z-10">Side Projects</span>
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-50/60 via-indigo-50/50 to-purple-50/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+          </a>
+
+          <a
+            routerLink="/chatbot"
+            (click)="closeMobileMenu()"
+            class="group relative min-h-11 px-4 py-3 text-base font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-blue-600 flex items-center gap-3 overflow-hidden"
+          >
+            <span class="relative z-10">Chat with Assistant</span>
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-50/60 via-indigo-50/50 to-purple-50/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+          </a>
+
+          <a
+            routerLink="/curriculum"
+            (click)="closeMobileMenu()"
+            class="group relative min-h-11 px-4 py-3 text-base font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-blue-600 flex items-center gap-3 overflow-hidden"
+          >
+            <span class="relative z-10">Curriculum</span>
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-50/60 via-indigo-50/50 to-purple-50/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+          </a>
+
+          <!-- CTA Button with Gradient -->
+          <a
+            routerLink="/contact"
+            (click)="closeMobileMenu()"
+            class="min-h-11 px-4 py-3 mt-3 text-base font-semibold bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 text-white rounded-lg text-center transition-all duration-300 hover:from-blue-500 hover:via-indigo-500 hover:to-purple-500 hover:shadow-lg hover:shadow-purple-500/30 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 flex items-center justify-center gap-2 shadow-md"
+          >
+            <span>Contact Me</span>
+          </a>
+        </div>
+      </div>
+    }
+  </nav>
+</header>
