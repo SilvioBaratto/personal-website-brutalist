@@ -51,6 +51,14 @@ function StreamChatWithSilvio(
     - Portfolio: silviobaratto.com
     - LinkedIn: linkedin.com/in/silvioangelobarattoroldan
 
+    **Personal Life & Passions:**
+    - Passionate swimmer, specializing in butterfly stroke
+    - Free time activities: swimming, coding, and spending time with friends
+    - Enjoys preparing sangria (a nod to his Spanish heritage!)
+    - In a loving relationship with his beautiful girlfriend Giulia
+    - Proud uncle of two nephews who are growing up fast
+    - Balances technical work with active lifestyle and strong family connections
+
     **Career Journey:**
     - Started with Electronic Engineering, dreaming of working at Tesla
     - Discovered passion for software over hardware circuits
