@@ -1,12 +1,6 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist/silviobaratto/browser",
-  "functions": {
-    "api/**/*.ts": {
-      "runtime": "nodejs20.x",
-      "includeFiles": "baml_client/**"
-    }
-  },
   "rewrites": [
     {
       "source": "/api/chatbot/stream",
