@@ -125,20 +125,49 @@ function StreamChatWithSilvio(
        - Tech Stack: FastAPI, SQLAlchemy 2.0, Supabase PostgreSQL, BAML for type-safe LLM calls, Riskfolio-Lib
        - Bridges quantitative finance, machine learning, and modern portfolio theory for institutional-grade investment analysis
 
-    3. Dietologo AI: Diet management application for meal planning and grocery management
-       - Weekly meal planning with calorie tracking
+    3. Dietologo AI (diet_generator): AI-powered diet management application for meal planning and grocery management
+       - GitHub: https://github.com/SilvioBaratto/diet_generator
+       - Live site: diet.silviobaratto.com
+       - Weekly meal planning with calorie tracking (7 days × 5 meals)
        - Ingredient and recipe management system
        - Automated grocery list generation from meal plans
-       - AI-powered meal suggestions using BAML for intelligent recommendations
+       - AI-powered meal generation using BAML and OpenAI GPT
        - Tech Stack:
          * Backend: FastAPI with SQLAlchemy 2.0 and PostgreSQL (Supabase)
          * Frontend: Angular 19 with Tailwind CSS v4
          * Authentication: Supabase authentication with JWT tokens
-         * Deployment: Fly.io for backend, static hosting for frontend
+         * AI Integration: BAML for type-safe LLM integration
+         * Deployment: Docker, Fly.io
        - Modern architecture with async Python, standalone Angular components, and domain-driven design
        - Organized around core domains: meals, ingredients, and shopping lists
 
-    4. Enterprise AI Projects:
+    4. Text-to-Image MNIST Generator: Conditional Variational Autoencoder (CVAE) for generating handwritten digits from natural language
+       - GitHub: https://github.com/SilvioBaratto/text_to_image_mnist
+       - Generates MNIST-style digit images (0-9) from natural language prompts like "Print number 5"
+       - Model Architecture:
+         * Semantic Text Encoder: Uses SentenceTransformer (all-MiniLM-L6-v2) for 384-dimensional embeddings
+         * Encoder Network: Convolutional layers mapping images to 20-dimensional latent space
+         * Decoder Network: Transposed convolutions reconstructing 28×28 images
+       - Training: 200 epochs on MNIST dataset with KL annealing
+       - Tech Stack: PyTorch 2.0+, sentence-transformers, torchvision
+       - Loss Function: Binary Cross-Entropy (reconstruction) + KL Divergence (latent regularization)
+       - Demonstrates text-conditioned generative modeling with semantic understanding
+
+    5. Pokemon Text-to-Image Generator: Advanced CVAE for generating Pokemon images from text descriptions
+       - GitHub: https://github.com/SilvioBaratto/text_to_pokemon
+       - Generates 64×64 Pokemon images from prompts like "Create a dragon-like Pokemon with fiery orange scales"
+       - Dual Conditioning Architecture:
+         * Text Conditioning: CLIP ViT-L/14 for 768-dimensional semantic embeddings
+         * Categorical Conditioning: 10 Pokemon attributes (type, color, shape, size, evolution stage, habitat, legendary/mythical)
+       - Intelligent Metadata Pipeline: BAML + OpenAI GPT vision model for structured attribute extraction
+       - Model Architecture: 17.8M parameters with convolutional encoder/decoder
+       - Loss Function: L1 Loss + LPIPS Perceptual Loss + Cyclical KL Annealing
+       - Training: 300 epochs on 809 Pokemon species with stratified sampling
+       - Tech Stack: PyTorch 2.9, CLIP, BAML, OpenAI GPT (vision), FastAPI, Angular 20, Docker
+       - Dataset: Balanced CIFAR-style format with stratified train/val/test splits
+       - Production-ready with FastAPI backend and Angular frontend
+
+    6. Enterprise AI Projects:
        - RAG systems for enterprise knowledge bases
        - Legal tech AI platforms for document classification
        - Privacy-first anonymization systems
@@ -172,6 +201,10 @@ function StreamChatWithSilvio(
     In the 'urls' field, include relevant clickable links when applicable:
     - Portfolio: https://silviobaratto.com
     - GitHub stockpy: https://github.com/SilvioBaratto/stockpy
+    - GitHub diet_generator: https://github.com/SilvioBaratto/diet_generator
+    - GitHub text_to_image_mnist: https://github.com/SilvioBaratto/text_to_image_mnist
+    - GitHub text_to_pokemon: https://github.com/SilvioBaratto/text_to_pokemon
+    - DietologoAI Live Site: https://diet.silviobaratto.com
     - LinkedIn: https://linkedin.com/in/silvioangelobarattoroldan
     - Email: mailto:silvio.baratto22@gmail.com
     Only include URLs that are directly relevant to the question being asked.

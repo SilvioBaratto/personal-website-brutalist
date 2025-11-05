@@ -8,22 +8,23 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 export class FeaturedProjectsComponent {
   projects = [
     {
-      title: 'StockPy',
-      description: 'Python machine learning library for stock market analysis implementing LSTM, BiLSTM, GRU, BiGRU, MLP, and Bayesian Neural Networks. Includes probabilistic models (NNHMM, DMM) for financial time series with scikit-learn-style interfaces. Built on PyTorch and Pyro with S&P 500 data downloader.',
-      tags: ['PyTorch', 'Pyro', 'LSTM', 'Bayesian Networks', 'Time Series', 'Python'],
-      link: 'https://github.com/SilvioBaratto/stockpy',
+      title: 'Roldan Hedge Fund',
+      description: 'Quantitative portfolio optimization platform combining AI-powered stock analysis (6-factor evaluation) with multi-strategy optimization. Implements Mean-Variance, Black-Litterman with AI views, Risk Parity, HRP, and CVaR optimization. Features macro regime analysis and institutional-grade constraints.',
+      tags: ['FastAPI', 'BAML', 'Riskfolio-Lib', 'SQLAlchemy', 'Supabase', 'Quant Finance'],
       featured: true,
     },
     {
       title: 'Dietologo AI',
-      description: 'Diet management application with AI-powered meal suggestions using BAML. Features weekly meal planning with calorie tracking, ingredient/recipe management, and automated grocery list generation. Modern async architecture with Angular 19, FastAPI, and Supabase authentication.',
-      tags: ['Angular 19', 'FastAPI', 'BAML', 'Supabase', 'Tailwind CSS', 'Fly.io'],
+      description: 'Production AI-powered diet generator with weekly meal plans (35 meals/week), AI recipe generation, and smart shopping lists. Live at diet.silviobaratto.com with Google authentication and subscription system. Complete full-stack solution with Docker deployment.',
+      tags: ['Angular 19', 'FastAPI', 'BAML', 'OpenAI', 'Supabase', 'Docker', 'Production'],
+      link: 'https://diet.silviobaratto.com',
       featured: true,
     },
     {
-      title: 'Roldan Hedge Fund',
-      description: 'Quantitative portfolio optimization platform combining AI-powered stock analysis (6-factor evaluation) with multi-strategy optimization. Implements Mean-Variance, Black-Litterman with AI views, Risk Parity, HRP, and CVaR optimization. Features macro regime analysis and institutional-grade constraints.',
-      tags: ['FastAPI', 'BAML', 'Riskfolio-Lib', 'SQLAlchemy', 'Supabase', 'Quant Finance'],
+      title: 'Pokemon Text-to-Image Generator',
+      description: 'Advanced Conditional VAE generating 64×64 Pokemon images from text using dual conditioning: CLIP ViT-L/14 (768-dim) + categorical attributes (type, color, shape). Features BAML metadata pipeline with OpenAI vision, LPIPS perceptual loss, and 17.8M parameters. Production-ready with FastAPI + Angular frontend.',
+      tags: ['PyTorch', 'CLIP', 'BAML', 'OpenAI Vision', 'FastAPI', 'Angular', 'Generative AI'],
+      link: 'https://github.com/SilvioBaratto/text_to_pokemon',
       featured: true,
     },
   ];
