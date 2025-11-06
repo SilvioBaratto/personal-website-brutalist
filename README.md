@@ -2,7 +2,7 @@
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/SilvioBaratto/personal-website)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Angular](https://img.shields.io/badge/Angular-19-red.svg)](https://angular.dev)
+[![Angular](https://img.shields.io/badge/Angular-20-red.svg)](https://angular.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue.svg)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38bdf8.svg)](https://tailwindcss.com/)
 
@@ -11,7 +11,7 @@
   <p><i>Preview of the website in action - <a href="https://silviobaratto.com">Visit the live site →</a></i></p>
 </div>
 
-Modern personal portfolio website built with Angular 19, featuring a BAML-powered AI chatbot and beautiful gradient design system. This project showcases modern web development practices with server-side rendering, serverless architecture, and AI integration.
+Modern personal portfolio website built with Angular 20, featuring a BAML-powered AI chatbot and beautiful gradient design system. This project showcases modern web development practices with server-side rendering, serverless architecture, and AI integration.
 
 **🌐 Live Website**: [silviobaratto.com](https://silviobaratto.com) | [silviobaratto.vercel.app](https://silviobaratto.vercel.app)
 
@@ -45,7 +45,7 @@ Modern personal portfolio website built with Angular 19, featuring a BAML-powere
 ## Tech Stack
 
 ### Frontend
-- **Angular 19**: Latest version with standalone components, signals, and modern reactive patterns
+- **Angular 20**: Latest version with standalone components, signals, and modern reactive patterns
   - Standalone components for better modularity
   - Signals for reactive state management
   - Native control flow syntax (@if, @for, @switch)
@@ -78,7 +78,7 @@ The application follows a modern serverless architecture with three main layers:
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                     Client (Browser)                         │
-│  Angular 19 SPA with SSR-rendered initial content           │
+│  Angular 20 SPA with SSR-rendered initial content           │
 └─────────────────────┬───────────────────────────────────────┘
                       │
                       ├─ Static Assets (Vercel CDN)
@@ -144,7 +144,7 @@ The application follows a modern serverless architecture with three main layers:
 
 ### Prerequisites
 
-- Node.js 20+
+- Node.js 22+
 - npm or yarn
 
 ### Setup
@@ -490,7 +490,7 @@ BAML (Boundary ML) configuration:
 - Node version mismatch
 
 **Solutions**:
-- Check Node.js version matches requirements (Node 20+):
+- Check Node.js version matches requirements (Node 22+):
   ```bash
   node --version
   ```
