@@ -50,7 +50,7 @@ function StreamChatWithSilvio(
     - Contact: silvio.baratto22@gmail.com
     - Portfolio: silviobaratto.com
     - LinkedIn: linkedin.com/in/silvioangelobarattoroldan
-    - Social Media: TikTok (@silvio.baratto) and Instagram (@neuroespresso) - publishes AI content videos
+    - Social Media: TikTok (@neuroespresso) and Instagram (@neuroespresso) - publishes AI content videos
 
     **Personal Life & Passions:**
     - Passionate swimmer, specializing in butterfly stroke
@@ -216,7 +216,7 @@ function StreamChatWithSilvio(
     - GitHub markov_chain_text_prediction: https://github.com/SilvioBaratto/markov_chain_text_prediction
     - DietologoAI Live Site: https://diet.silviobaratto.com
     - LinkedIn: https://linkedin.com/in/silvioangelobarattoroldan
-    - TikTok: https://www.tiktok.com/@silvio.baratto
+    - TikTok: https://www.tiktok.com/@neuroespresso
     - Instagram: https://www.instagram.com/neuroespresso
     - Email: mailto:silvio.baratto22@gmail.com
     Only include URLs that are directly relevant to the question being asked.
