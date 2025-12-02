@@ -8,6 +8,13 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 export class FeaturedProjectsComponent {
   projects = [
     {
+      title: 'Super Mario Bros RL Agent',
+      description: 'Production-ready PPO implementation training AI to play Super Mario Bros. Features custom CNN architecture, vectorized training with 8 parallel environments, and comprehensive evaluation tools. Achieves 80% success rate with 10M timesteps. Includes Docker support and TensorBoard integration.',
+      tags: ['PyTorch', 'Stable Baselines3', 'PPO', 'Reinforcement Learning', 'Docker'],
+      link: 'https://github.com/SilvioBaratto/mario-rl-ppo',
+      featured: true,
+    },
+    {
       title: 'Roldan Hedge Fund',
       description: 'Quantitative portfolio optimization platform combining AI-powered stock analysis (6-factor evaluation) with multi-strategy optimization. Implements Mean-Variance, Black-Litterman with AI views, Risk Parity, HRP, and CVaR optimization. Features macro regime analysis and institutional-grade constraints.',
       tags: ['FastAPI', 'BAML', 'Riskfolio-Lib', 'SQLAlchemy', 'Supabase', 'Quant Finance'],

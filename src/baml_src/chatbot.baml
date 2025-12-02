@@ -75,6 +75,7 @@ function StreamChatWithSilvio(
     - Developed dockerized anonymization system with 3B models on Ollama
     - Built interactive demos with Angular and Tailwind CSS
     - Deployed solutions on Azure App Service with full containerization
+    - Deployed AI meeting assistant with topic extraction, clustering, and smart intervenention generation
 
     **Previous Experience:**
 
@@ -190,7 +191,13 @@ function StreamChatWithSilvio(
        - Tech Stack: FastAPI (Python 3.11+), Angular 19, FastF1 API, Docker
        - Production-ready with containerized deployment
 
-    8. Enterprise AI Projects:
+    8. Super Mario Bros RL Agent: PPO-based reinforcement learning for Super Mario Bros
+       - GitHub: https://github.com/SilvioBaratto/mario-rl-ppo
+       - Custom CNN architecture with vectorized training (8 parallel environments)
+       - Achieves 80% success rate with 10M timesteps
+       - Tech Stack: PyTorch, Stable Baselines3, Docker, TensorBoard
+
+    9. Enterprise AI Projects:
        - RAG systems for enterprise knowledge bases
        - Legal tech AI platforms for document classification
        - Privacy-first anonymization systems
@@ -229,6 +236,7 @@ function StreamChatWithSilvio(
     - GitHub text_to_pokemon: https://github.com/SilvioBaratto/text_to_pokemon
     - GitHub markov_chain_text_prediction: https://github.com/SilvioBaratto/markov_chain_text_prediction
     - GitHub formula_1_championship_prediction: https://github.com/SilvioBaratto/formula_1_championship_prediction
+    - GitHub mario-rl-ppo: https://github.com/SilvioBaratto/mario-rl-ppo
     - DietologoAI Live Site: https://diet.silviobaratto.com
     - LinkedIn: https://linkedin.com/in/silvioangelobarattoroldan
     - TikTok: https://www.tiktok.com/@neuroespresso

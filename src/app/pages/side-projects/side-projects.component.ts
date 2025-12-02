@@ -134,6 +134,13 @@ interface Project {
 export class SideProjectsComponent {
   projects: Project[] = [
     {
+      title: 'Super Mario Bros RL Agent',
+      description: 'Production-ready PPO implementation training AI to play Super Mario Bros. Features custom CNN architecture (4-layer with 512-unit FC), vectorized training with 8 parallel environments, and comprehensive evaluation tools. Achieves 80% success rate with 10M timesteps. Includes Docker support, TensorBoard/W&B integration, and modular codebase.',
+      tags: ['PyTorch', 'Stable Baselines3', 'PPO', 'Reinforcement Learning', 'Docker', 'TensorBoard'],
+      link: 'https://github.com/SilvioBaratto/mario-rl-ppo',
+      highlighted: true,
+    },
+    {
       title: 'Formula 1 Championship Prediction',
       description: 'ML system forecasting F1 World Championship outcomes using official telemetry data. Combines Bayesian variance decomposition, 10,000+ Monte Carlo simulations, and ensemble ML (Random Forest, Gradient Boosting, SVM). Features 50+ engineered features, track classification, and hybrid predictions with confidence intervals.',
       tags: ['FastAPI', 'Angular 19', 'FastF1 API', 'Bayesian ML', 'Monte Carlo', 'Docker'],
