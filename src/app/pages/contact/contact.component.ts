@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, signal, computed } from '@angular/core';
+import { Component, ChangeDetectionStrategy, signal, computed, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HeaderComponent } from '../../shared/header/header.component';
 
@@ -147,7 +147,7 @@ import { HeaderComponent } from '../../shared/header/header.component';
   imports: [HeaderComponent, ReactiveFormsModule],
 })
 export class ContactComponent {
-  private fb = new FormBuilder();
+  private fb = inject(FormBuilder);
 
   formSubmitted = signal(false);
   isSubmitting = signal(false);
