@@ -1,15 +1,6 @@
-<main class="pt-16 sm:pt-20 h-screen relative flex flex-col bg-gradient-to-br from-blue-50 via-purple-50/30 to-pink-50/20">
-  <!-- Animated gradient mesh background -->
-  <div class="absolute inset-0 overflow-hidden pointer-events-none">
-    <!-- Top right gradient orb -->
-    <div class="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-blue-400/15 via-purple-400/10 to-pink-400/8 rounded-full blur-3xl animate-pulse"></div>
-
-    <!-- Middle left gradient orb -->
-    <div class="absolute top-1/3 -left-32 w-80 h-80 bg-gradient-to-tr from-indigo-400/12 via-blue-400/8 to-cyan-400/5 rounded-full blur-3xl" style="animation: float 20s ease-in-out infinite;"></div>
-
-    <!-- Bottom gradient orb -->
-    <div class="absolute bottom-1/4 right-1/4 w-72 h-72 bg-gradient-to-bl from-purple-400/8 via-fuchsia-400/6 to-pink-400/4 rounded-full blur-3xl" style="animation: float 25s ease-in-out infinite reverse;"></div>
-  </div>
+<main class="pt-16 sm:pt-20 h-screen flex flex-col bg-white">
+  <!-- Brutalist grid background - Purple -->
+  <div class="fixed inset-0 pointer-events-none opacity-[0.02]" style="background-image: linear-gradient(#9723C9 1px, transparent 1px), linear-gradient(90deg, #9723C9 1px, transparent 1px); background-size: 20px 20px;"></div>
 
   <!-- Chat Messages Area -->
   <div
@@ -25,121 +16,96 @@
             [class.justify-start]="message.role === 'assistant'"
           >
             <!-- Message Bubble Container -->
-            <div class="max-w-[85%] sm:max-w-[75%] lg:max-w-[70%]">
+            <div class="max-w-[90%] sm:max-w-[80%] lg:max-w-[75%]">
 
-              <!-- User Message -->
+              <!-- User Message - Purple -->
               @if (message.role === 'user') {
-                <div class="rounded-2xl px-4 py-3 sm:px-5 sm:py-3.5 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 text-white shadow-lg hover:shadow-xl hover:from-blue-500 hover:via-indigo-500 hover:to-purple-500 transition-all duration-300">
-                  <p class="text-sm sm:text-base leading-relaxed whitespace-pre-wrap break-words">{{ message.content }}</p>
+                <div class="border-4 border-black bg-[#9723C9] text-white px-4 py-3 sm:px-5 sm:py-4">
+                  <p class="font-mono text-sm sm:text-base leading-relaxed whitespace-pre-wrap break-words">{{ message.content }}</p>
                 </div>
-                <p class="text-xs mt-1.5 px-1 text-right text-gray-600">
+                <p class="font-mono text-xs mt-1.5 px-1 text-right text-[#9723C9]">
                   {{ message.timestamp | date: 'shortTime' }}
                 </p>
               }
 
               <!-- Assistant Message -->
               @if (message.role === 'assistant') {
-                <div class="flex items-start gap-2 sm:gap-3">
-                  <!-- Silvio's Profile Image -->
-                  <img
-                    ngSrc="/assets/apple-touch-icon.png"
-                    alt="Silvio Angelo Baratto"
-                    width="40"
-                    height="40"
-                    class="w-8 h-8 sm:w-10 sm:h-10 rounded-full ring-2 ring-purple-200 flex-shrink-0 object-cover"
-                  />
+                <div class="flex items-start gap-3 sm:gap-4">
+                  <!-- Silvio's Profile Image with Yellow accent -->
+                  <div class="relative flex-shrink-0">
+                    <div class="absolute inset-0 bg-[#F4D738] translate-x-1 translate-y-1"></div>
+                    <div class="relative w-10 h-10 sm:w-12 sm:h-12 border-2 border-black overflow-hidden bg-white">
+                      <img
+                        ngSrc="/assets/apple-touch-icon.png"
+                        alt="Silvio Angelo Baratto"
+                        width="48"
+                        height="48"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
 
                   <div class="space-y-3 flex-1">
-                  <!-- Main Message Bubble -->
-                  <div class="rounded-2xl px-4 py-3 sm:px-5 sm:py-3.5 bg-white/90 backdrop-blur-sm text-gray-900 shadow-lg border border-gray-200/50 hover:shadow-xl hover:border-purple-200/50 transition-all duration-300">
+                    <!-- Main Message Bubble -->
+                    <div class="border-4 border-black bg-white px-4 py-3 sm:px-5 sm:py-4">
 
-                    <!-- Category Badge (if available) -->
-                    @if (message.category) {
-                      <div class="flex flex-wrap items-center gap-2 mb-2.5">
-                        <span
-                          class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold shadow-sm"
-                          [class.bg-gradient-to-r]="message.category === 'EXPERIENCE'"
-                          [class.from-blue-500]="message.category === 'EXPERIENCE'"
-                          [class.to-indigo-500]="message.category === 'EXPERIENCE'"
-                          [class.text-white]="message.category === 'EXPERIENCE'"
-                          [class.bg-gradient-to-r]="message.category === 'TECHNICAL_SKILLS'"
-                          [class.from-green-500]="message.category === 'TECHNICAL_SKILLS'"
-                          [class.to-emerald-500]="message.category === 'TECHNICAL_SKILLS'"
-                          [class.text-white]="message.category === 'TECHNICAL_SKILLS'"
-                          [class.bg-gradient-to-r]="message.category === 'PROJECTS'"
-                          [class.from-purple-500]="message.category === 'PROJECTS'"
-                          [class.to-pink-500]="message.category === 'PROJECTS'"
-                          [class.text-white]="message.category === 'PROJECTS'"
-                          [class.bg-gradient-to-r]="message.category === 'EDUCATION'"
-                          [class.from-orange-500]="message.category === 'EDUCATION'"
-                          [class.to-amber-500]="message.category === 'EDUCATION'"
-                          [class.text-white]="message.category === 'EDUCATION'"
-                          [class.bg-gradient-to-r]="message.category === 'PERSONAL'"
-                          [class.from-pink-500]="message.category === 'PERSONAL'"
-                          [class.to-fuchsia-500]="message.category === 'PERSONAL'"
-                          [class.text-white]="message.category === 'PERSONAL'"
-                          [class.bg-gradient-to-r]="message.category !== 'EXPERIENCE' && message.category !== 'TECHNICAL_SKILLS' && message.category !== 'PROJECTS' && message.category !== 'EDUCATION' && message.category !== 'PERSONAL'"
-                          [class.from-gray-400]="message.category !== 'EXPERIENCE' && message.category !== 'TECHNICAL_SKILLS' && message.category !== 'PROJECTS' && message.category !== 'EDUCATION' && message.category !== 'PERSONAL'"
-                          [class.to-gray-500]="message.category !== 'EXPERIENCE' && message.category !== 'TECHNICAL_SKILLS' && message.category !== 'PROJECTS' && message.category !== 'EDUCATION' && message.category !== 'PERSONAL'"
-                          [class.text-white]="message.category !== 'EXPERIENCE' && message.category !== 'TECHNICAL_SKILLS' && message.category !== 'PROJECTS' && message.category !== 'EDUCATION' && message.category !== 'PERSONAL'"
-                        >
-                          {{ message.category.replace('_', ' ') }}
-                        </span>
-                      </div>
-                    }
+                      <!-- Category Badge (if available) - Yellow -->
+                      @if (message.category) {
+                        <div class="mb-3">
+                          <span class="inline-block font-mono text-xs uppercase tracking-widest border-2 border-black bg-[#F4D738] px-2 py-0.5 font-bold">
+                            {{ message.category.replace('_', ' ') }}
+                          </span>
+                        </div>
+                      }
 
-                    <!-- Message Content -->
-                    <p class="text-sm sm:text-base leading-relaxed whitespace-pre-wrap break-words">{{ message.content }}</p>
+                      <!-- Message Content -->
+                      <p class="font-mono text-sm sm:text-base leading-relaxed whitespace-pre-wrap break-words">{{ message.content }}</p>
 
-                    <!-- URLs (if available) -->
-                    @if (message.urls && message.urls.length > 0) {
-                      <div class="mt-3 space-y-1.5">
-                        <p class="text-xs font-medium text-gray-500">Related links:</p>
+                      <!-- URLs (if available) - Green hover -->
+                      @if (message.urls && message.urls.length > 0) {
+                        <div class="mt-4 pt-3 border-t-2 border-[#9723C9]/30">
+                          <p class="font-mono text-xs uppercase tracking-widest mb-2 text-[#9723C9]">Links:</p>
+                          <div class="flex flex-wrap gap-2">
+                            @for (url of message.urls; track $index) {
+                              <a
+                                [href]="url"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center font-mono text-xs border-2 border-black px-2 py-1 hover:bg-[#7FBC8C] hover:text-black transition-colors duration-150"
+                              >
+                                <span class="mr-1">&rarr;</span>
+                                <span class="break-all">{{ url }}</span>
+                              </a>
+                            }
+                          </div>
+                        </div>
+                      }
+                    </div>
+
+                    <!-- Follow-up Suggestions - Purple hover -->
+                    @if (message.followUpSuggestions && message.followUpSuggestions.length > 0) {
+                      <div class="space-y-2">
+                        <p class="font-mono text-xs uppercase tracking-widest px-1 text-[#9723C9]">Suggestions:</p>
                         <div class="flex flex-wrap gap-2">
-                          @for (url of message.urls; track $index) {
-                            <a
-                              [href]="url"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-medium bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 hover:from-blue-100 hover:to-indigo-100 hover:text-blue-800 transition-all duration-200 border border-blue-200 hover:border-indigo-300 shadow-sm hover:shadow-md"
+                          @for (suggestion of message.followUpSuggestions; track $index) {
+                            <button
+                              (click)="selectFollowUp(suggestion)"
+                              type="button"
+                              class="inline-flex items-center font-mono text-xs sm:text-sm border-2 border-black px-3 py-2 bg-white text-black hover:bg-[#9723C9] hover:text-white transition-colors duration-150 min-h-11 sm:min-h-0"
+                              [attr.aria-label]="'Follow up with: ' + suggestion"
                             >
-                              <svg class="w-3.5 h-3.5 mr-1.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                              </svg>
-                              <span class="break-all">{{ url }}</span>
-                            </a>
+                              <span class="mr-2 text-[#FF6B6B]">[?]</span>
+                              <span class="break-words text-left">{{ suggestion }}</span>
+                            </button>
                           }
                         </div>
                       </div>
                     }
-                  </div>
 
-                  <!-- Follow-up Suggestions -->
-                  @if (message.followUpSuggestions && message.followUpSuggestions.length > 0) {
-                    <div class="space-y-2">
-                      <p class="text-xs font-medium text-gray-500 px-1">Suggested actions:</p>
-                      <div class="flex flex-wrap gap-2">
-                        @for (suggestion of message.followUpSuggestions; track $index) {
-                          <button
-                            (click)="selectFollowUp(suggestion)"
-                            type="button"
-                            class="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg text-xs sm:text-sm font-medium bg-white/90 backdrop-blur-sm border-2 border-gray-200 text-gray-700 hover:border-transparent hover:bg-gradient-to-r hover:from-blue-500 hover:via-indigo-500 hover:to-purple-500 hover:text-white transition-all duration-300 shadow-sm hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 min-h-11 sm:min-h-0"
-                            [attr.aria-label]="'Follow up with: ' + suggestion"
-                          >
-                            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                            </svg>
-                            <span class="break-words text-left">{{ suggestion }}</span>
-                          </button>
-                        }
-                      </div>
-                    </div>
-                  }
-
-                  <!-- Timestamp -->
-                  <p class="text-xs mt-1.5 px-1 text-left text-gray-400">
-                    {{ message.timestamp | date: 'shortTime' }}
-                  </p>
+                    <!-- Timestamp -->
+                    <p class="font-mono text-xs px-1 text-black/40">
+                      {{ message.timestamp | date: 'shortTime' }}
+                    </p>
                   </div>
                 </div>
               }
@@ -147,24 +113,29 @@
           </div>
         }
 
-        <!-- Typing Indicator -->
+        <!-- Typing Indicator - Colored dots -->
         @if (isTyping()) {
           <div class="flex justify-start">
-            <div class="flex items-start gap-2 sm:gap-3 max-w-[85%] sm:max-w-[75%] lg:max-w-[70%]">
-              <!-- Silvio's Profile Image -->
-              <img
-                ngSrc="/assets/apple-touch-icon.png"
-                alt="Silvio Angelo Baratto"
-                width="40"
-                height="40"
-                class="w-8 h-8 sm:w-10 sm:h-10 rounded-full ring-2 ring-purple-200 flex-shrink-0 object-cover"
-              />
+            <div class="flex items-start gap-3 sm:gap-4 max-w-[90%] sm:max-w-[80%] lg:max-w-[75%]">
+              <!-- Silvio's Profile Image with Yellow accent -->
+              <div class="relative flex-shrink-0">
+                <div class="absolute inset-0 bg-[#F4D738] translate-x-1 translate-y-1"></div>
+                <div class="relative w-10 h-10 sm:w-12 sm:h-12 border-2 border-black overflow-hidden bg-white">
+                  <img
+                    ngSrc="/assets/apple-touch-icon.png"
+                    alt="Silvio Angelo Baratto"
+                    width="48"
+                    height="48"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
 
-              <div class="bg-white/90 backdrop-blur-sm rounded-2xl px-5 py-4 shadow-lg border border-gray-200/50">
-                <div class="flex gap-1.5">
-                  <div class="w-2 h-2 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full animate-bounce" style="animation-delay: 0ms"></div>
-                  <div class="w-2 h-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full animate-bounce" style="animation-delay: 150ms"></div>
-                  <div class="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-bounce" style="animation-delay: 300ms"></div>
+              <div class="border-4 border-black bg-white px-5 py-4">
+                <div class="flex gap-2">
+                  <div class="w-2 h-2 bg-[#9723C9] animate-bounce" style="animation-delay: 0ms"></div>
+                  <div class="w-2 h-2 bg-[#F4D738] animate-bounce" style="animation-delay: 150ms"></div>
+                  <div class="w-2 h-2 bg-[#FF6B6B] animate-bounce" style="animation-delay: 300ms"></div>
                 </div>
               </div>
             </div>
@@ -175,17 +146,17 @@
   </div>
 
   <!-- Chat Input Area - Fixed at Bottom -->
-  <div class="bg-white/95 backdrop-blur-lg border-t border-gray-200/50 shadow-2xl flex-shrink-0 relative z-10">
+  <div class="bg-white border-t-4 border-black flex-shrink-0 relative z-10">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 max-w-4xl">
-      <form (submit)="sendMessage(); $event.preventDefault()" class="flex gap-2 sm:gap-3">
-        <div class="flex-1 relative">
+      <form (submit)="sendMessage(); $event.preventDefault()" class="flex gap-0">
+        <div class="flex-1">
           <input
             type="text"
             [(ngModel)]="userInput"
             name="message"
             (keypress)="handleKeyPress($event)"
-            placeholder="Ask me about Silvio's experience, projects, or skills..."
-            class="w-full px-4 sm:px-5 py-3 sm:py-3.5 text-base bg-gray-50 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent focus:bg-white transition-all placeholder:text-gray-400 shadow-sm focus:shadow-md"
+            placeholder="Ask about experience, projects, or skills..."
+            class="w-full px-4 sm:px-5 py-3 sm:py-4 font-mono text-sm sm:text-base bg-white border-4 border-black border-r-0 focus:outline-none focus:ring-2 focus:ring-[#9723C9] focus:ring-inset transition-colors placeholder:text-black/40"
             [disabled]="isTyping()"
             autocomplete="off"
           />
@@ -193,13 +164,11 @@
         <button
           type="submit"
           [disabled]="!userInput().trim() || isTyping()"
-          class="min-h-11 min-w-11 px-4 py-3 sm:py-3.5 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 text-white font-semibold rounded-xl transition-all hover:from-blue-500 hover:via-indigo-500 hover:to-purple-500 hover:shadow-lg hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:shadow-none focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 flex items-center justify-center flex-shrink-0 shadow-md"
+          class="min-h-11 px-6 sm:px-8 py-3 sm:py-4 font-bold text-sm sm:text-base uppercase tracking-wider bg-[#9723C9] text-white border-4 border-black hover:bg-[#F4D738] hover:text-black transition-colors duration-150 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-[#9723C9] disabled:hover:text-white flex items-center justify-center flex-shrink-0"
           aria-label="Send message"
         >
-          <svg class="w-5 h-5 sm:w-6 sm:h-6" viewBox="-0.5 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2.33045 8.38999C0.250452 11.82 9.42048 14.9 9.42048 14.9C9.42048 14.9 12.5005 24.07 15.9305 21.99C19.5705 19.77 23.9305 6.13 21.0505 3.27C18.1705 0.409998 4.55045 4.74999 2.33045 8.38999Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M15.1999 9.12L9.41992 14.9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <span class="hidden sm:inline mr-2">Send</span>
+          <span>&rarr;</span>
         </button>
       </form>
     </div>

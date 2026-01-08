@@ -1,0 +1,20 @@
+{
+  "name": "cv-html-to-pdf",
+  "version": "1.0.0",
+  "description": "Modern HTML CV with PDF export functionality",
+  "main": "export-pdf.js",
+  "scripts": {
+    "export": "node export-pdf.js"
+  },
+  "keywords": [
+    "cv",
+    "resume",
+    "html",
+    "pdf"
+  ],
+  "author": "Silvio Baratto Roldan",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^22.0.0"
+  }
+}

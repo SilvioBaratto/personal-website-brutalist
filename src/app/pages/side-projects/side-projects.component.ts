@@ -14,14 +14,24 @@ interface Project {
   template: `
     <app-header />
     <main class="pt-16 sm:pt-20 bg-white min-h-screen">
+      <!-- Brutalist grid background - Purple -->
+      <div class="fixed inset-0 pointer-events-none opacity-[0.02]" style="background-image: linear-gradient(#9723C9 1px, transparent 1px), linear-gradient(90deg, #9723C9 1px, transparent 1px); background-size: 20px 20px;"></div>
+
       <!-- Hero Section -->
-      <section class="bg-gradient-to-br from-blue-50 via-white to-gray-50 py-12 sm:py-16 lg:py-20 border-b border-gray-100">
+      <section class="relative py-12 sm:py-16 lg:py-20 border-b-4 border-black">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-          <div class="text-center max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">
-              Side Projects
+          <div class="max-w-4xl">
+            <!-- Label - Yellow -->
+            <div class="inline-block border-2 border-black bg-[#F4D738] px-3 py-1 mb-6">
+              <span class="font-mono text-xs sm:text-sm uppercase tracking-widest font-bold">Portfolio</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black uppercase tracking-tight mb-6 leading-[0.9]">
+              <span class="bg-[#FF6B6B] text-white px-2">Side</span><br class="hidden sm:block" />
+              <span class="sm:ml-8 lg:ml-16">Projects</span>
             </h1>
-            <p class="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
+
+            <p class="font-mono text-base sm:text-lg text-black leading-relaxed max-w-2xl border-l-4 border-[#9723C9] pl-4 text-justify">
               Innovative AI solutions from research to production. Exploring the intersection of machine learning,
               finance, and practical applications.
             </p>
@@ -30,102 +40,147 @@ interface Project {
       </section>
 
       <!-- Projects Grid Section -->
-      <section class="py-12 sm:py-16 lg:py-20 bg-white">
+      <section class="relative py-12 sm:py-16 lg:py-20 border-b-4 border-black">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            @for (project of projects; track project.title) {
+          <!-- Section header - Red accent -->
+          <div class="flex items-center gap-4 mb-10 sm:mb-12">
+            <div class="w-12 sm:w-16 h-1 bg-[#FF6B6B]"></div>
+            <span class="font-mono text-xs sm:text-sm uppercase tracking-widest text-[#FF6B6B] font-bold">{{ projects.length }} Projects</span>
+          </div>
+
+          <div class="space-y-6 sm:space-y-8">
+            @for (project of projects; track project.title; let i = $index) {
               <article
-                class="group bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-gray-200 transition-all duration-300 flex flex-col"
-                [class.hover:shadow-2xl]="true"
-                [class.hover:border-blue-500]="true"
-                [class.-translate-y-1]="project.highlighted"
-                [class.hover:-translate-y-2]="true"
-                [class.ring-2]="project.highlighted"
-                [class.ring-blue-500]="project.highlighted"
-                [class.ring-offset-2]="project.highlighted"
+                class="group border-4 border-black transition-colors duration-150"
+                [class.bg-[#F4D738]]="project.highlighted"
+                [class.hover:bg-[#9723C9]]="project.highlighted"
+                [class.hover:text-white]="project.highlighted"
+                [class.hover:bg-black]="!project.highlighted"
+                [class.hover:text-white]="!project.highlighted"
               >
-                <!-- Project Title -->
-                <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4 transition-colors duration-300"
-                    [class.group-hover:text-blue-600]="true">
-                  {{ project.title }}
-                </h2>
-
-                <!-- Project Description -->
-                <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-6 flex-grow">
-                  {{ project.description }}
-                </p>
-
-                <!-- Tags -->
-                <div class="flex flex-wrap gap-2 mb-6">
-                  @for (tag of project.tags; track tag) {
-                    <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full transition-colors duration-300 hover:bg-blue-100">
-                      {{ tag }}
-                    </span>
-                  }
-                </div>
-
-                <!-- View Project Link -->
-                @if (project.link) {
-                  <a
-                    [href]="project.link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-flex items-center gap-2 text-blue-600 font-semibold text-sm transition-all duration-300 min-h-11"
-                    [class.hover:text-blue-700]="true"
-                    [class.group/link]="true"
+                <div class="flex flex-col lg:flex-row">
+                  <!-- Project number -->
+                  <div
+                    class="lg:w-24 xl:w-32 p-4 sm:p-6 border-b-4 lg:border-b-0 lg:border-r-4 flex items-center justify-center lg:justify-start border-black"
+                    [class.group-hover:border-white]="project.highlighted"
+                    [class.group-hover:border-white]="!project.highlighted"
                   >
-                    <span>View Project</span>
-                    <svg
-                      class="w-4 h-4 transition-transform duration-300"
-                      [class.group-hover/link:translate-x-1]="true"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
+                    <span
+                      class="font-mono text-4xl sm:text-5xl lg:text-6xl font-black"
+                      [class.text-[#9723C9]]="project.highlighted"
+                      [class.opacity-60]="project.highlighted"
+                      [class.group-hover:text-white]="project.highlighted"
+                      [class.group-hover:opacity-100]="project.highlighted"
+                      [class.opacity-30]="!project.highlighted"
+                      [class.group-hover:opacity-50]="!project.highlighted"
                     >
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                    <span class="sr-only"> (opens in new tab)</span>
-                  </a>
-                } @else {
-                  <span class="inline-flex items-center gap-2 text-gray-400 font-semibold text-sm min-h-11">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-                    </svg>
-                    <span>Private Project</span>
-                  </span>
-                }
+                      {{ (i + 1).toString().padStart(2, '0') }}
+                    </span>
+                  </div>
+
+                  <!-- Project content -->
+                  <div class="flex-1 p-6 sm:p-8">
+                    <!-- Highlighted badge - Red -->
+                    @if (project.highlighted) {
+                      <div class="inline-block border-2 border-black group-hover:border-white bg-[#FF6B6B] text-white px-2 py-0.5 mb-4">
+                        <span class="font-mono text-xs uppercase tracking-widest font-bold">Featured</span>
+                      </div>
+                    }
+
+                    <!-- Project Title -->
+                    <h2
+                      class="text-xl sm:text-2xl lg:text-3xl font-black uppercase tracking-tight mb-4"
+                      [class.group-hover:text-white]="project.highlighted"
+                    >
+                      {{ project.title }}
+                    </h2>
+
+                    <!-- Project Description -->
+                    <p
+                      class="font-mono text-sm sm:text-base leading-relaxed mb-6 max-w-3xl text-justify"
+                      [class.group-hover:text-white]="project.highlighted"
+                    >
+                      {{ project.description }}
+                    </p>
+
+                    <!-- Tags with colors -->
+                    <div class="flex flex-wrap gap-2 mb-6">
+                      @for (tag of project.tags; track tag; let j = $index) {
+                        <span
+                          class="font-mono text-xs px-3 py-1 border-2 uppercase tracking-wider font-semibold"
+                          [class.border-black]="project.highlighted"
+                          [class.group-hover:border-white]="project.highlighted"
+                          [class.bg-[#9723C9]]="project.highlighted && j % 3 === 0"
+                          [class.text-white]="project.highlighted && j % 3 === 0"
+                          [class.bg-[#7FBC8C]]="project.highlighted && j % 3 === 1"
+                          [class.bg-white]="project.highlighted && j % 3 === 2"
+                          [class.border-current]="!project.highlighted"
+                        >
+                          {{ tag }}
+                        </span>
+                      }
+                    </div>
+
+                    <!-- View Project Link -->
+                    @if (project.link) {
+                      <a
+                        [href]="project.link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 font-mono text-sm font-bold uppercase tracking-wider border-b-2 pb-1 hover:pb-2 transition-all"
+                        [class.border-[#9723C9]]="project.highlighted"
+                        [class.group-hover:border-white]="project.highlighted"
+                        [class.border-current]="!project.highlighted"
+                      >
+                        <span>View Project</span>
+                        <span>&rarr;</span>
+                        <span class="sr-only"> (opens in new tab)</span>
+                      </a>
+                    } @else {
+                      <span class="inline-flex items-center gap-2 font-mono text-sm uppercase tracking-wider opacity-50">
+                        <span>[Private]</span>
+                      </span>
+                    }
+                  </div>
+                </div>
               </article>
             }
           </div>
         </div>
       </section>
 
-      <!-- CTA Section -->
-      <section class="py-12 sm:py-16 lg:py-20 bg-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-          <div class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-8 sm:p-12 lg:p-16 text-center shadow-xl">
-            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
-              Interested in Collaboration?
+      <!-- CTA Section - Purple background -->
+      <section class="relative py-12 sm:py-16 lg:py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+          <div class="border-4 border-black bg-[#9723C9] text-white p-8 sm:p-12 lg:p-16">
+            <!-- Top bar decoration - Colored dots -->
+            <div class="flex items-center gap-3 mb-8">
+              <div class="w-3 h-3 bg-[#FF6B6B]"></div>
+              <div class="w-3 h-3 bg-[#F4D738]"></div>
+              <div class="w-3 h-3 bg-[#7FBC8C]"></div>
+            </div>
+
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black uppercase tracking-tight mb-6 leading-[1.1]">
+              Interested in<br class="hidden sm:block" /> Collaboration?
             </h2>
-            <p class="text-base sm:text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+
+            <p class="font-mono text-base sm:text-lg text-white/90 mb-8 sm:mb-10 max-w-2xl border-l-4 border-[#F4D738] pl-4 text-justify">
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
             </p>
+
             <a
               href="/contact"
-              class="inline-flex items-center gap-3 min-h-11 px-8 py-3.5 text-base sm:text-lg font-semibold bg-white text-blue-600 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600"
-              [class.hover:bg-blue-50]="true"
-              [class.hover:shadow-lg]="true"
-              [class.hover:scale-105]="true"
+              class="group inline-flex items-center gap-3 min-h-12 px-8 py-4 font-bold text-base sm:text-lg uppercase tracking-wider bg-[#F4D738] text-black border-4 border-black hover:bg-black hover:text-[#F4D738] transition-colors duration-150"
             >
               <span>Get In Touch</span>
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-              </svg>
+              <span class="group-hover:translate-x-2 transition-transform">&rarr;</span>
             </a>
           </div>
         </div>
       </section>
+
+      <!-- Bottom spacing -->
+      <div class="py-8 sm:py-12"></div>
     </main>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,

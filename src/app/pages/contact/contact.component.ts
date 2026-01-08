@@ -6,94 +6,106 @@ import { HeaderComponent } from '../../shared/header/header.component';
   selector: 'app-contact',
   template: `
     <app-header />
-    <main class="pt-20 min-h-screen bg-gradient-to-b from-white to-gray-50">
+    <main class="pt-16 sm:pt-20 min-h-screen bg-white">
+      <!-- Brutalist grid background - Purple -->
+      <div class="fixed inset-0 pointer-events-none opacity-[0.02]" style="background-image: linear-gradient(#6914E4 1px, transparent 1px), linear-gradient(90deg, #6914E4 1px, transparent 1px); background-size: 20px 20px;"></div>
+
       <!-- Hero Section -->
-      <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
-        <div class="max-w-4xl mx-auto text-center">
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-900 mb-4 md:mb-6">
-            Let's Connect
-          </h1>
-          <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto text-balance">
-            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-          </p>
+      <section class="relative py-12 sm:py-16 lg:py-20 border-b-4 border-black">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+          <div class="max-w-4xl">
+            <!-- Label - Yellow -->
+            <div class="inline-block border-2 border-black bg-[#FFF400] px-3 py-1 mb-6">
+              <span class="font-mono text-xs sm:text-sm uppercase tracking-widest font-bold">Contact</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black uppercase tracking-tight mb-6 leading-[0.9]">
+              <span class="bg-[#6914E4] text-white px-2">Let's</span><br class="hidden sm:block" />
+              <span class="sm:ml-8 lg:ml-16">Connect</span>
+            </h1>
+
+            <p class="font-mono text-base sm:text-lg text-black leading-relaxed max-w-2xl border-l-4 border-[#6914E4] pl-4">
+              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+            </p>
+          </div>
         </div>
       </section>
 
       <!-- Contact Methods Section -->
-      <section class="container mx-auto px-4 sm:px-6 lg:px-8 pb-12 md:pb-16 lg:pb-20">
-        <div class="max-w-6xl mx-auto">
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            <!-- Email Card -->
+      <section class="relative py-12 sm:py-16 lg:py-20 border-b-4 border-black">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+          <!-- Section header - Red accent -->
+          <div class="flex items-center gap-4 mb-10 sm:mb-12">
+            <div class="w-12 sm:w-16 h-1 bg-[#FF0000]"></div>
+            <span class="font-mono text-xs sm:text-sm uppercase tracking-widest text-[#FF0000] font-bold">Get In Touch</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-0 border-4 border-black">
+            <!-- Email Card - Featured Yellow -->
             <a
               href="mailto:silvio.baratto22@gmail.com"
-              class="group relative overflow-hidden bg-white rounded-2xl p-6 shadow-sm border border-gray-200
-                     hover:shadow-lg hover:border-blue-600 transition-all duration-300
-                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+              class="group p-6 sm:p-8 border-b-4 sm:border-b-4 sm:border-r-4 border-black bg-[#FFF400] hover:bg-[#6914E4] hover:text-white transition-colors duration-150 focus-visible:outline-none focus-visible:bg-[#6914E4] focus-visible:text-white"
               aria-label="Send email to silvio.baratto22@gmail.com"
             >
-              <div class="flex flex-col items-center text-center space-y-3">
-                <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center
-                            group-hover:bg-blue-600 transition-colors duration-300">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 border-4 border-current flex items-center justify-center flex-shrink-0">
                   <svg
-                    class="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300"
+                    class="w-6 h-6 sm:w-7 sm:h-7"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                     aria-hidden="true"
                   >
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2"
                           d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <div>
-                  <h3 class="font-semibold text-brand-900 mb-1">Email</h3>
-                  <p class="text-sm text-gray-600 break-all">silvio.baratto22@gmail.com</p>
+                <div class="flex-1 min-w-0">
+                  <span class="font-mono text-xs uppercase tracking-widest text-[#6914E4] group-hover:text-white/60 block mb-1 font-bold">[01]</span>
+                  <h3 class="text-lg sm:text-xl font-black uppercase tracking-tight mb-2">Email</h3>
+                  <p class="font-mono text-sm sm:text-base break-all">silvio.baratto22&#64;gmail.com</p>
                 </div>
+                <span class="font-mono text-xl sm:text-2xl font-bold group-hover:translate-x-1 transition-transform">&rarr;</span>
               </div>
             </a>
 
-            <!-- Location Card -->
-            <div
-              class="relative overflow-hidden bg-white rounded-2xl p-6 shadow-sm border border-gray-200
-                     hover:shadow-lg hover:border-blue-600 transition-all duration-300"
-            >
-              <div class="flex flex-col items-center text-center space-y-3">
-                <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center">
+            <!-- Location Card - Green hover -->
+            <div class="p-6 sm:p-8 border-b-4 border-black group hover:bg-[#00EE00] transition-colors duration-150">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 border-4 border-current flex items-center justify-center flex-shrink-0">
                   <svg
-                    class="w-6 h-6 text-blue-600"
+                    class="w-6 h-6 sm:w-7 sm:h-7"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                     aria-hidden="true"
                   >
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2"
                           d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2"
                           d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <div>
-                  <h3 class="font-semibold text-brand-900 mb-1">Location</h3>
-                  <p class="text-sm text-gray-600">Trieste, Friuli-Venezia Giulia, Italia</p>
+                <div class="flex-1">
+                  <span class="font-mono text-xs uppercase tracking-widest text-[#00EE00] group-hover:text-black/60 block mb-1 font-bold">[02]</span>
+                  <h3 class="text-lg sm:text-xl font-black uppercase tracking-tight mb-2">Location</h3>
+                  <p class="font-mono text-sm sm:text-base">Trieste, Friuli-Venezia Giulia, Italia</p>
                 </div>
               </div>
             </div>
 
-            <!-- GitHub Card -->
+            <!-- GitHub Card - Purple hover -->
             <a
               href="https://github.com/SilvioBaratto"
               target="_blank"
               rel="noopener noreferrer"
-              class="group relative overflow-hidden bg-white rounded-2xl p-6 shadow-sm border border-gray-200
-                     hover:shadow-lg hover:border-blue-600 transition-all duration-300
-                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+              class="group p-6 sm:p-8 border-b-4 sm:border-b-0 sm:border-r-4 border-black hover:bg-[#6914E4] hover:text-white transition-colors duration-150 focus-visible:outline-none focus-visible:bg-[#6914E4] focus-visible:text-white"
               aria-label="Visit GitHub profile"
             >
-              <div class="flex flex-col items-center text-center space-y-3">
-                <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center
-                            group-hover:bg-blue-600 transition-colors duration-300">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 border-4 border-current flex items-center justify-center flex-shrink-0">
                   <svg
-                    class="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300"
+                    class="w-6 h-6 sm:w-7 sm:h-7"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     aria-hidden="true"
@@ -103,28 +115,27 @@ import { HeaderComponent } from '../../shared/header/header.component';
                           clip-rule="evenodd" />
                   </svg>
                 </div>
-                <div>
-                  <h3 class="font-semibold text-brand-900 mb-1">GitHub</h3>
-                  <p class="text-sm text-gray-600">@SilvioBaratto</p>
+                <div class="flex-1">
+                  <span class="font-mono text-xs uppercase tracking-widest text-[#6914E4] group-hover:text-white/60 block mb-1 font-bold">[03]</span>
+                  <h3 class="text-lg sm:text-xl font-black uppercase tracking-tight mb-2">GitHub</h3>
+                  <p class="font-mono text-sm sm:text-base">&#64;SilvioBaratto</p>
                 </div>
+                <span class="font-mono text-xl sm:text-2xl font-bold group-hover:translate-x-1 transition-transform">&rarr;</span>
               </div>
             </a>
 
-            <!-- LinkedIn Card -->
+            <!-- LinkedIn Card - Red hover -->
             <a
               href="https://www.linkedin.com/in/silvioangelobarattoroldan"
               target="_blank"
               rel="noopener noreferrer"
-              class="group relative overflow-hidden bg-white rounded-2xl p-6 shadow-sm border border-gray-200
-                     hover:shadow-lg hover:border-blue-600 transition-all duration-300
-                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+              class="group p-6 sm:p-8 hover:bg-[#FF0000] hover:text-white transition-colors duration-150 focus-visible:outline-none focus-visible:bg-[#FF0000] focus-visible:text-white"
               aria-label="Visit LinkedIn profile"
             >
-              <div class="flex flex-col items-center text-center space-y-3">
-                <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center
-                            group-hover:bg-blue-600 transition-colors duration-300">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 border-4 border-current flex items-center justify-center flex-shrink-0">
                   <svg
-                    class="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300"
+                    class="w-6 h-6 sm:w-7 sm:h-7"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     aria-hidden="true"
@@ -132,15 +143,50 @@ import { HeaderComponent } from '../../shared/header/header.component';
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                   </svg>
                 </div>
-                <div>
-                  <h3 class="font-semibold text-brand-900 mb-1">LinkedIn</h3>
-                  <p class="text-sm text-gray-600">Connect with me</p>
+                <div class="flex-1">
+                  <span class="font-mono text-xs uppercase tracking-widest text-[#FF0000] group-hover:text-white/60 block mb-1 font-bold">[04]</span>
+                  <h3 class="text-lg sm:text-xl font-black uppercase tracking-tight mb-2">LinkedIn</h3>
+                  <p class="font-mono text-sm sm:text-base">Connect with me</p>
                 </div>
+                <span class="font-mono text-xl sm:text-2xl font-bold group-hover:translate-x-1 transition-transform">&rarr;</span>
               </div>
             </a>
           </div>
         </div>
       </section>
+
+      <!-- CTA Section - Purple background -->
+      <section class="relative py-12 sm:py-16 lg:py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+          <div class="border-4 border-black bg-[#6914E4] text-white p-8 sm:p-12 lg:p-16">
+            <!-- Top bar decoration - Colored dots -->
+            <div class="flex items-center gap-3 mb-8">
+              <div class="w-3 h-3 bg-[#FF0000]"></div>
+              <div class="w-3 h-3 bg-[#FFF400]"></div>
+              <div class="w-3 h-3 bg-[#00EE00]"></div>
+            </div>
+
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black uppercase tracking-tight mb-6 leading-[1.1]">
+              Ready to<br class="hidden sm:block" /> Work Together?
+            </h2>
+
+            <p class="font-mono text-base sm:text-lg text-white/90 mb-8 sm:mb-10 max-w-2xl border-l-4 border-[#FFF400] pl-4">
+              Drop me an email or connect on LinkedIn. I typically respond within 24 hours.
+            </p>
+
+            <a
+              href="mailto:silvio.baratto22@gmail.com"
+              class="group inline-flex items-center gap-3 min-h-12 px-8 py-4 font-bold text-base sm:text-lg uppercase tracking-wider bg-[#FFF400] text-black border-4 border-black hover:bg-black hover:text-[#FFF400] transition-colors duration-150"
+            >
+              <span>Send Email</span>
+              <span class="group-hover:translate-x-2 transition-transform">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom spacing -->
+      <div class="py-8 sm:py-12"></div>
     </main>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,

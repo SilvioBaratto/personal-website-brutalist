@@ -1,85 +1,80 @@
-<main class="pt-16 sm:pt-20 min-h-screen relative bg-gradient-to-br from-blue-50 via-purple-50/30 to-pink-50/20">
-  <!-- Animated gradient mesh background -->
-  <div class="absolute inset-0 overflow-hidden pointer-events-none">
-    <!-- Top right gradient orb -->
-    <div class="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-blue-400/20 via-purple-400/15 to-pink-400/10 rounded-full blur-3xl animate-pulse"></div>
-
-    <!-- Middle left gradient orb -->
-    <div class="absolute top-1/3 -left-32 w-80 h-80 bg-gradient-to-tr from-indigo-400/15 via-blue-400/10 to-cyan-400/5 rounded-full blur-3xl" style="animation: float 20s ease-in-out infinite;"></div>
-
-    <!-- Bottom right gradient orb -->
-    <div class="absolute bottom-1/4 right-1/4 w-72 h-72 bg-gradient-to-bl from-purple-400/10 via-fuchsia-400/8 to-pink-400/5 rounded-full blur-3xl" style="animation: float 25s ease-in-out infinite reverse;"></div>
-  </div>
+<main class="pt-16 sm:pt-20 min-h-screen bg-white">
+  <!-- Brutalist grid background -->
+  <div class="fixed inset-0 pointer-events-none opacity-[0.02]" style="background-image: linear-gradient(#9723C9 1px, transparent 1px), linear-gradient(90deg, #9723C9 1px, transparent 1px); background-size: 20px 20px;"></div>
 
   <!-- Hero Section -->
-  <section class="relative py-8 sm:py-12 lg:py-16 z-10">
-    <!-- Hero gradient overlay -->
-    <div class="absolute inset-0 bg-gradient-to-b from-blue-100/40 via-transparent to-transparent pointer-events-none"></div>
+  <section class="relative py-12 sm:py-16 lg:py-20 border-b-4 border-black">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl">
+        <!-- Label -->
+        <div class="inline-block border-2 border-black bg-[#F4D738] px-3 py-1 mb-6">
+          <span class="font-mono text-xs sm:text-sm uppercase tracking-widest font-bold">About Me</span>
+        </div>
 
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="max-w-4xl mx-auto">
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8">
-          <span class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-            Who am I?
-          </span>
-          <span class="text-brand-900"> An engineer who wanted to design Teslas and ended up taming AI 🚀</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black uppercase tracking-tight mb-6 sm:mb-8 leading-[1.1]">
+          An engineer who wanted to design <span class="bg-[#F4D738] px-1">Teslas</span> and ended up taming <span class="bg-[#9723C9] text-white px-1">AI</span>
         </h1>
-        <p class="text-lg sm:text-xl lg:text-2xl text-gray-700 leading-relaxed">
-          Hi! I'm <span class="font-semibold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Silvio Angelo Baratto Roldan</span> - yes, double surname, dual nationality, double espresso in the morning. Spanish mother, Italian father: I speak both languages fluently and gesture twice the European average.
+
+        <p class="font-mono text-base sm:text-lg lg:text-xl text-black leading-relaxed border-l-4 border-[#9723C9] pl-4 text-justify">
+          Hi! I'm <span class="font-bold bg-[#F4D738] px-1">Silvio Angelo Baratto Roldan</span> - yes, double surname, dual nationality, double espresso in the morning. Spanish mother, Italian father: I speak both languages fluently and gesture twice the European average.
         </p>
       </div>
     </div>
   </section>
 
   <!-- Journey Section -->
-  <section class="relative py-8 sm:py-10 lg:py-12 bg-white z-10">
-    <!-- Subtle gradient overlay -->
-    <div class="absolute inset-0 bg-gradient-to-br from-purple-50/30 via-transparent to-pink-50/20 pointer-events-none"></div>
+  <section class="relative py-12 sm:py-16 lg:py-20 border-b-4 border-black">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-12 sm:w-16 h-1 bg-[#FF6B6B]"></div>
+          <span class="font-mono text-xs sm:text-sm uppercase tracking-widest text-[#FF6B6B] font-bold">Origin Story</span>
+        </div>
 
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-900 mb-4 sm:mb-6">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight mb-6">
           From Tesla dreams to Python plot twist
         </h2>
-        <p class="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed">
-          I started studying electronic engineering with dreams of working at Tesla. Small problem: circuits and I were as compatible as vim and emacs. But when I discovered I was way better with computers, I realized my destiny was bits, not volts. <span class="font-semibold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">Plot twist</span>: now I program AI that could drive those Teslas.
+
+        <p class="font-mono text-base sm:text-lg text-black leading-relaxed text-justify">
+          I started studying electronic engineering with dreams of working at Tesla. Small problem: circuits and I were as compatible as vim and emacs. But when I discovered I was way better with computers, I realized my destiny was bits, not volts. <span class="font-bold bg-[#F4D738] px-1">Plot twist</span>: now I program AI that could drive those Teslas.
         </p>
       </div>
     </div>
   </section>
 
   <!-- Learning Through Experience -->
-  <section class="relative py-8 sm:py-10 lg:py-12 z-10">
-    <!-- Radial gradient accent -->
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-radial from-blue-100/20 via-transparent to-transparent pointer-events-none"></div>
+  <section class="relative py-12 sm:py-16 lg:py-20 border-b-4 border-black">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-12 sm:w-16 h-1 bg-[#9723C9]"></div>
+          <span class="font-mono text-xs sm:text-sm uppercase tracking-widest text-[#9723C9] font-bold">Experience</span>
+        </div>
 
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-900 mb-6 sm:mb-8">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight mb-8">
           The art of productive burnout
         </h2>
 
         <!-- Luxottica -->
-        <div class="mb-8 sm:mb-10">
-          <p class="text-base sm:text-lg text-gray-700 leading-relaxed">
-            Post-bachelor's, total burnout. Solution? Go work at <span class="font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Luxottica</span> (because nothing says "rest" like managing a team of 5 suppliers and implementing AGVs in production). There I discovered I could make <span class="font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Naive Bayes</span> coexist with logistics and that predicting production problems was more fun than solving them. Bonus: I learned that managing people is like debugging, but with more coffee and less Stack Overflow.
+        <div class="mb-10 sm:mb-12">
+          <p class="font-mono text-base sm:text-lg text-black leading-relaxed text-justify">
+            Post-bachelor's, total burnout. Solution? Go work at <span class="font-bold bg-[#7FBC8C] px-1">Luxottica</span> (because nothing says "rest" like managing a team of 5 suppliers and implementing AGVs in production). There I discovered I could make <span class="font-bold">Naive Bayes</span> coexist with logistics and that predicting production problems was more fun than solving them. Bonus: I learned that managing people is like debugging, but with more coffee and less Stack Overflow.
           </p>
         </div>
 
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-900 mb-6 sm:mb-8">
-          The comeback: From zero to ML hero
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight mb-8">
+          The comeback: From zero to <span class="bg-[#9723C9] text-white px-1">ML</span> hero
         </h2>
 
         <!-- University -->
-        <div class="mb-8 sm:mb-10">
-          <p class="text-base sm:text-lg text-gray-700 leading-relaxed">
-            Recovered from burnout, I returned to university for my master's in
-            <span class="font-semibold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Data Science</span>. I got so passionate about deep learning that I created my own PyTorch library (<a
+        <div>
+          <p class="font-mono text-base sm:text-lg text-black leading-relaxed text-justify">
+            Recovered from burnout, I returned to university for my master's in <span class="font-bold bg-[#F4D738] px-1">Data Science</span>. I got so passionate about deep learning that I created my own PyTorch library (<a
               href="https://github.com/SilvioBaratto/stockpy"
               target="_blank"
               rel="noopener noreferrer"
-              class="font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent underline underline-offset-2 hover:from-blue-700 hover:to-indigo-700 transition-all focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 rounded"
-              >stockpy</a>) - because apparently I didn't have enough problems in my life. From there, the addiction to side projects became chronic.
+              class="font-bold border-b-2 border-[#9723C9] hover:bg-[#9723C9] hover:text-white transition-colors px-1"
+            >stockpy</a>) - because apparently I didn't have enough problems in my life. From there, the addiction to side projects became chronic.
           </p>
         </div>
       </div>
@@ -87,239 +82,189 @@
   </section>
 
   <!-- The European code tour -->
-  <section class="relative py-8 sm:py-10 lg:py-12 bg-white z-10">
-    <!-- Section gradient overlay -->
-    <div class="absolute inset-0 bg-gradient-to-b from-pink-50/20 via-transparent to-indigo-50/20 pointer-events-none"></div>
+  <section class="relative py-12 sm:py-16 lg:py-20 border-b-4 border-black">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-5xl">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-12 sm:w-16 h-1 bg-[#7FBC8C]"></div>
+          <span class="font-mono text-xs sm:text-sm uppercase tracking-widest text-[#7FBC8C] font-bold">Career</span>
+        </div>
 
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-900 mb-6 sm:mb-8">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight mb-10 sm:mb-12">
           The European code tour
         </h2>
 
-        <!-- Generali -->
-        <div class="mb-6 sm:mb-8">
-          <div class="group relative bg-gradient-to-br from-blue-50 via-indigo-50/50 to-transparent p-5 sm:p-6 lg:p-8 rounded-xl border border-blue-200/50 shadow-sm hover:shadow-2xl transition-all duration-300 hover:border-indigo-300/70 overflow-hidden">
-            <!-- Animated gradient border glow -->
-            <div class="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-indigo-500/0 to-blue-500/0 opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl"></div>
-
-            <!-- Corner gradient accent -->
-            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-400/10 to-transparent rounded-full blur-2xl"></div>
-
-            <div class="relative">
-              <h3 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-brand-900 mb-3 sm:mb-4">
-                Generali Investments
-              </h3>
-              <p class="text-base sm:text-lg text-gray-700 leading-relaxed">
-                I wanted to become a quant. I built a portfolio optimizer in Streamlit. The trauma was so severe that I'm now an evangelist for <span class="font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Angular + FastAPI</span>. Lesson learned: software architecture is like pasta - if you do it badly, everyone notices.
-              </p>
+        <!-- Experience Cards Grid -->
+        <div class="space-y-6 sm:space-y-8">
+          <!-- Generali -->
+          <article class="border-4 border-black group hover:bg-[#9723C9] hover:text-white transition-colors duration-150">
+            <div class="flex flex-col lg:flex-row">
+              <div class="lg:w-48 p-4 sm:p-6 border-b-4 lg:border-b-0 lg:border-r-4 border-black group-hover:border-white flex items-center">
+                <span class="font-mono text-3xl sm:text-4xl lg:text-5xl font-black opacity-30 group-hover:opacity-50 text-[#7FBC8C]">01</span>
+              </div>
+              <div class="flex-1 p-6 sm:p-8">
+                <h3 class="text-xl sm:text-2xl lg:text-3xl font-black uppercase tracking-tight mb-4">
+                  Generali Investments
+                </h3>
+                <p class="font-mono text-sm sm:text-base leading-relaxed text-justify">
+                  I wanted to become a quant. I built a portfolio optimizer in Streamlit. The trauma was so severe that I'm now an evangelist for <span class="font-bold">Angular + FastAPI</span>. Lesson learned: software architecture is like pasta - if you do it badly, everyone notices.
+                </p>
+              </div>
             </div>
-          </div>
-        </div>
+          </article>
 
-        <!-- ECB -->
-        <div class="mb-6 sm:mb-8">
-          <div class="group relative bg-gradient-to-br from-indigo-50 via-purple-50/50 to-transparent p-5 sm:p-6 lg:p-8 rounded-xl border border-indigo-200/50 shadow-sm hover:shadow-2xl transition-all duration-300 hover:border-purple-300/70 overflow-hidden">
-            <!-- Animated gradient border glow -->
-            <div class="absolute inset-0 bg-gradient-to-r from-indigo-500/0 via-purple-500/0 to-indigo-500/0 opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl"></div>
-
-            <!-- Corner gradient accent -->
-            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-purple-400/10 to-transparent rounded-full blur-2xl"></div>
-
-            <div class="relative">
-              <h3 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-brand-900 mb-3 sm:mb-4">
-                European Central Bank
-              </h3>
-              <p class="text-base sm:text-lg text-gray-700 leading-relaxed">
-                8 months in Frankfurt developing LLM solutions to standardize financial datasets and analyze sentiment. I learned that "regulatory reporting" is the fancy way of saying "turning Excel into something usable." I created Python libraries for FinREP while discussing macroeconomics with Europe's brightest minds. Stimulating? Absolutely. Technically challenging? Let's say I needed more adrenaline.
-              </p>
+          <!-- ECB -->
+          <article class="border-4 border-black group hover:bg-[#9723C9] hover:text-white transition-colors duration-150">
+            <div class="flex flex-col lg:flex-row">
+              <div class="lg:w-48 p-4 sm:p-6 border-b-4 lg:border-b-0 lg:border-r-4 border-black group-hover:border-white flex items-center">
+                <span class="font-mono text-3xl sm:text-4xl lg:text-5xl font-black opacity-30 group-hover:opacity-50 text-[#9723C9]">02</span>
+              </div>
+              <div class="flex-1 p-6 sm:p-8">
+                <h3 class="text-xl sm:text-2xl lg:text-3xl font-black uppercase tracking-tight mb-4">
+                  European Central Bank
+                </h3>
+                <p class="font-mono text-sm sm:text-base leading-relaxed text-justify">
+                  8 months in Frankfurt developing LLM solutions to standardize financial datasets and analyze sentiment. I learned that "regulatory reporting" is the fancy way of saying "turning Excel into something usable." I created Python libraries for FinREP while discussing macroeconomics with Europe's brightest minds.
+                </p>
+              </div>
             </div>
-          </div>
-        </div>
+          </article>
 
-        <!-- EY -->
-        <div class="mb-6 sm:mb-8">
-          <div class="group relative bg-gradient-to-br from-purple-50 via-pink-50/50 to-transparent p-5 sm:p-6 lg:p-8 rounded-xl border border-purple-200/50 shadow-sm hover:shadow-2xl transition-all duration-300 hover:border-pink-300/70 overflow-hidden">
-            <!-- Animated gradient border glow -->
-            <div class="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-pink-500/0 to-purple-500/0 opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl"></div>
-
-            <!-- Corner gradient accent -->
-            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-pink-400/10 to-transparent rounded-full blur-2xl"></div>
-
-            <div class="relative">
-              <h3 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-brand-900 mb-3 sm:mb-4">
-                Present: EY and the AI factory
-              </h3>
-              <p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-5">
-                I'm now at <span class="font-semibold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">EY</span>, where in less than a year I've:
-              </p>
-              <ul class="space-y-3 sm:space-y-4">
-                <li class="flex items-start gap-3">
-                  <span class="flex-shrink-0 text-xl">🤖</span>
-                  <span class="text-base sm:text-lg text-gray-700">
-                    Built RAG systems that make ChatGPT look like a beginner
-                  </span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="flex-shrink-0 text-xl">📚</span>
-                  <span class="text-base sm:text-lg text-gray-700">
-                    Created legal classification platforms (because lawyers deserve some AI too)
-                  </span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="flex-shrink-0 text-xl">🔒</span>
-                  <span class="text-base sm:text-lg text-gray-700">
-                    Developed anonymization systems with 3B models on Ollama (privacy first!)
-                  </span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="flex-shrink-0 text-xl">🚀</span>
-                  <span class="text-base sm:text-lg text-gray-700">
-                    Deployed everything on <span class="font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Azure</span> in Docker containers (because "works on my machine" isn't a deployment strategy)
-                  </span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="flex-shrink-0 text-xl">🎨</span>
-                  <span class="text-base sm:text-lg text-gray-700">
-                    Built frontends in <span class="font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">React</span> and <span class="font-semibold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Angular</span> with Tailwind CSS (yes, I can center a div)
-                  </span>
-                </li>
-              </ul>
+          <!-- EY -->
+          <article class="border-4 border-black bg-[#F4D738] text-black">
+            <div class="flex flex-col lg:flex-row">
+              <div class="lg:w-48 p-4 sm:p-6 border-b-4 lg:border-b-0 lg:border-r-4 border-black flex items-center">
+                <span class="font-mono text-3xl sm:text-4xl lg:text-5xl font-black text-[#9723C9]">03</span>
+              </div>
+              <div class="flex-1 p-6 sm:p-8">
+                <div class="inline-block border-2 border-black bg-[#FF6B6B] text-white px-2 py-0.5 mb-4">
+                  <span class="font-mono text-xs uppercase tracking-widest font-bold">Current</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl lg:text-3xl font-black uppercase tracking-tight mb-4">
+                  EY - The AI Factory
+                </h3>
+                <p class="font-mono text-sm sm:text-base leading-relaxed mb-6 text-justify">
+                  In less than a year I've:
+                </p>
+                <ul class="space-y-3 font-mono text-sm sm:text-base">
+                  <li class="flex items-start gap-3">
+                    <span class="font-bold text-[#9723C9]">[01]</span>
+                    <span>Built RAG systems that make ChatGPT look like a beginner</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="font-bold text-[#9723C9]">[02]</span>
+                    <span>Created legal classification platforms (lawyers deserve AI too)</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="font-bold text-[#9723C9]">[03]</span>
+                    <span>Developed anonymization systems with 3B models on Ollama</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="font-bold text-[#9723C9]">[04]</span>
+                    <span>Deployed everything on Azure in Docker containers</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="font-bold text-[#9723C9]">[05]</span>
+                    <span>Built frontends in React and Angular with Tailwind CSS</span>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Tech Stack -->
-  <section class="relative py-8 sm:py-10 lg:py-12 z-10">
-    <!-- Gradient background accent -->
-    <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/30 via-transparent to-purple-50/30 pointer-events-none"></div>
+  <section class="relative py-12 sm:py-16 lg:py-20 border-b-4 border-black">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-5xl">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-12 sm:w-16 h-1 bg-[#F4D738]"></div>
+          <span class="font-mono text-xs sm:text-sm uppercase tracking-widest font-bold">Stack</span>
+        </div>
 
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-900 mb-6 sm:mb-8">
-          Tech stack: My arsenal
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight mb-10 sm:mb-12">
+          Tech Stack: My Arsenal
         </h2>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 lg:gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-0 border-4 border-black">
           <!-- Backend -->
-          <div class="group relative bg-white/80 backdrop-blur-sm p-5 sm:p-6 rounded-xl shadow-sm border-2 border-blue-200/50 hover:shadow-xl hover:border-indigo-300 transition-all duration-300 overflow-hidden">
-            <!-- Gradient background -->
-            <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 opacity-50 group-hover:opacity-70 transition-opacity"></div>
-
-            <!-- Gradient accent line -->
-            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-indigo-500"></div>
-
-            <div class="relative">
-              <h3 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">
-                <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Backend</span>
-              </h3>
-              <p class="text-sm sm:text-base text-gray-700">Python, FastAPI, Flask, LlamaIndex, BAML</p>
-            </div>
+          <div class="p-6 sm:p-8 border-b-4 sm:border-r-4 border-black group hover:bg-[#9723C9] hover:text-white transition-colors duration-150">
+            <span class="font-mono text-xs uppercase tracking-widest text-[#9723C9] group-hover:text-[#F4D738] mb-2 block font-bold">01</span>
+            <h3 class="text-lg sm:text-xl font-black uppercase tracking-tight mb-3">Backend</h3>
+            <p class="font-mono text-sm sm:text-base">Python, FastAPI, Flask, LlamaIndex, BAML</p>
           </div>
 
           <!-- Frontend -->
-          <div class="group relative bg-white/80 backdrop-blur-sm p-5 sm:p-6 rounded-xl shadow-sm border-2 border-purple-200/50 hover:shadow-xl hover:border-pink-300 transition-all duration-300 overflow-hidden">
-            <!-- Gradient background -->
-            <div class="absolute inset-0 bg-gradient-to-br from-purple-50 to-pink-50 opacity-50 group-hover:opacity-70 transition-opacity"></div>
-
-            <!-- Gradient accent line -->
-            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500"></div>
-
-            <div class="relative">
-              <h3 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">
-                <span class="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Frontend</span>
-              </h3>
-              <p class="text-sm sm:text-base text-gray-700">Angular, React, Tailwind CSS (responsive and beautiful, always)</p>
-            </div>
+          <div class="p-6 sm:p-8 border-b-4 border-black group hover:bg-[#FF6B6B] hover:text-white transition-colors duration-150">
+            <span class="font-mono text-xs uppercase tracking-widest text-[#FF6B6B] group-hover:text-[#F4D738] mb-2 block font-bold">02</span>
+            <h3 class="text-lg sm:text-xl font-black uppercase tracking-tight mb-3">Frontend</h3>
+            <p class="font-mono text-sm sm:text-base">Angular, React, Tailwind CSS</p>
           </div>
 
           <!-- AI/ML -->
-          <div class="group relative bg-white/80 backdrop-blur-sm p-5 sm:p-6 rounded-xl shadow-sm border-2 border-green-200/50 hover:shadow-xl hover:border-teal-300 transition-all duration-300 overflow-hidden">
-            <!-- Gradient background -->
-            <div class="absolute inset-0 bg-gradient-to-br from-green-50 to-teal-50 opacity-50 group-hover:opacity-70 transition-opacity"></div>
-
-            <!-- Gradient accent line -->
-            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-teal-500"></div>
-
-            <div class="relative">
-              <h3 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">
-                <span class="bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent">AI/ML</span>
-              </h3>
-              <p class="text-sm sm:text-base text-gray-700">RAG Systems, NLP, LLM, PyTorch</p>
-            </div>
+          <div class="p-6 sm:p-8 border-b-4 sm:border-b-0 sm:border-r-4 border-black group hover:bg-[#7FBC8C] hover:text-black transition-colors duration-150">
+            <span class="font-mono text-xs uppercase tracking-widest text-[#7FBC8C] group-hover:text-black mb-2 block font-bold">03</span>
+            <h3 class="text-lg sm:text-xl font-black uppercase tracking-tight mb-3">AI/ML</h3>
+            <p class="font-mono text-sm sm:text-base">RAG Systems, NLP, LLM, PyTorch</p>
           </div>
 
           <!-- DevOps -->
-          <div class="group relative bg-white/80 backdrop-blur-sm p-5 sm:p-6 rounded-xl shadow-sm border-2 border-orange-200/50 hover:shadow-xl hover:border-amber-300 transition-all duration-300 overflow-hidden">
-            <!-- Gradient background -->
-            <div class="absolute inset-0 bg-gradient-to-br from-orange-50 to-amber-50 opacity-50 group-hover:opacity-70 transition-opacity"></div>
-
-            <!-- Gradient accent line -->
-            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-amber-500"></div>
-
-            <div class="relative">
-              <h3 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">
-                <span class="bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">DevOps</span>
-              </h3>
-              <p class="text-sm sm:text-base text-gray-700">Docker, Azure, CI/CD</p>
-            </div>
+          <div class="p-6 sm:p-8 group hover:bg-[#F4D738] hover:text-black transition-colors duration-150">
+            <span class="font-mono text-xs uppercase tracking-widest text-[#F4D738] group-hover:text-[#9723C9] mb-2 block font-bold">04</span>
+            <h3 class="text-lg sm:text-xl font-black uppercase tracking-tight mb-3">DevOps</h3>
+            <p class="font-mono text-sm sm:text-base">Docker, Azure, CI/CD</p>
           </div>
+        </div>
 
-          <!-- Database -->
-          <div class="group relative bg-white/80 backdrop-blur-sm p-5 sm:p-6 rounded-xl shadow-sm border-2 border-indigo-200/50 hover:shadow-xl hover:border-purple-300 transition-all duration-300 overflow-hidden sm:col-span-2">
-            <!-- Gradient background -->
-            <div class="absolute inset-0 bg-gradient-to-br from-indigo-50 to-purple-50 opacity-50 group-hover:opacity-70 transition-opacity"></div>
-
-            <!-- Gradient accent line -->
-            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 to-purple-500"></div>
-
-            <div class="relative">
-              <h3 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">
-                <span class="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Database</span>
-              </h3>
-              <p class="text-sm sm:text-base text-gray-700">If it exists, I've probably queried it</p>
-            </div>
-          </div>
+        <!-- Database - Full width -->
+        <div class="border-4 border-t-0 border-black p-6 sm:p-8 bg-[#9723C9] text-white">
+          <span class="font-mono text-xs uppercase tracking-widest text-[#F4D738] mb-2 block font-bold">05</span>
+          <h3 class="text-lg sm:text-xl font-black uppercase tracking-tight mb-3">Database</h3>
+          <p class="font-mono text-sm sm:text-base">If it exists, I've probably queried it</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- The Future -->
-  <section class="relative py-8 sm:py-10 lg:py-12 bg-white z-10">
-    <!-- Gradient overlay -->
-    <div class="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-purple-50/10 to-transparent pointer-events-none"></div>
+  <section class="relative py-12 sm:py-16 lg:py-20">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-12 sm:w-16 h-1 bg-[#FF6B6B]"></div>
+          <span class="font-mono text-xs sm:text-sm uppercase tracking-widest text-[#FF6B6B] font-bold">Future</span>
+        </div>
 
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-900 mb-4 sm:mb-6">
-          The future?
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight mb-6">
+          The Future?
         </h2>
-        <p class="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-6">
-          My goal is simple: become the best technician on the market. And yes, get rich too - at least enough to buy that Tesla I never designed.
+
+        <p class="font-mono text-base sm:text-lg text-black leading-relaxed mb-10 text-justify">
+          My goal is simple: become the best technician on the market. And yes, get rich too - at least enough to buy that <span class="bg-[#F4D738] px-1 font-bold">Tesla</span> I never designed.
         </p>
 
         <!-- P.S. Section -->
-        <div class="group relative mt-6 sm:mt-8 p-5 sm:p-6 lg:p-8 bg-gradient-to-br from-blue-50 via-indigo-50/50 to-purple-50/30 rounded-xl border-2 border-blue-200/50 hover:border-purple-300 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
-          <!-- Corner gradient glow -->
-          <div class="absolute bottom-0 right-0 w-40 h-40 bg-gradient-to-tl from-purple-300/20 via-blue-200/10 to-transparent rounded-full blur-2xl group-hover:from-purple-400/30 group-hover:via-blue-300/20 transition-all"></div>
+        <div class="border-4 border-black bg-[#9723C9] text-white p-6 sm:p-8 lg:p-10">
+          <p class="font-mono text-base sm:text-lg leading-relaxed text-justify">
+            <span class="font-bold text-[#F4D738]">[P.S.]</span> If you're looking for someone who transforms ambitious ideas into production-ready code, manages teams without losing their sanity, and does all this while telling terrible jokes about Python... here I am!
+          </p>
 
-          <!-- Animated gradient accent -->
-          <div class="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-purple-500/0 to-pink-500/0 opacity-0 group-hover:opacity-10 transition-opacity duration-300 blur-xl"></div>
-
-          <div class="relative">
-            <p class="text-base sm:text-lg text-gray-700 leading-relaxed">
-              <span class="font-semibold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">P.S.:</span> If you're looking for someone who transforms ambitious ideas into production-ready code, manages teams without losing their sanity, and does all this while telling terrible jokes about Python... here I am!
-            </p>
-          </div>
+          <!-- CTA -->
+          <a
+            href="/contact"
+            class="inline-flex items-center gap-3 mt-6 sm:mt-8 px-6 sm:px-8 py-3 sm:py-4 font-bold text-base sm:text-lg uppercase tracking-wider bg-[#F4D738] text-black border-4 border-black hover:bg-black hover:text-[#F4D738] transition-colors duration-150"
+          >
+            <span>Get in Touch</span>
+            <span>&rarr;</span>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Bottom spacing -->
-  <div class="py-6 sm:py-8"></div>
+  <div class="py-8 sm:py-12"></div>
 </main>

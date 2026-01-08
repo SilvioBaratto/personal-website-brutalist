@@ -1,94 +1,88 @@
-<header class="bg-white/98 shadow-sm w-full" style="-webkit-transform: translateZ(0); transform: translateZ(0);">
-  <!-- Gradient Background Overlay -->
-  <div class="absolute inset-0 bg-gradient-to-r from-blue-50/30 via-purple-50/20 to-pink-50/10 pointer-events-none"></div>
-
-  <!-- Gradient Border Bottom -->
-  <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-200/60 via-indigo-300/50 via-purple-200/60 to-transparent pointer-events-none"></div>
-
-  <nav class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-    <div class="flex items-center justify-between h-16 sm:h-20 relative">
-      <!-- Logo with Gradient -->
+<header class="fixed top-0 left-0 right-0 bg-white border-b-4 border-black z-50">
+  <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 sm:h-20">
+      <!-- Logo - Brutalist style with color -->
       <a
         href="/"
-        class="group text-xl sm:text-2xl font-bold transition-all duration-300"
+        class="group font-black text-xl sm:text-2xl uppercase tracking-tight"
         aria-label="Silvio Baratto - Home"
       >
-        <span class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent group-hover:from-blue-500 group-hover:via-indigo-500 group-hover:to-purple-500 transition-all duration-300">Silvio</span><span class="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent group-hover:from-indigo-500 group-hover:to-purple-500 transition-all duration-300">Baratto</span>
+        <span class="bg-transparent group-hover:bg-[#F4D738] px-1 transition-all duration-150">Silvio</span><span class="text-[#9723C9]">Baratto</span>
       </a>
 
       <!-- Desktop Navigation -->
-      <div class="hidden lg:flex items-center gap-2 xl:gap-3">
+      <div class="hidden lg:flex items-center gap-1 xl:gap-2">
         <a
           routerLink="/about"
-          class="group relative px-3 xl:px-4 py-2 text-sm xl:text-base font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-blue-600 overflow-hidden"
+          class="px-3 xl:px-4 py-2 font-mono text-sm uppercase tracking-wider hover:bg-[#9723C9] hover:text-white transition-colors duration-150"
         >
-          <span class="relative z-10">About</span>
-          <div class="absolute inset-0 bg-gradient-to-r from-blue-50/60 via-indigo-50/50 to-purple-50/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+          About
         </a>
         <a
           routerLink="/side-projects"
-          class="group relative px-3 xl:px-4 py-2 text-sm xl:text-base font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-blue-600 overflow-hidden"
+          class="px-3 xl:px-4 py-2 font-mono text-sm uppercase tracking-wider hover:bg-[#FF6B6B] hover:text-white transition-colors duration-150"
         >
-          <span class="relative z-10">Side Projects</span>
-          <div class="absolute inset-0 bg-gradient-to-r from-blue-50/60 via-indigo-50/50 to-purple-50/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+          Projects
         </a>
         <a
           routerLink="/chatbot"
-          class="group relative px-3 xl:px-4 py-2 text-sm xl:text-base font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-blue-600 whitespace-nowrap overflow-hidden"
+          class="px-3 xl:px-4 py-2 font-mono text-sm uppercase tracking-wider hover:bg-[#7FBC8C] transition-colors duration-150 whitespace-nowrap"
         >
-          <span class="relative z-10">Chat with Assistant</span>
-          <div class="absolute inset-0 bg-gradient-to-r from-blue-50/60 via-indigo-50/50 to-purple-50/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+          AI Chat
         </a>
         <a
           routerLink="/curriculum"
-          class="group relative px-3 xl:px-4 py-2 text-sm xl:text-base font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-blue-600 overflow-hidden"
+          class="px-3 xl:px-4 py-2 font-mono text-sm uppercase tracking-wider hover:bg-[#F4D738] transition-colors duration-150"
         >
-          <span class="relative z-10">Curriculum</span>
-          <div class="absolute inset-0 bg-gradient-to-r from-blue-50/60 via-indigo-50/50 to-purple-50/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+          CV
         </a>
+
+        <!-- Divider -->
+        <div class="w-px h-6 bg-[#9723C9]/30 mx-2"></div>
+
+        <!-- Social Icons -->
         <a
           href="https://github.com/SilvioBaratto"
           target="_blank"
           rel="noopener noreferrer"
-          class="group relative px-3 xl:px-4 py-2 text-gray-700 rounded-lg transition-all duration-300 hover:text-blue-600 overflow-hidden flex items-center gap-2"
+          class="p-2 hover:bg-[#9723C9] hover:text-white transition-colors duration-150"
           aria-label="GitHub Profile"
         >
-          <svg class="w-5 h-5 relative z-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
           </svg>
-          <div class="absolute inset-0 bg-gradient-to-r from-blue-50/60 via-indigo-50/50 to-purple-50/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
         </a>
         <a
           href="https://www.tiktok.com/@neuroespresso"
           target="_blank"
           rel="noopener noreferrer"
-          class="group relative px-3 xl:px-4 py-2 text-gray-700 rounded-lg transition-all duration-300 hover:text-blue-600 overflow-hidden flex items-center gap-2"
+          class="p-2 hover:bg-[#FF6B6B] hover:text-white transition-colors duration-150"
           aria-label="TikTok Profile"
         >
-          <svg class="w-5 h-5 relative z-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
           </svg>
-          <div class="absolute inset-0 bg-gradient-to-r from-blue-50/60 via-indigo-50/50 to-purple-50/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
         </a>
+
+        <!-- Contact CTA - Purple -->
         <a
           routerLink="/contact"
-          class="ml-2 px-4 xl:px-5 py-2.5 text-sm xl:text-base font-semibold bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 text-white rounded-lg transition-all duration-300 hover:from-blue-500 hover:via-indigo-500 hover:to-purple-500 hover:shadow-lg hover:shadow-purple-500/30 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 whitespace-nowrap shadow-md"
+          class="ml-2 px-4 xl:px-5 py-2 font-bold text-sm uppercase tracking-wider bg-[#9723C9] text-white border-2 border-black hover:bg-[#F4D738] hover:text-black transition-colors duration-150"
         >
-          Contact Me
+          Contact
         </a>
       </div>
 
-      <!-- Mobile Menu Button -->
+      <!-- Mobile Menu Button - Purple hover -->
       <button
         (click)="toggleMobileMenu()"
-        class="lg:hidden flex items-center justify-center w-12 h-12 p-2 focus:outline-none focus:ring-2 focus:ring-gray-400 relative hover:bg-gray-100 transition-colors rounded-lg"
+        class="lg:hidden flex items-center justify-center w-12 h-12 border-2 border-black hover:bg-[#9723C9] hover:text-white transition-colors duration-150"
         [attr.aria-label]="mobileMenuOpen() ? 'Close navigation menu' : 'Open navigation menu'"
         [attr.aria-expanded]="mobileMenuOpen()"
-        style="z-index: 10000;"
         type="button"
       >
         <svg
-          class="w-6 h-6 pointer-events-none text-gray-900"
+          class="w-6 h-6 pointer-events-none"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -96,15 +90,15 @@
         >
           @if (mobileMenuOpen()) {
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              stroke-linecap="square"
+              stroke-linejoin="miter"
               stroke-width="2"
               d="M6 18L18 6M6 6l12 12"
             />
           } @else {
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              stroke-linecap="square"
+              stroke-linejoin="miter"
               stroke-width="2"
               d="M4 6h16M4 12h16M4 18h16"
             />
@@ -115,88 +109,78 @@
 
     <!-- Mobile Menu -->
     @if (mobileMenuOpen()) {
-      <div class="lg:hidden py-4 relative animate-fade-in overflow-hidden">
-        <!-- Gradient Border Top -->
-        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-200/60 via-indigo-300/50 via-purple-200/60 to-transparent"></div>
-
-        <!-- Subtle Gradient Background -->
-        <div class="absolute inset-0 bg-gradient-to-b from-blue-50/20 via-purple-50/10 to-transparent pointer-events-none"></div>
-
-        <div class="flex flex-col gap-2 relative">
-          <!-- Navigation Sections with Gradient Hover Effects -->
+      <div class="lg:hidden border-t-4 border-black">
+        <div class="flex flex-col">
           <a
             routerLink="/about"
             (click)="closeMobileMenu()"
-            class="group relative min-h-11 px-4 py-3 text-base font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-blue-600 flex items-center gap-3 overflow-hidden"
+            class="min-h-12 px-4 py-4 font-mono text-base uppercase tracking-wider border-b-2 border-black/20 hover:bg-[#9723C9] hover:text-white transition-colors duration-150"
           >
-            <span class="relative z-10">About</span>
-            <div class="absolute inset-0 bg-gradient-to-r from-blue-50/60 via-indigo-50/50 to-purple-50/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+            About
           </a>
 
           <a
             routerLink="/side-projects"
             (click)="closeMobileMenu()"
-            class="group relative min-h-11 px-4 py-3 text-base font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-blue-600 flex items-center gap-3 overflow-hidden"
+            class="min-h-12 px-4 py-4 font-mono text-base uppercase tracking-wider border-b-2 border-black/20 hover:bg-[#FF6B6B] hover:text-white transition-colors duration-150"
           >
-            <span class="relative z-10">Side Projects</span>
-            <div class="absolute inset-0 bg-gradient-to-r from-blue-50/60 via-indigo-50/50 to-purple-50/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+            Side Projects
           </a>
 
           <a
             routerLink="/chatbot"
             (click)="closeMobileMenu()"
-            class="group relative min-h-11 px-4 py-3 text-base font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-blue-600 flex items-center gap-3 overflow-hidden"
+            class="min-h-12 px-4 py-4 font-mono text-base uppercase tracking-wider border-b-2 border-black/20 hover:bg-[#7FBC8C] transition-colors duration-150"
           >
-            <span class="relative z-10">Chat with Assistant</span>
-            <div class="absolute inset-0 bg-gradient-to-r from-blue-50/60 via-indigo-50/50 to-purple-50/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+            Chat with AI
           </a>
 
           <a
             routerLink="/curriculum"
             (click)="closeMobileMenu()"
-            class="group relative min-h-11 px-4 py-3 text-base font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-blue-600 flex items-center gap-3 overflow-hidden"
+            class="min-h-12 px-4 py-4 font-mono text-base uppercase tracking-wider border-b-2 border-black/20 hover:bg-[#F4D738] transition-colors duration-150"
           >
-            <span class="relative z-10">Curriculum</span>
-            <div class="absolute inset-0 bg-gradient-to-r from-blue-50/60 via-indigo-50/50 to-purple-50/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+            Curriculum
           </a>
 
-          <a
-            href="https://github.com/SilvioBaratto"
-            target="_blank"
-            rel="noopener noreferrer"
-            (click)="closeMobileMenu()"
-            class="group relative min-h-11 px-4 py-3 text-base font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-blue-600 flex items-center gap-3 overflow-hidden"
-            aria-label="GitHub Profile"
-          >
-            <svg class="w-5 h-5 relative z-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
-            </svg>
-            <span class="relative z-10">GitHub</span>
-            <div class="absolute inset-0 bg-gradient-to-r from-blue-50/60 via-indigo-50/50 to-purple-50/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
-          </a>
+          <!-- Social Links Row -->
+          <div class="flex border-b-2 border-black/20">
+            <a
+              href="https://github.com/SilvioBaratto"
+              target="_blank"
+              rel="noopener noreferrer"
+              (click)="closeMobileMenu()"
+              class="flex-1 min-h-12 px-4 py-4 font-mono text-base uppercase tracking-wider hover:bg-[#9723C9] hover:text-white transition-colors duration-150 flex items-center gap-3 border-r-2 border-black/20"
+              aria-label="GitHub Profile"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+              </svg>
+              <span>GitHub</span>
+            </a>
 
-          <a
-            href="https://www.tiktok.com/@neuroespresso"
-            target="_blank"
-            rel="noopener noreferrer"
-            (click)="closeMobileMenu()"
-            class="group relative min-h-11 px-4 py-3 text-base font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-blue-600 flex items-center gap-3 overflow-hidden"
-            aria-label="TikTok Profile"
-          >
-            <svg class="w-5 h-5 relative z-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
-            </svg>
-            <span class="relative z-10">TikTok</span>
-            <div class="absolute inset-0 bg-gradient-to-r from-blue-50/60 via-indigo-50/50 to-purple-50/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
-          </a>
+            <a
+              href="https://www.tiktok.com/@neuroespresso"
+              target="_blank"
+              rel="noopener noreferrer"
+              (click)="closeMobileMenu()"
+              class="flex-1 min-h-12 px-4 py-4 font-mono text-base uppercase tracking-wider hover:bg-[#FF6B6B] hover:text-white transition-colors duration-150 flex items-center gap-3"
+              aria-label="TikTok Profile"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
+              </svg>
+              <span>TikTok</span>
+            </a>
+          </div>
 
-          <!-- CTA Button with Gradient -->
+          <!-- Contact CTA - Purple -->
           <a
             routerLink="/contact"
             (click)="closeMobileMenu()"
-            class="min-h-11 px-4 py-3 mt-3 text-base font-semibold bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 text-white rounded-lg text-center transition-all duration-300 hover:from-blue-500 hover:via-indigo-500 hover:to-purple-500 hover:shadow-lg hover:shadow-purple-500/30 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 flex items-center justify-center gap-2 shadow-md"
+            class="min-h-12 px-4 py-4 mb-4 font-bold text-base uppercase tracking-wider bg-[#9723C9] text-white text-center hover:bg-[#F4D738] hover:text-black border-4 border-black transition-colors duration-150"
           >
-            <span>Contact Me</span>
+            Contact Me
           </a>
         </div>
       </div>

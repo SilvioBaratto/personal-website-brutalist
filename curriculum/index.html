@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silvio Baratto Roldan - Full-Stack AI Developer</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'mono': ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        'cv-purple': '#9723C9',
+                        'cv-yellow': '#F4D738',
+                        'cv-red': '#FF6B6B',
+                        'cv-green': '#7FBC8C',
+                        'cv-black': '#111111',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Print-specific styles */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            .print-break {
+                page-break-inside: avoid;
+            }
+
+            @page {
+                size: A4;
+                margin: 0;
+            }
+        }
+
+        /* Smooth typography */
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+</head>
+<body class="bg-white text-cv-black">
+    <!-- Print Button (hidden in print) -->
+    <div class="no-print fixed top-4 right-4 z-50">
+        <button onclick="window.print()" class="bg-cv-purple hover:bg-cv-yellow hover:text-cv-black text-white px-6 py-3 border-4 border-cv-black font-mono text-sm uppercase tracking-wider font-bold transition-colors">
+            Print / Save as PDF
+        </button>
+    </div>
+
+    <!-- Main Container -->
+    <div class="min-h-screen bg-white">
+        <!-- A4 Page Container -->
+        <div class="max-w-[210mm] mx-auto bg-white print:max-w-full">
+            <!-- Content with padding -->
+            <div class="p-8 print:p-8">
+
+                <!-- Header Section -->
+                <header class="mb-6 print-break border-4 border-cv-black p-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h1 class="text-2xl font-black uppercase tracking-tight leading-none">
+                                <span class="bg-cv-purple text-white px-1">Silvio</span> Baratto Roldan
+                            </h1>
+                            <p class="font-mono text-sm font-bold uppercase tracking-widest mt-2 text-cv-purple">Full-Stack AI Developer</p>
+                        </div>
+                        <div class="text-right font-mono text-xs leading-relaxed">
+                            <a href="mailto:silvio.baratto22@gmail.com" class="block hover:bg-cv-purple hover:text-white px-1"><span class="text-cv-purple font-bold">[Email]</span> silvio.baratto22@gmail.com</a>
+                            <a href="https://www.linkedin.com/in/silvioangelobarattoroldan" target="_blank" class="block hover:bg-cv-purple hover:text-white px-1"><span class="text-cv-purple font-bold">[LinkedIn]</span> Profile</a>
+                            <a href="https://silviobaratto.com" target="_blank" class="block hover:bg-cv-purple hover:text-white px-1"><span class="text-cv-purple font-bold">[Web]</span> silviobaratto.com</a>
+                        </div>
+                    </div>
+
+                    <!-- Languages -->
+                    <div class="flex gap-2 mt-3">
+                        <span class="font-mono text-[10px] uppercase tracking-wider border-2 border-cv-black bg-cv-green text-cv-black px-2 py-1 font-bold">Italian [Native]</span>
+                        <span class="font-mono text-[10px] uppercase tracking-wider border-2 border-cv-black bg-cv-purple text-white px-2 py-1 font-bold">English [Professional]</span>
+                        <span class="font-mono text-[10px] uppercase tracking-wider border-2 border-cv-black bg-cv-red text-cv-black px-2 py-1 font-bold">Spanish [Native]</span>
+                    </div>
+                </header>
+
+                <!-- Professional Summary -->
+                <section class="mb-5 print-break">
+                    <h2 class="font-mono text-xs font-bold uppercase tracking-widest mb-2 flex items-center gap-3 text-cv-black">
+                        <span class="w-8 h-1 bg-cv-purple"></span>
+                        Summary
+                    </h2>
+                    <p class="text-xs leading-relaxed border-l-4 border-cv-purple pl-3">
+                        Full-Stack AI Developer with expertise in RAG architectures, NLP applications, and production deployment on Azure. Experienced in building scalable applications
+                        with modern frontend frameworks and Python backends.
+                    </p>
+                </section>
+
+                <!-- Technical Skills -->
+                <section class="mb-5 print-break">
+                    <h2 class="font-mono text-xs font-bold uppercase tracking-widest mb-2 flex items-center gap-3 text-cv-black">
+                        <span class="w-8 h-1 bg-cv-yellow"></span>
+                        Technical Skills
+                    </h2>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="font-mono text-[10px] uppercase tracking-wider border-2 border-cv-black px-2 py-0.5 font-bold">Python</span>
+                        <span class="font-mono text-[10px] uppercase tracking-wider border-2 border-cv-black px-2 py-0.5 font-bold">React</span>
+                        <span class="font-mono text-[10px] uppercase tracking-wider border-2 border-cv-black px-2 py-0.5 font-bold">Angular</span>
+                        <span class="font-mono text-[10px] uppercase tracking-wider border-2 border-cv-black px-2 py-0.5 font-bold">FastAPI</span>
+                        <span class="font-mono text-[10px] uppercase tracking-wider border-2 border-cv-black px-2 py-0.5 font-bold">Flask</span>
+                        <span class="font-mono text-[10px] uppercase tracking-wider bg-cv-purple text-white border-2 border-cv-black px-2 py-0.5 font-bold">LlamaIndex</span>
+                        <span class="font-mono text-[10px] uppercase tracking-wider bg-cv-purple text-white border-2 border-cv-black px-2 py-0.5 font-bold">BAML</span>
+                        <span class="font-mono text-[10px] uppercase tracking-wider border-2 border-cv-black px-2 py-0.5 font-bold">Docker</span>
+                        <span class="font-mono text-[10px] uppercase tracking-wider border-2 border-cv-black px-2 py-0.5 font-bold">Azure</span>
+                        <span class="font-mono text-[10px] uppercase tracking-wider border-2 border-cv-black px-2 py-0.5 font-bold">Ollama</span>
+                        <span class="font-mono text-[10px] uppercase tracking-wider border-2 border-cv-black px-2 py-0.5 font-bold">Tailwind CSS</span>
+                        <span class="font-mono text-[10px] uppercase tracking-wider bg-cv-red text-cv-black border-2 border-cv-black px-2 py-0.5 font-bold">Machine Learning</span>
+                        <span class="font-mono text-[10px] uppercase tracking-wider bg-cv-red text-cv-black border-2 border-cv-black px-2 py-0.5 font-bold">NLP</span>
+                        <span class="font-mono text-[10px] uppercase tracking-wider bg-cv-red text-cv-black border-2 border-cv-black px-2 py-0.5 font-bold">RAG Systems</span>
+                    </div>
+                </section>
+
+                <!-- Professional Experience -->
+                <section class="mb-5">
+                    <h2 class="font-mono text-xs font-bold uppercase tracking-widest mb-3 flex items-center gap-3 text-cv-black">
+                        <span class="w-8 h-1 bg-cv-red"></span>
+                        Professional Experience
+                    </h2>
+
+                    <!-- EY Experience - Featured -->
+                    <div class="mb-4 print-break border-4 border-cv-black bg-cv-yellow p-3">
+                        <div class="flex justify-between items-start mb-1">
+                            <div>
+                                <span class="font-mono text-[9px] uppercase tracking-widest bg-cv-red text-cv-black border-2 border-cv-black px-1.5 py-0.5 font-bold">Current</span>
+                                <h3 class="text-sm font-black uppercase tracking-tight mt-1">Full-Stack AI Developer</h3>
+                                <p class="font-mono text-[10px] uppercase tracking-wider mt-0.5">EY · Full-time · Trieste, Italy · Hybrid</p>
+                            </div>
+                            <span class="font-mono text-[10px] font-bold whitespace-nowrap ml-3 text-cv-black">Nov 2024 - Present</span>
+                        </div>
+                        <ul class="text-xs leading-relaxed mt-2 space-y-1">
+                            <li class="flex items-start gap-2"><span class="font-bold text-cv-black">[•]</span> Developed and deployed AI meeting assistant with topic extraction, clustering, and smart intervention generation</li>
+                            <li class="flex items-start gap-2"><span class="font-bold text-cv-black">[•]</span> Built RAG system for private knowledge base using React, Flask, LlamaIndex, and MinerU</li>
+                            <li class="flex items-start gap-2"><span class="font-bold text-cv-black">[•]</span> Created legal document classification and summarization platform with Angular, FastAPI, and BAML</li>
+                            <li class="flex items-start gap-2"><span class="font-bold text-cv-black">[•]</span> Implemented dockerized anonymization system for Italian legal documents using lightweight 3B models (Ollama)</li>
+                            <li class="flex items-start gap-2"><span class="font-bold text-cv-black">[•]</span> Deployed all solutions on Azure App Service with full containerization</li>
+                        </ul>
+                    </div>
+
+                    <!-- ECB Experience -->
+                    <div class="mb-4 print-break border-l-4 border-cv-purple pl-3">
+                        <div class="flex justify-between items-start mb-1">
+                            <div>
+                                <h3 class="text-sm font-black uppercase tracking-tight">Data Scientist</h3>
+                                <p class="font-mono text-[10px] uppercase tracking-wider mt-0.5">European Central Bank · Internship · Frankfurt, Germany · Hybrid</p>
+                            </div>
+                            <span class="font-mono text-[10px] font-bold whitespace-nowrap ml-3 text-cv-black">Mar 2024 - Nov 2024</span>
+                        </div>
+                        <ul class="text-xs leading-relaxed mt-2 space-y-1">
+                            <li class="flex items-start gap-2"><span class="font-bold text-cv-black">[•]</span> Implemented LLM solutions for naming convention standardization in financial datasets</li>
+                            <li class="flex items-start gap-2"><span class="font-bold text-cv-black">[•]</span> Developed sentiment analysis tool for survey data processing and metadata management</li>
+                            <li class="flex items-start gap-2"><span class="font-bold text-cv-black">[•]</span> Created Python library for generating logical transformation rules for FinREP regulatory reporting</li>
+                        </ul>
+                    </div>
+
+                    <!-- Generali Investments -->
+                    <div class="mb-4 print-break border-l-4 border-cv-green pl-3">
+                        <div class="flex justify-between items-start mb-1">
+                            <div>
+                                <h3 class="text-sm font-black uppercase tracking-tight">Data Scientist</h3>
+                                <p class="font-mono text-[10px] uppercase tracking-wider mt-0.5">Generali Investments · Internship · Trieste, Italy · Hybrid</p>
+                            </div>
+                            <span class="font-mono text-[10px] font-bold whitespace-nowrap ml-3 text-cv-black">Nov 2023 - Feb 2024</span>
+                        </div>
+                        <ul class="text-xs leading-relaxed mt-2 space-y-1">
+                            <li class="flex items-start gap-2"><span class="font-bold text-cv-black">[•]</span> Contributed to portfolio optimization web application using Python, Streamlit, and Flask</li>
+                        </ul>
+                    </div>
+
+                    <!-- EssilorLuxottica -->
+                    <div class="print-break border-l-4 border-cv-red pl-3">
+                        <div class="flex justify-between items-start mb-1">
+                            <div>
+                                <h3 class="text-sm font-black uppercase tracking-tight">Logistics Automation Specialist</h3>
+                                <p class="font-mono text-[10px] uppercase tracking-wider mt-0.5">EssilorLuxottica · Internship · Agordo, Italy · On-site</p>
+                            </div>
+                            <span class="font-mono text-[10px] font-bold whitespace-nowrap ml-3 text-cv-black">Mar 2021 - Sep 2021</span>
+                        </div>
+                        <ul class="text-xs leading-relaxed mt-2 space-y-1">
+                            <li class="flex items-start gap-2"><span class="font-bold text-cv-black">[•]</span> Managed implementation of AGV logistics projects at Agordo and Sedico sites with daily KPI analysis</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Education -->
+                <section>
+                    <h2 class="font-mono text-xs font-bold uppercase tracking-widest mb-3 flex items-center gap-3 text-cv-black">
+                        <span class="w-8 h-1 bg-cv-green"></span>
+                        Education
+                    </h2>
+
+                    <div class="space-y-3">
+                        <div class="print-break border-l-4 border-cv-purple pl-3">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-sm font-black uppercase tracking-tight">Master of Science - Data Science & Scientific Computing</h3>
+                                    <p class="font-mono text-[10px] uppercase tracking-wider mt-0.5 text-black/70">University of Trieste · AI and Machine Learning</p>
+                                </div>
+                                <span class="font-mono text-[10px] font-bold whitespace-nowrap ml-3 text-cv-black">2021 - 2023</span>
+                            </div>
+                        </div>
+
+                        <div class="print-break border-l-4 border-cv-red pl-3">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-sm font-black uppercase tracking-tight">Erasmus+ Scholarship - Mathematics & Computer Science</h3>
+                                    <p class="font-mono text-[10px] uppercase tracking-wider mt-0.5 text-black/70">Autonomous University of Madrid</p>
+                                </div>
+                                <span class="font-mono text-[10px] font-bold whitespace-nowrap ml-3 text-cv-black">2022 - 2023</span>
+                            </div>
+                        </div>
+
+                        <div class="print-break border-l-4 border-cv-green pl-3">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-sm font-black uppercase tracking-tight">Bachelor of Engineering - Electronic & Computer Engineering</h3>
+                                    <p class="font-mono text-[10px] uppercase tracking-wider mt-0.5 text-black/70">University of Trieste</p>
+                                </div>
+                                <span class="font-mono text-[10px] font-bold whitespace-nowrap ml-3 text-cv-black">2016 - 2020</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

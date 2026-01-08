@@ -1,24 +1,61 @@
 @import "tailwindcss";
 
 @theme {
-  /* Custom brand colors */
-  --color-brand-900: oklch(0.25 0.08 265);
-  --color-brand-800: oklch(0.30 0.08 265);
-  --color-brand-700: oklch(0.35 0.08 265);
+  /* Neo-Brutalist Color Palette */
+  /* Primary: High contrast black */
+  --color-brutal-black: #111111;
+  --color-brutal-white: #FFFFFF;
 
-  /* Enhanced blue accent colors for better contrast */
-  --color-blue-600: oklch(0.55 0.17 250);
-  --color-blue-700: oklch(0.48 0.17 250);
+  /* Row 1: Pastels (Low Saturation) */
+  --color-brutal-mint: #DAF5F0;
+  --color-brutal-sage: #B5D2AD;
+  --color-brutal-cream: #FDFD96;
+  --color-brutal-peach: #F8D6B3;
+  --color-brutal-blush: #FCDFFF;
+  --color-brutal-lavender: #E3DFF2;
+
+  /* Row 2: Soft */
+  --color-brutal-turquoise: #A7DBD8;
+  --color-brutal-light-green: #BAFCA2;
+  --color-brutal-yellow: #FFDB58;
+  --color-brutal-salmon: #FFA07A;
+  --color-brutal-pink: #FFC0CB;
+  --color-brutal-violet: #C4A1FF;
+
+  /* Row 3: Medium */
+  --color-brutal-sky: #87CEEB;
+  --color-brutal-lime: #90EE90;
+  --color-brutal-gold: #F4D738;
+  --color-brutal-coral: #FF7A5C;
+  --color-brutal-hot-pink: #FFB2EF;
+  --color-brutal-purple: #A388EE;
+
+  /* Row 4: Vibrant (High Saturation) */
+  --color-brutal-cyan: #69D2E7;
+  --color-brutal-green: #7FBC8C;
+  --color-brutal-amber: #E3A018;
+  --color-brutal-red: #FF6B6B;
+  --color-brutal-magenta: #FF69B4;
+  --color-brutal-deep-purple: #9723C9;
+
+  /* Legacy brand colors (for compatibility) */
+  --color-brand-900: #111111;
+  --color-brand-800: #222222;
+  --color-brand-700: #333333;
+
+  /* Override blue accent colors with brutalist cyan */
+  --color-blue-600: #69D2E7;
+  --color-blue-700: #5BC0D5;
 
   /* Animation durations */
-  --animate-fade-in: fade-in 0.2s ease-in-out;
+  --animate-fade-in: fade-in 0.15s ease-out;
 }
 
-/* Custom animations */
+/* Custom animations - Brutalist: snappy, no fluff */
 @keyframes fade-in {
   from {
     opacity: 0;
-    transform: translateY(-8px);
+    transform: translateY(-4px);
   }
   to {
     opacity: 1;
@@ -26,76 +63,61 @@
   }
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0) translateX(0);
-  }
-  25% {
-    transform: translateY(-20px) translateX(10px);
-  }
-  50% {
-    transform: translateY(-10px) translateX(-10px);
-  }
-  75% {
-    transform: translateY(-30px) translateX(5px);
-  }
-}
-
-@keyframes gradient-shift {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
+/* Brutalist grid background pattern */
+.brutal-grid {
+  background-image:
+    linear-gradient(#111111 1px, transparent 1px),
+    linear-gradient(90deg, #111111 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
 /* Smooth scrolling for the entire page */
 html {
   scroll-behavior: smooth;
-  /* Fix for mobile Safari fixed positioning */
   position: relative;
   overflow-x: hidden;
 }
 
-/* Ensure consistent font rendering */
+/* Brutalist base styles */
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Fix for mobile Safari fixed positioning */
   position: relative;
   overflow-x: hidden;
   min-height: 100vh;
+  background-color: #FFFFFF;
+  color: #111111;
 }
 
-/* Focus visible styles for better keyboard navigation */
+/* Brutalist focus styles - bold and visible */
 *:focus-visible {
-  outline: 2px solid theme('colors.blue.600');
+  outline: 4px solid #9723C9;
   outline-offset: 2px;
 }
 
-/* Custom scrollbar styles for webkit browsers */
+/* Brutalist scrollbar - chunky and bold */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: theme('colors.gray.100');
+  background: #FFFFFF;
+  border-left: 4px solid #111111;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: theme('colors.gray.400');
-  border-radius: 5px;
+  background: #111111;
+  border: none;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: theme('colors.gray.500');
+  background: #9723C9;
 }
 
-/* Ensure proper text selection color */
+/* Brutalist text selection - high contrast */
 ::selection {
-  background-color: theme('colors.blue.100');
-  color: theme('colors.brand.900');
+  background-color: #F4D738;
+  color: #111111;
 }
 
 /* Utility for text balance (better line breaks) */
@@ -103,20 +125,129 @@ body {
   text-wrap: balance;
 }
 
-/* Radial gradient utility */
-.bg-gradient-radial {
-  background-image: radial-gradient(var(--tw-gradient-stops));
+/* Brutalist utility classes */
+.brutal-border {
+  border: 4px solid #111111;
 }
 
-/* Gradient animation utilities */
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient-shift 3s ease infinite;
+.brutal-border-thick {
+  border: 6px solid #111111;
+}
+
+.brutal-shadow {
+  box-shadow: 8px 8px 0 #111111;
+}
+
+.brutal-shadow-sm {
+  box-shadow: 4px 4px 0 #111111;
+}
+
+.brutal-shadow-yellow {
+  box-shadow: 8px 8px 0 #F4D738;
+}
+
+.brutal-shadow-purple {
+  box-shadow: 8px 8px 0 #9723C9;
+}
+
+/* Brutalist hover effects */
+.brutal-hover {
+  transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
+}
+
+.brutal-hover:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0 #111111;
+}
+
+/* Brutalist button base */
+.brutal-btn {
+  border: 4px solid #111111;
+  background-color: #FFFFFF;
+  color: #111111;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.1s ease-out;
+}
+
+.brutal-btn:hover {
+  background-color: #111111;
+  color: #FFFFFF;
+}
+
+.brutal-btn-yellow {
+  background-color: #F4D738;
+}
+
+.brutal-btn-yellow:hover {
+  background-color: #111111;
+  color: #F4D738;
+}
+
+.brutal-btn-purple {
+  background-color: #9723C9;
+  color: #FFFFFF;
+}
+
+.brutal-btn-purple:hover {
+  background-color: #111111;
+  color: #9723C9;
+}
+
+/* Brutalist card */
+.brutal-card {
+  border: 4px solid #111111;
+  background-color: #FFFFFF;
+  transition: all 0.15s ease-out;
+}
+
+.brutal-card:hover {
+  background-color: #111111;
+  color: #FFFFFF;
+}
+
+/* Brutalist input */
+.brutal-input {
+  border: 4px solid #111111;
+  background-color: #FFFFFF;
+  outline: none;
+}
+
+.brutal-input:focus {
+  border-color: #9723C9;
+  box-shadow: 4px 4px 0 #9723C9;
+}
+
+/* Brutalist badge/tag */
+.brutal-badge {
+  border: 2px solid #111111;
+  background-color: #111111;
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.25rem 0.75rem;
+}
+
+.brutal-badge-yellow {
+  background-color: #F4D738;
+  color: #111111;
+}
+
+.brutal-badge-purple {
+  background-color: #9723C9;
+  color: #FFFFFF;
+}
+
+.brutal-badge-outline {
+  background-color: transparent;
+  color: #111111;
 }
 
 /* Mobile Safari fixed positioning fix */
 @supports (-webkit-touch-callout: none) {
-  /* iOS Safari specific */
   app-header {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;

@@ -64,3 +64,6 @@ video.gif
 video_compressed.mp4
 *.mov
 # Note: demo.gif is small enough (8.76 MB) to commit for README
+
+# Design references
+brutalism-cheatsheet.md
