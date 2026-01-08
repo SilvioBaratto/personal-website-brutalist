@@ -33,6 +33,7 @@
     "@angular/ssr": "^20.3.3",
     "@boundaryml/baml": "^0.213.0",
     "@tailwindcss/postcss": "^4.1.15",
+    "@vercel/analytics": "^1.6.1",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "postcss": "^8.5.6",
