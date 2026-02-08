@@ -67,11 +67,17 @@ export interface ConversationContext {
   
 }
 
+export interface Link {
+  url: string
+  label: string
+  
+}
+
 export interface StreamingChatResponse {
   answer: string
   category: QuestionCategory
   sources: string[]
-  urls: string[]
+  links: Link[]
   follow_up_suggestions?: string[] | null
   
 }

@@ -2,12 +2,17 @@ import { Injectable, signal, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
 
+interface ChatLink {
+  url: string;
+  label: string;
+}
+
 // Define types locally since we can't import from baml_client in browser
 interface StreamingChatResponse {
   answer: string;
   category: QuestionCategory;
   sources: string[];
-  urls: string[];
+  links: ChatLink[];
   follow_up_suggestions?: string[];
 }
 
@@ -279,7 +284,7 @@ export class ChatbotService {
         "Please try again in a moment, or feel free to contact Silvio directly at silvio.baratto22@gmail.com.",
       category: 'GENERAL',
       sources: [],
-      urls: ['mailto:silvio.baratto22@gmail.com'],
+      links: [{ url: 'mailto:silvio.baratto22@gmail.com', label: 'Send Email' }],
       follow_up_suggestions: [
         'What is Silvio currently working on at EY?',
         'What programming languages does Silvio know?',

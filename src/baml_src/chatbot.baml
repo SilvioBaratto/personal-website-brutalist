@@ -6,12 +6,18 @@ class ConversationContext {
   user_interest_area QuestionCategory?
 }
 
+// A labeled link returned in responses
+class Link {
+  url string
+  label string
+}
+
 // Streaming version for real-time responses
 class StreamingChatResponse {
   answer string @stream.not_null
   category QuestionCategory @stream.not_null
   sources string[]
-  urls string[]
+  links Link[]
   follow_up_suggestions string[]?
 }
 
@@ -197,10 +203,53 @@ function StreamChatWithSilvio(
        - Achieves 80% success rate with 10M timesteps
        - Tech Stack: PyTorch, Stable Baselines3, Docker, TensorBoard
 
-    9. Enterprise AI Projects:
-       - RAG systems for enterprise knowledge bases
-       - Legal tech AI platforms for document classification
-       - Privacy-first anonymization systems
+    9. ClipCraft: AI-powered content generation platform for social media
+       - GitHub: https://github.com/SilvioBaratto/clipcraft
+       - Generates TikTok scripts, carousel posts, and animated social media content
+       - Full-stack application with modular API and frontend
+       - Docker Compose deployment with GitHub Actions CI/CD
+       - Tech Stack: TypeScript, Angular, Docker
+
+    10. Tinder Matching Simulator: AI-powered dating simulation platform
+        - GitHub: https://github.com/SilvioBaratto/tinder-llm
+        - Generates realistic user profiles with diverse personalities and interests
+        - Simulates bilateral swipe decisions with compatibility scoring and detailed reasoning
+        - Produces natural chat conversations between matched profiles
+        - AI-powered analytics with PDF report generation (charts and insights)
+        - Multi-LLM support: OpenAI, Anthropic Claude, Google Gemini, local Ollama models via BAML
+        - Tech Stack: Angular 21, FastAPI, BAML, PostgreSQL, SQLAlchemy 2.0, Docker
+
+    11. Briscola RL Agent: Reinforcement learning for the Italian trick-taking card game Briscola
+        - GitHub: https://github.com/SilvioBaratto/briscola-1-vs-1
+        - Custom PPO implementation (built from scratch, no RL frameworks)
+        - Self-play training against LLM-powered opponent (Mistral 7B via Ollama)
+        - 328-dimensional observation vector with trick history encoding
+        - Action masking for legal move constraints, margin-based reward shaping (±1.0 to ±3.0)
+        - Full-stack web interface for human vs AI gameplay
+        - Tech Stack: PyTorch, FastAPI, Angular, Ollama, BAML, Docker
+
+    12. Cucu Reinforcement Learning: PPO agent for the Italian card game Cucu
+        - GitHub: https://github.com/SilvioBaratto/cucu-reinforcement-learning
+        - Incomplete information card game with strategic depth
+        - Curriculum learning from random opponents to threshold-based strategies
+        - Multi-agent self-play with variable table sizes (4-8 players)
+        - Monte Carlo simulation for baseline strategy discovery
+        - Game visualization with animated GIF/MP4 rendering
+        - Tech Stack: PyTorch, PettingZoo, Stable Baselines 3
+
+    13. LocalRAG: Privacy-focused local RAG system
+        - GitHub: https://github.com/SilvioBaratto/localrag
+        - 100% local processing, no external data transmission
+        - Supports PDF, Word, PowerPoint, Excel, Markdown, HTML files
+        - Semantic chunking (512 tokens, 15% overlap) respecting document structure
+        - Interactive CLI with model selection and dual modes (direct chat or document-augmented)
+        - Streaming pipeline for memory optimization
+        - Tech Stack: Ollama, Qdrant vector database, Python, Docker
+
+    14. Enterprise AI Projects:
+        - RAG systems for enterprise knowledge bases
+        - Legal tech AI platforms for document classification
+        - Privacy-first anonymization systems
 
     **Technical Stack:**
     - Frontend: Angular, React, Tailwind CSS (responsive and modern UI design)
@@ -228,21 +277,27 @@ function StreamChatWithSilvio(
     Provide accurate, conversational answers based ONLY on the information above.
     Be personable and reflect Silvio's personality.
 
-    In the 'urls' field, include relevant clickable links when applicable:
-    - Portfolio: https://silviobaratto.com
-    - GitHub stockpy: https://github.com/SilvioBaratto/stockpy
-    - GitHub diet_generator: https://github.com/SilvioBaratto/diet_generator
-    - GitHub text_to_image_mnist: https://github.com/SilvioBaratto/text_to_image_mnist
-    - GitHub text_to_pokemon: https://github.com/SilvioBaratto/text_to_pokemon
-    - GitHub markov_chain_text_prediction: https://github.com/SilvioBaratto/markov_chain_text_prediction
-    - GitHub formula_1_championship_prediction: https://github.com/SilvioBaratto/formula_1_championship_prediction
-    - GitHub mario-rl-ppo: https://github.com/SilvioBaratto/mario-rl-ppo
-    - DietologoAI Live Site: https://diet.silviobaratto.com
-    - LinkedIn: https://linkedin.com/in/silvioangelobarattoroldan
-    - TikTok: https://www.tiktok.com/@neuroespresso
-    - Instagram: https://www.instagram.com/neuroespresso
-    - Email: mailto:silvio.baratto22@gmail.com
-    Only include URLs that are directly relevant to the question being asked.
+    In the 'links' field, include relevant links when applicable. Each link must have a short human-friendly 'label' and the full 'url'. Use concise labels like "Portfolio", "LinkedIn", "Send Email", "stockpy on GitHub", etc.
+    Available links:
+    - label: "Portfolio", url: https://silviobaratto.com
+    - label: "stockpy on GitHub", url: https://github.com/SilvioBaratto/stockpy
+    - label: "Dietologo AI on GitHub", url: https://github.com/SilvioBaratto/diet_generator
+    - label: "MNIST Generator on GitHub", url: https://github.com/SilvioBaratto/text_to_image_mnist
+    - label: "Pokemon Generator on GitHub", url: https://github.com/SilvioBaratto/text_to_pokemon
+    - label: "Markov Chain on GitHub", url: https://github.com/SilvioBaratto/markov_chain_text_prediction
+    - label: "F1 Prediction on GitHub", url: https://github.com/SilvioBaratto/formula_1_championship_prediction
+    - label: "Mario RL on GitHub", url: https://github.com/SilvioBaratto/mario-rl-ppo
+    - label: "ClipCraft on GitHub", url: https://github.com/SilvioBaratto/clipcraft
+    - label: "Tinder LLM on GitHub", url: https://github.com/SilvioBaratto/tinder-llm
+    - label: "Briscola RL on GitHub", url: https://github.com/SilvioBaratto/briscola-1-vs-1
+    - label: "Cucu RL on GitHub", url: https://github.com/SilvioBaratto/cucu-reinforcement-learning
+    - label: "LocalRAG on GitHub", url: https://github.com/SilvioBaratto/localrag
+    - label: "Dietologo AI Live", url: https://diet.silviobaratto.com
+    - label: "LinkedIn", url: https://linkedin.com/in/silvioangelobarattoroldan
+    - label: "TikTok", url: https://www.tiktok.com/@neuroespresso
+    - label: "Instagram", url: https://www.instagram.com/neuroespresso
+    - label: "Send Email", url: mailto:silvio.baratto22@gmail.com
+    Only include links that are directly relevant to the question being asked.
 
     {{ ctx.output_format }}
   "#

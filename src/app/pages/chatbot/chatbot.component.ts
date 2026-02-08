@@ -10,8 +10,14 @@ interface Message {
   role: 'user' | 'assistant';
   timestamp: Date;
   category?: string;
-  urls?: string[];
+  links?: { url: string; label: string }[];
   followUpSuggestions?: string[];
+}
+
+interface ContentSegment {
+  type: 'paragraph' | 'heading' | 'bullet-list' | 'numbered-list';
+  content: string;
+  items?: string[];
 }
 
 @Component({
@@ -26,7 +32,7 @@ export class ChatbotComponent {
   messages = signal<Message[]>([
     {
       id: '1',
-      content: "Hi! I'm Silvio's AI assistant powered by BAML. I can help you learn more about Silvio's experience, projects, and expertise. What would you like to know?",
+      content: "Hi! I'm Silvio's AI assistant. I can help you learn more about Silvio's experience, projects, and expertise. What would you like to know?",
       role: 'assistant',
       timestamp: new Date(),
     },
@@ -81,7 +87,7 @@ export class ChatbotComponent {
             role: 'assistant',
             timestamp: new Date(),
             category: chunk.category,
-            urls: chunk.urls || [],
+            links: chunk.links || [],
             followUpSuggestions: chunk.follow_up_suggestions || [],
           };
           this.messages.update((msgs) => [...msgs, assistantMessage]);
@@ -95,7 +101,7 @@ export class ChatbotComponent {
                     ...msg,
                     content: chunk.answer || '',
                     category: chunk.category,
-                    urls: chunk.urls || [],
+                    links: chunk.links || [],
                     followUpSuggestions: chunk.follow_up_suggestions || [],
                   }
                 : msg
@@ -148,6 +154,101 @@ export class ChatbotComponent {
   selectFollowUp(suggestion: string) {
     this.userInput.set(suggestion);
     this.sendMessage();
+  }
+
+  private contentCache = new Map<string, ContentSegment[]>();
+
+  parseContent(content: string): ContentSegment[] {
+    const cached = this.contentCache.get(content);
+    if (cached) return cached;
+
+    const lines = content.split('\n');
+    const segments: ContentSegment[] = [];
+    let currentItems: string[] = [];
+    let currentType: 'bullet-list' | 'numbered-list' | null = null;
+    let paragraphBuffer: string[] = [];
+
+    const flushParagraph = () => {
+      if (paragraphBuffer.length > 0) {
+        segments.push({ type: 'paragraph', content: paragraphBuffer.join(' ') });
+        paragraphBuffer = [];
+      }
+    };
+
+    const flushList = () => {
+      if (currentItems.length > 0 && currentType) {
+        segments.push({ type: currentType, content: '', items: currentItems });
+        currentItems = [];
+        currentType = null;
+      }
+    };
+
+    for (const line of lines) {
+      const trimmed = line.trim();
+
+      if (!trimmed) {
+        flushParagraph();
+        flushList();
+        continue;
+      }
+
+      // Markdown-style heading
+      if (/^#{1,3}\s+/.test(trimmed)) {
+        flushParagraph();
+        flushList();
+        segments.push({ type: 'heading', content: trimmed.replace(/^#{1,3}\s+/, '') });
+        continue;
+      }
+
+      // Bullet list item
+      if (/^[-*•]\s+/.test(trimmed)) {
+        flushParagraph();
+        if (currentType && currentType !== 'bullet-list') flushList();
+        currentType = 'bullet-list';
+        currentItems.push(trimmed.replace(/^[-*•]\s+/, ''));
+        continue;
+      }
+
+      // Numbered list item
+      if (/^\d+[.)]\s+/.test(trimmed)) {
+        flushParagraph();
+        if (currentType && currentType !== 'numbered-list') flushList();
+        currentType = 'numbered-list';
+        currentItems.push(trimmed.replace(/^\d+[.)]\s+/, ''));
+        continue;
+      }
+
+      flushList();
+
+      // Bold heading: **text** or **text**:
+      if (/^\*\*.+\*\*:?$/.test(trimmed)) {
+        flushParagraph();
+        segments.push({
+          type: 'heading',
+          content: trimmed.replace(/^\*\*|\*\*:?$/g, '').replace(/:$/, ''),
+        });
+        continue;
+      }
+
+      // Short capitalized line ending with colon
+      if (/^[A-Z][^.!?]{0,55}:$/.test(trimmed)) {
+        flushParagraph();
+        segments.push({ type: 'heading', content: trimmed.replace(/:$/, '') });
+        continue;
+      }
+
+      paragraphBuffer.push(trimmed);
+    }
+
+    flushParagraph();
+    flushList();
+
+    this.contentCache.set(content, segments);
+    return segments;
+  }
+
+  formatInline(text: string): string {
+    return text.replace(/\*\*(.+?)\*\*/g, '<strong class="font-bold">$1</strong>');
   }
 
   // Optional: Reset conversation

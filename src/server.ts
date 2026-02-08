@@ -53,7 +53,7 @@ app.post('/api/chatbot/stream', async (req, res) => {
           answer: accumulatedText,
           category: response.category,
           sources: response.sources,
-          urls: response.urls,
+          links: response.links,
           follow_up_suggestions: response.follow_up_suggestions,
           isComplete: i === words.length - 1
         };

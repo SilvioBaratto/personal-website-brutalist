@@ -1,11 +1,11 @@
-<section class="min-h-[calc(100vh-4rem)] sm:min-h-[calc(100vh-5rem)] flex items-center py-12 sm:py-16 lg:py-20 border-b-4 border-black">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<section class="min-h-[calc(100vh-4rem)] sm:min-h-[calc(100vh-5rem)] flex items-center py-12 sm:py-16 lg:py-20 border-b-2 sm:border-b-4 border-black">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
     <div class="flex flex-col lg:flex-row items-center gap-8 sm:gap-12 lg:gap-16">
       <!-- Text Content -->
       <div class="flex-1 text-center lg:text-left order-2 lg:order-1 max-w-2xl lg:max-w-none">
         <!-- Brutalist label -->
         <div class="inline-block border-2 border-black bg-[#F4D738] px-3 py-1 mb-4 sm:mb-6">
-          <span class="font-mono text-xs sm:text-sm uppercase tracking-widest font-bold">Full-Stack AI Developer</span>
+          <span class="font-gooddog text-xs sm:text-sm uppercase tracking-widest">Full-Stack AI Developer</span>
         </div>
 
         <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-black mb-4 sm:mb-6 leading-[0.9] tracking-tight uppercase">
@@ -21,17 +21,15 @@
         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
           <a
             href="/about"
-            class="group min-h-12 px-6 sm:px-8 py-3 text-base sm:text-lg font-bold bg-[#9723C9] text-white uppercase tracking-wider border-4 border-black hover:bg-[#F4D738] hover:text-black transition-colors duration-150"
+            class="group min-h-12 px-6 sm:px-8 py-3 text-base sm:text-lg font-gooddog bg-[#9723C9] text-white uppercase tracking-wider border-2 sm:border-4 border-black hover:bg-[#F4D738] hover:text-black transition-colors duration-150"
           >
             About Me
-            <span class="inline-block ml-2 group-hover:translate-x-1 transition-transform">&rarr;</span>
           </a>
           <a
             href="/contact"
-            class="group min-h-12 px-6 sm:px-8 py-3 text-base sm:text-lg font-bold bg-white text-black uppercase tracking-wider border-4 border-black hover:bg-black hover:text-white transition-colors duration-150"
+            class="group min-h-12 px-6 sm:px-8 py-3 text-base sm:text-lg font-gooddog bg-white text-black uppercase tracking-wider border-2 sm:border-4 border-black hover:bg-black hover:text-white transition-colors duration-150"
           >
             Contact
-            <span class="inline-block ml-2 group-hover:translate-x-1 transition-transform">&rarr;</span>
           </a>
         </div>
       </div>
@@ -43,7 +41,7 @@
           <div class="absolute inset-0 bg-black translate-x-1 translate-y-1 sm:translate-x-2 sm:translate-y-2"></div>
 
           <!-- Main image container -->
-          <div class="relative w-full aspect-square border-4 border-black bg-white overflow-hidden">
+          <div class="relative w-full aspect-square border-2 sm:border-4 border-black bg-white overflow-hidden">
             <img
               ngSrc="/assets/profile.jpeg"
               alt="Silvio Angelo Baratto - Full-Stack AI Developer"
@@ -65,10 +63,10 @@
 
     <!-- Languages strip with colors -->
     <div class="mt-12 sm:mt-16 lg:mt-20 pt-8 border-t-2 border-black">
-      <div class="flex flex-wrap gap-4 sm:gap-6 justify-center lg:justify-start font-mono text-xs sm:text-sm uppercase tracking-wider font-bold">
-        <span class="border-2 border-black bg-[#7FBC8C] px-3 py-1">Italian [Native]</span>
-        <span class="border-2 border-black bg-[#9723C9] text-white px-3 py-1">English [Professional]</span>
-        <span class="border-2 border-black bg-[#FF6B6B] text-white px-3 py-1">Spanish [Native]</span>
+      <div class="grid grid-cols-3 gap-2 sm:flex sm:flex-wrap sm:gap-6 justify-center lg:justify-start font-gooddog text-xs sm:text-sm uppercase tracking-wider">
+        <span class="border-2 border-black bg-[#7FBC8C] px-3 py-1 text-center">Italian <span class="sm:hidden">(C2)</span><span class="hidden sm:inline">(Native)</span></span>
+        <span class="border-2 border-black bg-[#9723C9] text-white px-3 py-1 text-center">English <span class="sm:hidden">(C1)</span><span class="hidden sm:inline">(Professional)</span></span>
+        <span class="border-2 border-black bg-[#FF6B6B] text-white px-3 py-1 text-center">Spanish <span class="sm:hidden">(C2)</span><span class="hidden sm:inline">(Native)</span></span>
       </div>
     </div>
   </div>

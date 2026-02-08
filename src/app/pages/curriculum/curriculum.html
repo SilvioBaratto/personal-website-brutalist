@@ -2,360 +2,365 @@
   <!-- Brutalist grid background - Purple -->
   <div class="fixed inset-0 pointer-events-none opacity-[0.02]" style="background-image: linear-gradient(#9723C9 1px, transparent 1px), linear-gradient(90deg, #9723C9 1px, transparent 1px); background-size: 20px 20px;"></div>
 
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 max-w-5xl relative z-10">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 max-w-7xl relative z-10">
 
     <!-- Header Section -->
-    <header class="border-4 border-black p-6 sm:p-8 lg:p-10 mb-8">
-      <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
-        <div>
-          <div class="inline-block border-2 border-black bg-[#F4D738] px-3 py-1 mb-4">
-            <span class="font-mono text-xs sm:text-sm uppercase tracking-widest font-bold">Curriculum Vitae</span>
-          </div>
-
-          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight mb-2">
-            <span class="bg-[#9723C9] text-white px-2">Silvio</span> Baratto Roldan
-          </h1>
-          <p class="font-mono text-lg sm:text-xl font-bold mb-3">
-            Full-Stack AI Developer @ <span class="text-[#F4D738] bg-black px-1">EY</span>
-          </p>
-          <p class="font-mono text-sm text-[#9723C9] mb-4">
-            Trieste, Friuli-Venezia Giulia, Italia
-          </p>
-
-          <!-- Contact Info -->
-          <div class="flex flex-wrap gap-4 font-mono text-sm">
-            <a href="mailto:silvio.baratto22@gmail.com" class="flex items-center hover:bg-[#9723C9] hover:text-white px-2 py-1 -mx-2 transition-colors">
-              <span class="mr-2 text-[#FF6B6B]">[Email]</span>
-              silvio.baratto22&#64;gmail.com
-            </a>
-            <a href="https://www.linkedin.com/in/silvioangelobarattoroldan" target="_blank" rel="noopener noreferrer" class="flex items-center hover:bg-[#9723C9] hover:text-white px-2 py-1 -mx-2 transition-colors">
-              <span class="mr-2 text-[#FF6B6B]">[LinkedIn]</span>
-              Profile
-            </a>
-            <a href="https://silviobaratto.com" target="_blank" rel="noopener noreferrer" class="flex items-center hover:bg-[#9723C9] hover:text-white px-2 py-1 -mx-2 transition-colors">
-              <span class="mr-2 text-[#FF6B6B]">[Web]</span>
-              silviobaratto.com
-            </a>
-          </div>
+    <header class="border-2 sm:border-4 border-black mb-6 sm:mb-8">
+      <!-- Top bar: Label + Download -->
+      <div class="flex items-center justify-between border-b-2 sm:border-b-4 border-black px-4 sm:px-8 lg:px-10 py-3">
+        <div class="inline-block border-2 border-black bg-[#F4D738] px-3 py-1">
+          <span class="font-gooddog text-xs sm:text-sm uppercase tracking-widest">Curriculum Vitae</span>
         </div>
-
-        <!-- Download PDF Button - Purple -->
-        <a href="/assets/SilvioBaratto_CV.pdf" download="SilvioBaratto_CV.pdf" class="inline-flex items-center px-6 py-3 font-bold text-sm uppercase tracking-wider bg-[#9723C9] text-white border-4 border-black hover:bg-[#F4D738] hover:text-black transition-colors duration-150 flex-shrink-0">
-          <span class="mr-2">&darr;</span>
+        <a href="/assets/SilvioBaratto_CV.pdf" download="SilvioBaratto_CV.pdf" class="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 font-gooddog text-xs sm:text-sm uppercase tracking-wider bg-[#9723C9] text-white border-2 border-black hover:bg-[#F4D738] hover:text-black transition-colors duration-150">
+          <span class="inline-block w-4 h-4 sm:w-5 sm:h-5 mr-2 bg-current [mask-image:url('/assets/icons/download.svg')] [mask-size:contain] [mask-repeat:no-repeat]"></span>
           Download PDF
         </a>
       </div>
+
+      <!-- Name + Title -->
+      <div class="px-4 sm:px-8 lg:px-10 pt-5 sm:pt-8 pb-4 sm:pb-6 border-b-2 sm:border-b-4 border-black">
+        <h1 class="text-2xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight mb-3">
+          <span class="bg-[#9723C9] text-white px-2">Silvio</span> Baratto Roldan
+        </h1>
+        <p class="font-mono text-base sm:text-xl font-bold">
+          Full-Stack AI Developer @ <span class="text-[#F4D738] bg-black px-1">EY</span>
+        </p>
+      </div>
+
+      <!-- Languages strip -->
+      <div class="grid grid-cols-3 font-mono text-sm font-bold">
+        <div class="px-2 sm:px-8 py-3 border-r-2 border-black text-center uppercase">
+          <span class="text-xs tracking-widest">Italiano</span>
+          <span class="block text-xs text-black/60 sm:hidden">[C2]</span>
+          <span class="block text-xs text-black/60 hidden sm:block">[Native]</span>
+        </div>
+        <div class="px-2 sm:px-8 py-3 border-r-2 border-black text-center uppercase">
+          <span class="text-xs tracking-widest">English</span>
+          <span class="block text-xs text-black/60 sm:hidden">[C1]</span>
+          <span class="block text-xs text-black/60 hidden sm:block">[Professional]</span>
+        </div>
+        <div class="px-2 sm:px-8 py-3 text-center uppercase">
+          <span class="text-xs tracking-widest">Español</span>
+          <span class="block text-xs text-black/60 sm:hidden">[C2]</span>
+          <span class="block text-xs text-black/60 hidden sm:block">[Native]</span>
+        </div>
+      </div>
     </header>
 
-    <!-- Summary - Purple accent -->
-    <section class="border-4 border-black p-6 sm:p-8 mb-8">
-      <div class="flex items-center gap-4 mb-4">
-        <div class="w-12 sm:w-16 h-1 bg-[#9723C9]"></div>
-        <span class="font-mono text-xs sm:text-sm uppercase tracking-widest text-[#9723C9] font-bold">Summary</span>
+    <!-- Summary -->
+    <section class="border-2 sm:border-4 border-black mb-6 sm:mb-8">
+      <div class="flex items-center gap-3 sm:gap-4 border-b-2 sm:border-b-4 border-black px-4 sm:px-8 lg:px-10 py-3">
+        <div class="w-8 sm:w-12 h-1 bg-[#9723C9]"></div>
+        <span class="font-gooddog text-xs sm:text-sm uppercase tracking-widest text-[#9723C9]">Summary</span>
       </div>
-      <p class="font-mono text-base sm:text-lg leading-relaxed border-l-4 border-[#9723C9] pl-4 text-justify">
-        Full-Stack AI Developer specializing in end-to-end AI-powered systems, with expertise in RAG architectures, NLP applications, and production deployment on Azure. Proven track record of delivering containerized solutions for legal tech, financial services, and enterprise AI systems.
-      </p>
+      <div class="px-4 sm:px-8 lg:px-10 py-5 sm:py-8">
+        <p class="font-mono text-sm sm:text-lg leading-relaxed sm:border-l-4 sm:border-[#9723C9] sm:pl-4 text-justify">
+          Full-Stack AI Developer specializing in end-to-end AI-powered systems, with expertise in RAG architectures, NLP applications, and production deployment on Azure. Proven track record of delivering containerized solutions for legal tech, financial services, and enterprise AI systems.
+        </p>
+      </div>
     </section>
 
-    <!-- Experience - Red accent -->
-    <section class="border-4 border-black p-6 sm:p-8 mb-8">
-      <div class="flex items-center gap-4 mb-6">
-        <div class="w-12 sm:w-16 h-1 bg-[#FF6B6B]"></div>
-        <span class="font-mono text-xs sm:text-sm uppercase tracking-widest text-[#FF6B6B] font-bold">Experience</span>
+    <!-- Experience -->
+    <section class="border-2 sm:border-4 border-black mb-6 sm:mb-8">
+      <div class="flex items-center gap-3 sm:gap-4 border-b-2 sm:border-b-4 border-black px-4 sm:px-8 lg:px-10 py-3">
+        <div class="w-8 sm:w-12 h-1 bg-[#FF6B6B]"></div>
+        <span class="font-gooddog text-xs sm:text-sm uppercase tracking-widest text-[#FF6B6B]">Experience</span>
       </div>
 
-      <div class="space-y-6">
-        <!-- EY - Current Position - Yellow featured -->
-        <article class="border-4 border-black bg-[#F4D738] p-6">
-          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
-            <div>
-              <div class="inline-block border-2 border-black bg-[#FF6B6B] text-white px-2 py-0.5 mb-2">
-                <span class="font-mono text-xs uppercase tracking-widest font-bold">Current</span>
-              </div>
-              <h3 class="text-xl sm:text-2xl font-black uppercase tracking-tight">Full-Stack AI Developer</h3>
-              <p class="font-mono text-lg font-bold">EY</p>
+      <!-- EY -->
+      <article class="border-b-2 sm:border-b-4 border-black">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] border-b-2 border-black">
+          <div class="px-4 sm:px-8 lg:px-10 pt-4 pb-1 sm:py-5 lg:border-r-2 border-black">
+            <div class="inline-block border-2 border-black bg-[#FF6B6B] text-white px-2 py-0.5 mb-2">
+              <span class="font-gooddog text-xs uppercase tracking-widest">Current</span>
             </div>
-            <p class="font-mono text-sm text-[#9723C9] whitespace-nowrap font-bold">Nov 2024 - Present</p>
+            <h3 class="text-lg sm:text-2xl font-black uppercase tracking-tight">Full-Stack AI Developer</h3>
+            <p class="font-mono text-base sm:text-lg font-bold">EY</p>
           </div>
-          <p class="font-mono text-xs text-black/60 mb-4">Trieste, Italy • Full-time • Hybrid</p>
-          <ul class="space-y-2 font-mono text-sm">
+          <div class="px-4 sm:px-8 lg:px-10 pt-0 pb-3 sm:py-5 flex items-center">
+            <div class="font-mono text-sm">
+              <span class="block text-xs uppercase tracking-widest text-[#FF6B6B] font-gooddog mb-1">Period</span>
+              <span class="font-bold whitespace-nowrap">Nov 2024 - Present</span>
+              <span class="block text-xs text-black/60 mt-1">Trieste, Italy • Full-time</span>
+            </div>
+          </div>
+        </div>
+        <div class="px-4 sm:px-8 lg:px-10 py-5 sm:py-6">
+          <ul class="space-y-2 font-mono text-sm border-l-2 border-[#9723C9] pl-3 sm:border-l-0 sm:pl-0">
             <li class="flex items-start gap-2">
-              <span class="flex-shrink-0 text-[#9723C9]">[•]</span>
+              <span class="flex-shrink-0 text-[#9723C9] hidden sm:inline">[•]</span>
               <span>Designed and developed RAG system for private knowledge base using React, Flask, LlamaIndex, and MinerU</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="flex-shrink-0 text-[#9723C9]">[•]</span>
+              <span class="flex-shrink-0 text-[#9723C9] hidden sm:inline">[•]</span>
               <span>Built legal document classification and summarization platform with Angular, FastAPI, and BAML</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="flex-shrink-0 text-[#9723C9]">[•]</span>
+              <span class="flex-shrink-0 text-[#9723C9] hidden sm:inline">[•]</span>
               <span>Implemented dockerized anonymization system for Italian legal documents using lightweight 3B models (Ollama)</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="flex-shrink-0 text-[#9723C9]">[•]</span>
+              <span class="flex-shrink-0 text-[#9723C9] hidden sm:inline">[•]</span>
               <span>Developed interactive demos and mockups using Angular and Tailwind CSS</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="flex-shrink-0 text-[#9723C9]">[•]</span>
+              <span class="flex-shrink-0 text-[#9723C9] hidden sm:inline">[•]</span>
               <span>Deployed all solutions on Azure App Service with full containerization</span>
             </li>
           </ul>
-        </article>
+        </div>
+      </article>
 
-        <!-- ECB - Purple hover -->
-        <article class="border-4 border-black p-6 hover:bg-[#9723C9] hover:text-white transition-colors duration-150 group">
-          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
-            <div>
-              <h3 class="text-xl sm:text-2xl font-black uppercase tracking-tight">Data Scientist</h3>
-              <p class="font-mono text-lg font-bold">European Central Bank</p>
-            </div>
-            <p class="font-mono text-sm text-[#9723C9] group-hover:text-white/80 whitespace-nowrap font-bold">Mar 2024 - Nov 2024</p>
+      <!-- ECB -->
+      <article class="border-b-2 sm:border-b-4 border-black">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] border-b-2 border-black">
+          <div class="px-4 sm:px-8 lg:px-10 pt-4 pb-1 sm:py-5 lg:border-r-2 border-black">
+            <h3 class="text-lg sm:text-2xl font-black uppercase tracking-tight">Data Scientist</h3>
+            <p class="font-mono text-base sm:text-lg font-bold">European Central Bank</p>
           </div>
-          <p class="font-mono text-xs text-black/60 group-hover:text-white/60 mb-4">Frankfurt am Main, Germany • Internship • Hybrid</p>
-          <ul class="space-y-2 font-mono text-sm">
+          <div class="px-4 sm:px-8 lg:px-10 pt-0 pb-3 sm:py-5 flex items-center">
+            <div class="font-mono text-sm">
+              <span class="block text-xs uppercase tracking-widest text-[#FF6B6B] font-gooddog mb-1">Period</span>
+              <span class="font-bold whitespace-nowrap">Mar 2024 - Nov 2024</span>
+              <span class="block text-xs text-black/60 mt-1">Frankfurt, Germany • Internship</span>
+            </div>
+          </div>
+        </div>
+        <div class="px-4 sm:px-8 lg:px-10 py-5 sm:py-6">
+          <ul class="space-y-2 font-mono text-sm border-l-2 border-[#9723C9] pl-3 sm:border-l-0 sm:pl-0">
             <li class="flex items-start gap-2">
-              <span class="flex-shrink-0 text-[#9723C9] group-hover:text-[#F4D738]">[•]</span>
+              <span class="flex-shrink-0 text-[#9723C9] hidden sm:inline">[•]</span>
               <span>Implemented LLM solutions for naming convention standardization in financial datasets</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="flex-shrink-0 text-[#9723C9] group-hover:text-[#F4D738]">[•]</span>
+              <span class="flex-shrink-0 text-[#9723C9] hidden sm:inline">[•]</span>
               <span>Developed sentiment analysis tool for survey data processing and metadata management</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="flex-shrink-0 text-[#9723C9] group-hover:text-[#F4D738]">[•]</span>
+              <span class="flex-shrink-0 text-[#9723C9] hidden sm:inline">[•]</span>
               <span>Created Python library for generating logical transformation rules for FinREP regulatory reporting</span>
             </li>
           </ul>
-        </article>
+        </div>
+      </article>
 
-        <!-- Generali - Green hover -->
-        <article class="border-4 border-black p-6 hover:bg-[#7FBC8C] hover:text-white transition-colors duration-150 group">
-          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
-            <div>
-              <h3 class="text-xl sm:text-2xl font-black uppercase tracking-tight">Data Scientist</h3>
-              <p class="font-mono text-lg font-bold">Generali Investments</p>
-            </div>
-            <p class="font-mono text-sm text-black/70 group-hover:text-black/80 whitespace-nowrap font-bold">Nov 2023 - Feb 2024</p>
+      <!-- Generali -->
+      <article class="border-b-2 sm:border-b-4 border-black">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] border-b-2 border-black">
+          <div class="px-4 sm:px-8 lg:px-10 pt-4 pb-1 sm:py-5 lg:border-r-2 border-black">
+            <h3 class="text-lg sm:text-2xl font-black uppercase tracking-tight">Data Scientist</h3>
+            <p class="font-mono text-base sm:text-lg font-bold">Generali Investments</p>
           </div>
-          <p class="font-mono text-xs text-black/60 mb-4">Trieste, Italy • Internship • Hybrid</p>
-          <ul class="space-y-2 font-mono text-sm">
+          <div class="px-4 sm:px-8 lg:px-10 pt-0 pb-3 sm:py-5 flex items-center">
+            <div class="font-mono text-sm">
+              <span class="block text-xs uppercase tracking-widest text-[#FF6B6B] font-gooddog mb-1">Period</span>
+              <span class="font-bold whitespace-nowrap">Nov 2023 - Feb 2024</span>
+              <span class="block text-xs text-black/60 mt-1">Trieste, Italy • Internship</span>
+            </div>
+          </div>
+        </div>
+        <div class="px-4 sm:px-8 lg:px-10 py-5 sm:py-6">
+          <ul class="space-y-2 font-mono text-sm border-l-2 border-[#9723C9] pl-3 sm:border-l-0 sm:pl-0">
             <li class="flex items-start gap-2">
-              <span class="flex-shrink-0 text-[#7FBC8C] group-hover:text-black">[•]</span>
+              <span class="flex-shrink-0 text-[#9723C9] hidden sm:inline">[•]</span>
               <span>Contributed to portfolio optimization web application using Python, Streamlit, and Flask</span>
             </li>
           </ul>
-        </article>
+        </div>
+      </article>
 
-        <!-- Luxottica - Red hover -->
-        <article class="border-4 border-black p-6 hover:bg-[#FF6B6B] hover:text-white transition-colors duration-150 group">
-          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
-            <div>
-              <h3 class="text-xl sm:text-2xl font-black uppercase tracking-tight">Logistics Automation Specialist</h3>
-              <p class="font-mono text-lg font-bold">EssilorLuxottica</p>
-            </div>
-            <p class="font-mono text-sm text-[#FF6B6B] group-hover:text-white/80 whitespace-nowrap font-bold">Mar 2021 - Sep 2021</p>
+      <!-- Luxottica -->
+      <article>
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] border-b-2 border-black">
+          <div class="px-4 sm:px-8 lg:px-10 pt-4 pb-1 sm:py-5 lg:border-r-2 border-black">
+            <h3 class="text-lg sm:text-2xl font-black uppercase tracking-tight">Logistics Automation Specialist</h3>
+            <p class="font-mono text-base sm:text-lg font-bold">EssilorLuxottica</p>
           </div>
-          <p class="font-mono text-xs text-black/60 group-hover:text-white/60 mb-4">Agordo, Italy • Internship • On-site</p>
-          <ul class="space-y-2 font-mono text-sm">
+          <div class="px-4 sm:px-8 lg:px-10 pt-0 pb-3 sm:py-5 flex items-center">
+            <div class="font-mono text-sm">
+              <span class="block text-xs uppercase tracking-widest text-[#FF6B6B] font-gooddog mb-1">Period</span>
+              <span class="font-bold whitespace-nowrap">Mar 2021 - Sep 2021</span>
+              <span class="block text-xs text-black/60 mt-1">Agordo, Italy • Internship</span>
+            </div>
+          </div>
+        </div>
+        <div class="px-4 sm:px-8 lg:px-10 py-5 sm:py-6">
+          <ul class="space-y-2 font-mono text-sm border-l-2 border-[#9723C9] pl-3 sm:border-l-0 sm:pl-0">
             <li class="flex items-start gap-2">
-              <span class="flex-shrink-0 text-[#FF6B6B] group-hover:text-[#F4D738]">[•]</span>
+              <span class="flex-shrink-0 text-[#9723C9] hidden sm:inline">[•]</span>
               <span>Managed implementation of AGV logistics projects at Agordo and Sedico sites with daily KPI analysis</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="flex-shrink-0 text-[#FF6B6B] group-hover:text-[#F4D738]">[•]</span>
+              <span class="flex-shrink-0 text-[#9723C9] hidden sm:inline">[•]</span>
               <span>Applied machine learning techniques (Random Forest, Naive Bayes) for predictive maintenance</span>
             </li>
           </ul>
-        </article>
-      </div>
+        </div>
+      </article>
     </section>
 
-    <!-- Education - Green accent -->
-    <section class="border-4 border-black p-6 sm:p-8 mb-8">
-      <div class="flex items-center gap-4 mb-6">
-        <div class="w-12 sm:w-16 h-1 bg-[#7FBC8C]"></div>
-        <span class="font-mono text-xs sm:text-sm uppercase tracking-widest text-[#7FBC8C] font-bold">Education</span>
+    <!-- Education -->
+    <section class="border-2 sm:border-4 border-black mb-6 sm:mb-8">
+      <div class="flex items-center gap-3 sm:gap-4 border-b-2 sm:border-b-4 border-black px-4 sm:px-8 lg:px-10 py-3">
+        <div class="w-8 sm:w-12 h-1 bg-[#7FBC8C]"></div>
+        <span class="font-gooddog text-xs sm:text-sm uppercase tracking-widest text-[#7FBC8C]">Education</span>
       </div>
 
-      <div class="space-y-4">
-        <article class="border-4 border-black p-6 hover:bg-[#9723C9] hover:text-white transition-colors duration-150 group">
-          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-2">
-            <div>
-              <h3 class="text-lg sm:text-xl font-black uppercase tracking-tight">Master of Science</h3>
-              <p class="font-mono font-bold">Data Science & Scientific Computing</p>
-              <p class="font-mono text-sm text-[#9723C9] group-hover:text-white/80">Università degli Studi di Trieste</p>
-            </div>
-            <p class="font-mono text-sm text-black/70 group-hover:text-[#F4D738] whitespace-nowrap font-bold">2021 - 2023</p>
+      <article class="border-b-2 sm:border-b-4 border-black">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto]">
+          <div class="px-4 sm:px-8 lg:px-10 pt-4 pb-1 sm:py-5 lg:border-r-2 border-black">
+            <h3 class="text-lg sm:text-xl font-black uppercase tracking-tight">Master of Science</h3>
+            <p class="font-mono font-bold">Data Science & Scientific Computing</p>
+            <p class="font-mono text-sm text-[#9723C9]">Università degli Studi di Trieste</p>
+            <p class="font-mono text-xs text-black/60 mt-1">Curriculum: Artificial Intelligence and Machine Learning</p>
           </div>
-          <p class="font-mono text-sm text-black/60 group-hover:text-white/60">Curriculum: Artificial Intelligence and Machine Learning</p>
-        </article>
+          <div class="px-4 sm:px-8 lg:px-10 py-4 sm:py-5 flex items-center">
+            <span class="font-mono text-sm font-bold whitespace-nowrap">2021 - 2023</span>
+          </div>
+        </div>
+      </article>
 
-        <article class="border-4 border-black p-6 hover:bg-[#FF6B6B] hover:text-white transition-colors duration-150 group">
-          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-2">
-            <div>
-              <h3 class="text-lg sm:text-xl font-black uppercase tracking-tight">Erasmus+ Scholarship</h3>
-              <p class="font-mono font-bold">Mathematics and Computer Science</p>
-              <p class="font-mono text-sm text-[#FF6B6B] group-hover:text-white/80">Universidad Autónoma de Madrid</p>
-            </div>
-            <p class="font-mono text-sm text-[#FF6B6B] group-hover:text-[#F4D738] whitespace-nowrap font-bold">2022 - 2023</p>
+      <article class="border-b-2 sm:border-b-4 border-black">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto]">
+          <div class="px-4 sm:px-8 lg:px-10 pt-4 pb-1 sm:py-5 lg:border-r-2 border-black">
+            <h3 class="text-lg sm:text-xl font-black uppercase tracking-tight">Erasmus+ Scholarship</h3>
+            <p class="font-mono font-bold">Mathematics and Computer Science</p>
+            <p class="font-mono text-sm text-[#9723C9]">Universidad Autónoma de Madrid</p>
           </div>
-        </article>
+          <div class="px-4 sm:px-8 lg:px-10 py-4 sm:py-5 flex items-center">
+            <span class="font-mono text-sm font-bold whitespace-nowrap">2022 - 2023</span>
+          </div>
+        </div>
+      </article>
 
-        <article class="border-4 border-black p-6 hover:bg-[#7FBC8C] hover:text-white transition-colors duration-150 group">
-          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-2">
-            <div>
-              <h3 class="text-lg sm:text-xl font-black uppercase tracking-tight">Bachelor of Engineering</h3>
-              <p class="font-mono font-bold">Electronic and Computer Engineering</p>
-              <p class="font-mono text-sm text-[#7FBC8C] group-hover:text-black/80">Università degli Studi di Trieste</p>
-            </div>
-            <p class="font-mono text-sm text-black/70 group-hover:text-black/80 whitespace-nowrap font-bold">2016 - 2020</p>
+      <article>
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto]">
+          <div class="px-4 sm:px-8 lg:px-10 pt-4 pb-1 sm:py-5 lg:border-r-2 border-black">
+            <h3 class="text-lg sm:text-xl font-black uppercase tracking-tight">Bachelor of Engineering</h3>
+            <p class="font-mono font-bold">Electronic and Computer Engineering</p>
+            <p class="font-mono text-sm text-[#9723C9]">Università degli Studi di Trieste</p>
           </div>
-        </article>
-      </div>
+          <div class="px-4 sm:px-8 lg:px-10 py-4 sm:py-5 flex items-center">
+            <span class="font-mono text-sm font-bold whitespace-nowrap">2016 - 2020</span>
+          </div>
+        </div>
+      </article>
     </section>
 
-    <!-- Skills & Languages Grid -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-      <!-- Core Skills - Yellow accent -->
-      <section class="border-4 border-black p-6 sm:p-8">
-        <div class="flex items-center gap-4 mb-6">
-          <div class="w-8 sm:w-12 h-1 bg-[#F4D738]"></div>
-          <span class="font-mono text-xs sm:text-sm uppercase tracking-widest font-bold">Skills</span>
+    <!-- Skills -->
+    <section class="border-2 sm:border-4 border-black mb-6 sm:mb-8">
+      <div class="flex items-center gap-3 sm:gap-4 border-b-2 sm:border-b-4 border-black px-4 sm:px-8 lg:px-10 py-3">
+        <div class="w-8 sm:w-12 h-1 bg-[#F4D738]"></div>
+        <span class="font-gooddog text-xs sm:text-sm uppercase tracking-widest">Skills</span>
+      </div>
+
+      <div class="divide-y-2 divide-black">
+        <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 px-4 sm:px-8 lg:px-10 py-4">
+          <h3 class="font-gooddog text-xs uppercase tracking-widest text-[#9723C9] w-32 flex-shrink-0">[01] Frontend</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="font-gooddog text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider">Angular</span>
+            <span class="font-gooddog text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider">React</span>
+            <span class="font-gooddog text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider">Tailwind</span>
+          </div>
         </div>
 
-        <div class="space-y-4">
-          <!-- Frontend -->
-          <div>
-            <h3 class="font-mono text-xs uppercase tracking-widest text-[#9723C9] mb-2 font-bold">[01] Frontend</h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="font-mono text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider hover:bg-[#9723C9] hover:text-white hover:border-[#9723C9] transition-colors">Angular</span>
-              <span class="font-mono text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider hover:bg-[#9723C9] hover:text-white hover:border-[#9723C9] transition-colors">React</span>
-              <span class="font-mono text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider hover:bg-[#9723C9] hover:text-white hover:border-[#9723C9] transition-colors">Tailwind</span>
-            </div>
+        <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 px-4 sm:px-8 lg:px-10 py-4">
+          <h3 class="font-gooddog text-xs uppercase tracking-widest text-[#7FBC8C] w-32 flex-shrink-0">[02] Backend</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="font-gooddog text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider">Python</span>
+            <span class="font-gooddog text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider">FastAPI</span>
+            <span class="font-gooddog text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider">Flask</span>
+            <span class="font-gooddog text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider">SQLAlchemy</span>
           </div>
+        </div>
 
-          <!-- Backend -->
-          <div>
-            <h3 class="font-mono text-xs uppercase tracking-widest text-[#7FBC8C] mb-2 font-bold">[02] Backend</h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="font-mono text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider hover:bg-[#7FBC8C] hover:text-white hover:border-[#7FBC8C] transition-colors">Python</span>
-              <span class="font-mono text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider hover:bg-[#7FBC8C] hover:text-white hover:border-[#7FBC8C] transition-colors">FastAPI</span>
-              <span class="font-mono text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider hover:bg-[#7FBC8C] hover:text-white hover:border-[#7FBC8C] transition-colors">Flask</span>
-              <span class="font-mono text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider hover:bg-[#7FBC8C] hover:text-white hover:border-[#7FBC8C] transition-colors">SQLAlchemy</span>
-            </div>
+        <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 px-4 sm:px-8 lg:px-10 py-4">
+          <h3 class="font-gooddog text-xs uppercase tracking-widest text-[#FF6B6B] w-32 flex-shrink-0">[03] AI/ML</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="font-gooddog text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider">PyTorch</span>
+            <span class="font-gooddog text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider">LlamaIndex</span>
+            <span class="font-gooddog text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider">BAML</span>
+            <span class="font-gooddog text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider">RAG</span>
+            <span class="font-gooddog text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider">NLP</span>
           </div>
+        </div>
 
-          <!-- AI/ML -->
-          <div>
-            <h3 class="font-mono text-xs uppercase tracking-widest text-[#FF6B6B] mb-2 font-bold">[03] AI/ML</h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="font-mono text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider hover:bg-[#FF6B6B] hover:text-white hover:border-[#FF6B6B] transition-colors">PyTorch</span>
-              <span class="font-mono text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider hover:bg-[#FF6B6B] hover:text-white hover:border-[#FF6B6B] transition-colors">LlamaIndex</span>
-              <span class="font-mono text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider hover:bg-[#FF6B6B] hover:text-white hover:border-[#FF6B6B] transition-colors">BAML</span>
-              <span class="font-mono text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider hover:bg-[#FF6B6B] hover:text-white hover:border-[#FF6B6B] transition-colors">RAG</span>
-              <span class="font-mono text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider hover:bg-[#FF6B6B] hover:text-white hover:border-[#FF6B6B] transition-colors">NLP</span>
-            </div>
+        <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 px-4 sm:px-8 lg:px-10 py-4">
+          <h3 class="font-gooddog text-xs uppercase tracking-widest text-[#F4D738] w-32 flex-shrink-0">[04] DevOps</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="font-gooddog text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider">Docker</span>
+            <span class="font-gooddog text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider">Azure</span>
+            <span class="font-gooddog text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider">PostgreSQL</span>
+            <span class="font-gooddog text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider">Supabase</span>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- DevOps -->
-          <div>
-            <h3 class="font-mono text-xs uppercase tracking-widest text-[#F4D738] mb-2 font-bold">[04] DevOps</h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="font-mono text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider hover:bg-[#F4D738] hover:border-[#F4D738] transition-colors">Docker</span>
-              <span class="font-mono text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider hover:bg-[#F4D738] hover:border-[#F4D738] transition-colors">Azure</span>
-              <span class="font-mono text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider hover:bg-[#F4D738] hover:border-[#F4D738] transition-colors">PostgreSQL</span>
-              <span class="font-mono text-xs px-3 py-1.5 border-2 border-black uppercase tracking-wider hover:bg-[#F4D738] hover:border-[#F4D738] transition-colors">Supabase</span>
-            </div>
+    <!-- Certifications & Awards Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+      <!-- Certifications -->
+      <section class="border-2 sm:border-4 border-black">
+        <div class="flex items-center gap-3 sm:gap-4 border-b-2 sm:border-b-4 border-black px-4 sm:px-8 py-3">
+          <div class="w-8 sm:w-12 h-1 bg-[#FF6B6B]"></div>
+          <span class="font-gooddog text-xs sm:text-sm uppercase tracking-widest text-[#FF6B6B]">Certifications</span>
+        </div>
+
+        <div class="divide-y-2 divide-black font-mono text-sm">
+          <div class="flex items-start gap-2 px-4 sm:px-8 py-3">
+            <span class="text-[#7FBC8C]">[✓]</span>
+            <span>Neural Networks and Deep Learning</span>
+          </div>
+          <div class="flex items-start gap-2 px-4 sm:px-8 py-3">
+            <span class="text-[#7FBC8C]">[✓]</span>
+            <span>Improving Deep Neural Networks</span>
+          </div>
+          <div class="flex items-start gap-2 px-4 sm:px-8 py-3">
+            <span class="text-[#7FBC8C]">[✓]</span>
+            <span>Business Ethics Summer School</span>
+          </div>
+          <div class="flex items-start gap-2 px-4 sm:px-8 py-3">
+            <span class="text-[#7FBC8C]">[✓]</span>
+            <span>Clab Certificate 2018</span>
           </div>
         </div>
       </section>
 
-      <!-- Languages - Colored badges -->
-      <section class="border-4 border-black p-6 sm:p-8">
-        <div class="flex items-center gap-4 mb-6">
-          <div class="w-8 sm:w-12 h-1 bg-[#9723C9]"></div>
-          <span class="font-mono text-xs sm:text-sm uppercase tracking-widest text-[#9723C9] font-bold">Languages</span>
+      <!-- Honors & Awards -->
+      <section class="border-2 sm:border-4 border-black">
+        <div class="flex items-center gap-3 sm:gap-4 border-b-2 sm:border-b-4 border-black px-4 sm:px-8 py-3">
+          <div class="w-8 sm:w-12 h-1 bg-[#F4D738]"></div>
+          <span class="font-gooddog text-xs sm:text-sm uppercase tracking-widest">Honors & Awards</span>
         </div>
 
-        <ul class="space-y-3 font-mono">
-          <li class="flex items-center justify-between p-3 border-2 border-black bg-[#7FBC8C] text-white hover:bg-black hover:text-[#7FBC8C] transition-colors">
-            <span class="font-bold uppercase">Italiano</span>
-            <span class="text-sm font-bold">[Native]</span>
-          </li>
-          <li class="flex items-center justify-between p-3 border-2 border-black bg-[#9723C9] text-white hover:bg-black hover:text-[#9723C9] transition-colors">
-            <span class="font-bold uppercase">English</span>
-            <span class="text-sm font-bold">[Professional]</span>
-          </li>
-          <li class="flex items-center justify-between p-3 border-2 border-black bg-[#FF6B6B] text-white hover:bg-black hover:text-[#FF6B6B] transition-colors">
-            <span class="font-bold uppercase">Español</span>
-            <span class="text-sm font-bold">[Native]</span>
-          </li>
-        </ul>
+        <div class="divide-y-2 divide-black font-mono text-sm">
+          <div class="flex items-start gap-2 px-4 sm:px-8 py-3">
+            <span class="text-[#F4D738]">[★]</span>
+            <span>First Place Clab Business Plan Competition</span>
+          </div>
+          <div class="flex items-start gap-2 px-4 sm:px-8 py-3">
+            <span class="text-[#F4D738]">[★]</span>
+            <span>Erasmus+ Scholarship</span>
+          </div>
+          <div class="flex items-start gap-2 px-4 sm:px-8 py-3">
+            <span class="text-[#F4D738]">[★]</span>
+            <span>Premio Presenza e Cultura</span>
+          </div>
+          <div class="flex items-start gap-2 px-4 sm:px-8 py-3">
+            <span class="text-[#F4D738]">[★]</span>
+            <span>First Place Transform4Europe Business Plan</span>
+          </div>
+          <div class="flex items-start gap-2 px-4 sm:px-8 py-3">
+            <span class="text-[#F4D738]">[★]</span>
+            <span>Winner YES! CALL 2023</span>
+          </div>
+          <div class="flex items-start gap-2 px-4 sm:px-8 py-3">
+            <span class="text-[#F4D738]">[★]</span>
+            <span>Sustainable Innovative Solutions from FVG</span>
+          </div>
+        </div>
       </section>
     </div>
-
-    <!-- Certifications - Red accent -->
-    <section class="border-4 border-black p-6 sm:p-8 mb-8">
-      <div class="flex items-center gap-4 mb-6">
-        <div class="w-12 sm:w-16 h-1 bg-[#FF6B6B]"></div>
-        <span class="font-mono text-xs sm:text-sm uppercase tracking-widest text-[#FF6B6B] font-bold">Certifications</span>
-      </div>
-
-      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-mono text-sm">
-        <li class="flex items-center gap-2 p-3 border-2 border-black hover:bg-[#7FBC8C] hover:text-white transition-colors">
-          <span class="text-[#7FBC8C]">[✓]</span>
-          <span>Neural Networks and Deep Learning</span>
-        </li>
-        <li class="flex items-center gap-2 p-3 border-2 border-black hover:bg-[#7FBC8C] hover:text-white transition-colors">
-          <span class="text-[#7FBC8C]">[✓]</span>
-          <span>Improving Deep Neural Networks</span>
-        </li>
-        <li class="flex items-center gap-2 p-3 border-2 border-black hover:bg-[#7FBC8C] hover:text-white transition-colors">
-          <span class="text-[#7FBC8C]">[✓]</span>
-          <span>Business Ethics Summer School</span>
-        </li>
-        <li class="flex items-center gap-2 p-3 border-2 border-black hover:bg-[#7FBC8C] hover:text-white transition-colors">
-          <span class="text-[#7FBC8C]">[✓]</span>
-          <span>Clab Certificate 2018</span>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Honors & Awards - Purple background -->
-    <section class="border-4 border-black bg-[#9723C9] text-white p-6 sm:p-8">
-      <div class="flex items-center gap-4 mb-6">
-        <div class="w-12 sm:w-16 h-1 bg-[#F4D738]"></div>
-        <span class="font-mono text-xs sm:text-sm uppercase tracking-widest font-bold">Honors & Awards</span>
-      </div>
-
-      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-mono text-sm">
-        <li class="flex items-center gap-2 p-3 border-2 border-white hover:bg-[#F4D738] hover:text-black hover:border-[#F4D738] transition-colors">
-          <span class="text-[#F4D738]">[★]</span>
-          <span>First Place Clab Business Plan Competition</span>
-        </li>
-        <li class="flex items-center gap-2 p-3 border-2 border-white hover:bg-[#F4D738] hover:text-black hover:border-[#F4D738] transition-colors">
-          <span class="text-[#F4D738]">[★]</span>
-          <span>Erasmus+ Scholarship</span>
-        </li>
-        <li class="flex items-center gap-2 p-3 border-2 border-white hover:bg-[#F4D738] hover:text-black hover:border-[#F4D738] transition-colors">
-          <span class="text-[#F4D738]">[★]</span>
-          <span>Premio Presenza e Cultura</span>
-        </li>
-        <li class="flex items-center gap-2 p-3 border-2 border-white hover:bg-[#F4D738] hover:text-black hover:border-[#F4D738] transition-colors">
-          <span class="text-[#F4D738]">[★]</span>
-          <span>First Place Transform4Europe Business Plan</span>
-        </li>
-        <li class="flex items-center gap-2 p-3 border-2 border-white hover:bg-[#F4D738] hover:text-black hover:border-[#F4D738] transition-colors">
-          <span class="text-[#F4D738]">[★]</span>
-          <span>Winner YES! CALL 2023</span>
-        </li>
-        <li class="flex items-center gap-2 p-3 border-2 border-white hover:bg-[#F4D738] hover:text-black hover:border-[#F4D738] transition-colors">
-          <span class="text-[#F4D738]">[★]</span>
-          <span>Sustainable Innovative Solutions from FVG</span>
-        </li>
-      </ul>
-    </section>
 
   </div>
 

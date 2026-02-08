@@ -23,7 +23,7 @@ import { toBamlError } from "@boundaryml/baml"
 import type { Checked, Check } from "./types"
 import type { partial_types } from "./partial_types"
 import type * as types from "./types"
-import type {ConversationContext, QuestionCategory, StreamingChatResponse} from "./types"
+import type {ConversationContext, Link, QuestionCategory, StreamingChatResponse} from "./types"
 import type TypeBuilder from "./type_builder"
 
 export class LlmResponseParser {
@@ -35,9 +35,9 @@ export class LlmResponseParser {
       __baml_options__?: { tb?: TypeBuilder, clientRegistry?: ClientRegistry, env?: Record<string, string | undefined> }
   ): types.StreamingChatResponse {
     try {
-      const rawEnv = __baml_options__?.env ? { ...process.env, ...__baml_options__.env } : { ...process.env };
-      const env: Record<string, string> = Object.fromEntries(
-        Object.entries(rawEnv).filter(([_, value]) => value !== undefined) as [string, string][]
+      const __rawEnv__ = __baml_options__?.env ? { ...process.env, ...__baml_options__.env } : { ...process.env };
+      const __env__: Record<string, string> = Object.fromEntries(
+        Object.entries(__rawEnv__).filter(([_, value]) => value !== undefined) as [string, string][]
       );
       return this.runtime.parseLlmResponse(
         "StreamChatWithSilvio",
@@ -46,7 +46,7 @@ export class LlmResponseParser {
         this.ctxManager.cloneContext(),
         __baml_options__?.tb?.__tb(),
         __baml_options__?.clientRegistry,
-        env,
+        __env__,
       ) as types.StreamingChatResponse
     } catch (error) {
       throw toBamlError(error);
@@ -64,9 +64,9 @@ export class LlmStreamParser {
       __baml_options__?: { tb?: TypeBuilder, clientRegistry?: ClientRegistry, env?: Record<string, string | undefined> }
   ): partial_types.StreamingChatResponse {
     try {
-      const rawEnv = __baml_options__?.env ? { ...process.env, ...__baml_options__.env } : { ...process.env };
-      const env: Record<string, string> = Object.fromEntries(
-        Object.entries(rawEnv).filter(([_, value]) => value !== undefined) as [string, string][]
+      const __rawEnv__ = __baml_options__?.env ? { ...process.env, ...__baml_options__.env } : { ...process.env };
+      const __env__: Record<string, string> = Object.fromEntries(
+        Object.entries(__rawEnv__).filter(([_, value]) => value !== undefined) as [string, string][]
       );
       return this.runtime.parseLlmResponse(
         "StreamChatWithSilvio",
@@ -75,7 +75,7 @@ export class LlmStreamParser {
         this.ctxManager.cloneContext(),
         __baml_options__?.tb?.__tb(),
         __baml_options__?.clientRegistry,
-        env,
+        __env__,
       ) as partial_types.StreamingChatResponse
     } catch (error) {
       throw toBamlError(error);

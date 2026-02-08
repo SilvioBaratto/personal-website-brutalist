@@ -1,6 +1,15 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'GoodDog';
+  src: url('/assets/fonts/GoodDogNewW00-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
+  --font-gooddog: 'GoodDog', cursive;
   /* Neo-Brutalist Color Palette */
   /* Primary: High contrast black */
   --color-brutal-black: #111111;

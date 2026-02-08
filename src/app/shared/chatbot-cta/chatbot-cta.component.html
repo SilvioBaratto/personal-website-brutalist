@@ -1,42 +1,43 @@
-<section class="py-16 sm:py-20 lg:py-24">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-    <!-- CTA Card - Brutalist style with colors -->
-    <article class="border-4 border-black bg-[#9723C9] text-white">
-      <!-- Top bar with label -->
-      <div class="border-b-4 border-black bg-[#F4D738] px-6 py-3 flex items-center gap-3">
+<section class="py-10 sm:py-16 lg:py-24">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+    <!-- CTA Card -->
+    <article class="border-2 sm:border-4 border-black bg-[#9723C9] text-white">
+      <!-- Top bar -->
+      <div class="border-b-2 sm:border-b-4 border-black bg-[#F4D738] px-4 py-2 sm:px-6 sm:py-3 flex items-center gap-2 sm:gap-3">
         <div class="w-3 h-3 bg-[#FF6B6B]"></div>
         <div class="w-3 h-3 bg-[#7FBC8C]"></div>
         <div class="w-3 h-3 bg-black"></div>
-        <span class="ml-auto font-mono text-xs uppercase tracking-widest text-black font-bold">AI Assistant</span>
+        <span class="ml-auto font-gooddog text-xs uppercase tracking-widest text-black">AI Assistant</span>
       </div>
 
-      <div class="p-6 sm:p-10 lg:p-12">
-        <div class="max-w-3xl mx-auto">
-          <!-- Icon -->
-          <div class="w-16 h-16 sm:w-20 sm:h-20 border-4 border-[#F4D738] bg-black flex items-center justify-center mb-6 sm:mb-8">
-            <svg class="w-8 h-8 sm:w-10 sm:h-10 text-[#F4D738]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
-            </svg>
+      <div class="p-4 sm:p-8 lg:p-12">
+        <!-- Title above the grid -->
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black uppercase tracking-tight mb-6 sm:mb-8 leading-[0.9]">
+          Chat With My AI
+        </h2>
+
+        <!-- 2-col grid: Illustration | Description + Button -->
+        <div class="grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-8 sm:gap-10 lg:gap-14">
+          <!-- Left: Illustration -->
+          <div class="flex justify-center sm:justify-start">
+            <div class="w-28 h-28 sm:w-40 sm:h-40 lg:w-48 lg:h-48 border-2 sm:border-4 border-black bg-[#F4D738] p-4 flex items-center justify-center">
+              <img ngSrc="assets/icons/chatbot.svg" alt="Chatbot illustration" width="400" height="400" class="w-full h-full" />
+            </div>
           </div>
 
-          <!-- Title -->
-          <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black uppercase tracking-tight mb-4 sm:mb-6">
-            Chat With<br class="hidden sm:block" /> My AI
-          </h2>
+          <!-- Right: Description + Button pinned to bottom -->
+          <div class="flex flex-col justify-between">
+            <p class="font-mono text-sm sm:text-base lg:text-lg text-white/90 leading-relaxed sm:border-l-4 sm:border-[#F4D738] sm:pl-4 text-justify">
+              Ask about my experience, projects, technical skills, and more
+            </p>
 
-          <!-- Description -->
-          <p class="font-mono text-sm sm:text-base lg:text-lg text-white/90 mb-8 sm:mb-10 leading-relaxed max-w-2xl border-l-4 border-[#F4D738] pl-4 text-justify">
-            Powered by BAML and GPT-5 mini. Ask about my experience, projects, technical skills, and more. Try asking about my work at EY, stockpy, or Dietologo AI!
-          </p>
-
-          <!-- CTA Button -->
-          <a
-            href="/chatbot"
-            class="group inline-flex items-center gap-3 min-h-12 px-8 py-4 text-base sm:text-lg font-bold bg-[#F4D738] text-black uppercase tracking-wider border-4 border-black hover:bg-black hover:text-[#F4D738] transition-colors duration-150"
-          >
-            <span>Start Chatting</span>
-            <span class="group-hover:translate-x-2 transition-transform">&rarr;</span>
-          </a>
+            <a
+              href="/chatbot"
+              class="group inline-flex items-center gap-3 min-h-11 px-6 sm:px-8 py-3 sm:py-4 mt-6 sm:mt-8 text-sm sm:text-lg font-gooddog bg-[#F4D738] text-black uppercase tracking-wider border-2 sm:border-4 border-black hover:bg-black hover:text-[#F4D738] transition-colors duration-150 self-start"
+            >
+              <span>Start Chatting</span>
+            </a>
+          </div>
         </div>
       </div>
     </article>

@@ -29,7 +29,9 @@ export default class TypeBuilder {
     
     ConversationContext: ClassViewer<'ConversationContext', "previous_topic" | "mentioned_companies" | "mentioned_technologies" | "user_interest_area">;
     
-    StreamingChatResponse: ClassViewer<'StreamingChatResponse', "answer" | "category" | "sources" | "urls" | "follow_up_suggestions">;
+    Link: ClassViewer<'Link', "url" | "label">;
+    
+    StreamingChatResponse: ClassViewer<'StreamingChatResponse', "answer" | "category" | "sources" | "links" | "follow_up_suggestions">;
     
     
     QuestionCategory: EnumViewer<'QuestionCategory', "EXPERIENCE" | "TECHNICAL_SKILLS" | "PROJECTS" | "EDUCATION" | "LANGUAGES" | "CAREER_JOURNEY" | "GENERAL" | "CONTACT" | "OFF_TOPIC">;
@@ -38,7 +40,7 @@ export default class TypeBuilder {
     constructor() {
         this.tb = new _TypeBuilder({
           classes: new Set([
-            "ConversationContext","StreamingChatResponse",
+            "ConversationContext","Link","StreamingChatResponse",
           ]),
           enums: new Set([
             "QuestionCategory",
@@ -50,8 +52,12 @@ export default class TypeBuilder {
           "previous_topic","mentioned_companies","mentioned_technologies","user_interest_area",
         ]);
         
+        this.Link = this.tb.classViewer("Link", [
+          "url","label",
+        ]);
+        
         this.StreamingChatResponse = this.tb.classViewer("StreamingChatResponse", [
-          "answer","category","sources","urls","follow_up_suggestions",
+          "answer","category","sources","links","follow_up_suggestions",
         ]);
         
         
