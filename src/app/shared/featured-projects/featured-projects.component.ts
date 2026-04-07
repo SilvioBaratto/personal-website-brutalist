@@ -8,6 +8,13 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 export class FeaturedProjectsComponent {
   projects = [
     {
+      title: 'Optimizer',
+      description: 'Quantitative portfolio construction platform built on skfolio and scikit-learn. Features 13 optimization models, HMM regime blending, walk-forward cross-validation, and vine copula scenario generation. Angular 21 dashboard with FastAPI backend and PyPI package (portopt). Live at optimizer.silviobaratto.com.',
+      tags: ['Angular 21', 'FastAPI', 'skfolio', 'PostgreSQL', 'PyPI', 'Quant Finance', 'Production'],
+      link: 'https://optimizer.silviobaratto.com',
+      featured: true,
+    },
+    {
       title: 'Dietologo AI',
       description: 'Production AI-powered diet generator with weekly meal plans (35 meals/week), AI recipe generation, and smart shopping lists. Live at diet.silviobaratto.com with Google authentication and subscription system. Complete full-stack solution with Docker deployment.',
       tags: ['Angular 19', 'FastAPI', 'BAML', 'OpenAI', 'Supabase', 'Docker', 'Production'],
@@ -15,17 +22,10 @@ export class FeaturedProjectsComponent {
       featured: true,
     },
     {
-      title: 'ClipCraft',
-      description: 'AI-powered content generation platform for TikTok scripts, carousel posts, and animated social media content. Full-stack application with modular API and frontend, Docker Compose deployment, and GitHub Actions CI/CD.',
-      tags: ['TypeScript', 'Angular', 'Docker', 'AI Content Generation', 'Social Media'],
-      link: 'https://github.com/SilvioBaratto/clipcraft',
-      featured: true,
-    },
-    {
-      title: 'LocalRAG',
-      description: 'Privacy-focused RAG system running entirely locally. Supports PDF, Word, PowerPoint, Excel, Markdown, and HTML files. Features semantic chunking, interactive CLI with model selection, dual modes (direct chat or document-augmented), and streaming pipeline for memory optimization.',
-      tags: ['Ollama', 'Qdrant', 'Python', 'RAG', 'Privacy-First', 'Docker'],
-      link: 'https://github.com/SilvioBaratto/localrag',
+      title: 'ITAL-IA',
+      description: 'AI chatbot for Italian regions with scraped knowledge base and real-time SSE streaming. Per-region knowledge, RAG pipeline with Qdrant vector search, and conversational AI powered by GPT-5 Mini. Live at italia.silviobaratto.com.',
+      tags: ['NestJS 11', 'Angular 21', 'Supabase', 'Qdrant', 'BAML', 'GPT-5 Mini', 'RAG'],
+      link: 'https://italia.silviobaratto.com',
       featured: true,
     },
   ];

@@ -154,8 +154,8 @@ export class SideProjectsComponent {
     },
     {
       title: 'ClipCraft',
-      description: 'AI-powered content generation platform for TikTok scripts, carousel posts, and animated social media content. Full-stack application with modular API and frontend, Docker Compose deployment, and GitHub Actions CI/CD.',
-      tags: ['TypeScript', 'Angular', 'Docker', 'AI Content Generation', 'Social Media'],
+      description: 'AI-powered content generation platform for TikTok scripts, carousel posts, and animated social media content. NestJS backend with Claude Opus 4.6 for intelligent content creation, Playwright for server-side rendering, and Angular 21 frontend. Docker Compose deployment with GitHub Actions CI/CD.',
+      tags: ['NestJS', 'Angular 21', 'Claude Opus 4.6', 'Playwright', 'Docker', 'AI Content Generation'],
       link: 'https://github.com/SilvioBaratto/clipcraft',
       highlighted: true,
     },
@@ -174,6 +174,13 @@ export class SideProjectsComponent {
       highlighted: true,
     },
     {
+      title: 'ITAL-IA',
+      description: 'AI chatbot for Italian regions with scraped knowledge base and real-time SSE streaming. Per-region knowledge (starting with Friuli Venezia Giulia), RAG pipeline with Qdrant vector search, points of interest bookmarking, and conversational AI powered by GPT-5 Mini. Live at italia.silviobaratto.com.',
+      tags: ['NestJS 11', 'Angular 21', 'Supabase', 'Qdrant', 'BAML', 'GPT-5 Mini', 'RAG'],
+      link: 'https://italia.silviobaratto.com',
+      highlighted: true,
+    },
+    {
       title: 'LocalRAG',
       description: 'Privacy-focused RAG system running entirely locally. Supports PDF, Word, PowerPoint, Excel, Markdown, and HTML files. Features semantic chunking, interactive CLI with model selection, dual modes (direct chat or document-augmented), and streaming pipeline for memory optimization.',
       tags: ['Ollama', 'Qdrant', 'Python', 'RAG', 'Privacy-First', 'Docker'],
@@ -188,9 +195,10 @@ export class SideProjectsComponent {
       highlighted: true,
     },
     {
-      title: 'Roldan Hedge Fund',
-      description: 'Quantitative portfolio optimization platform combining AI-powered stock analysis (6-factor evaluation) with multi-strategy optimization. Implements Mean-Variance, Black-Litterman with AI views, Risk Parity, HRP, and CVaR optimization. Features macro regime analysis and institutional-grade constraints.',
-      tags: ['FastAPI', 'BAML', 'Riskfolio-Lib', 'SQLAlchemy', 'Supabase', 'Quant Finance'],
+      title: 'Optimizer',
+      description: 'Quantitative portfolio construction platform built on skfolio and scikit-learn. Features 13 optimization models, HMM regime blending, walk-forward cross-validation, vine copula scenario generation, and 8 investability screens. Angular 21 dashboard with FastAPI backend, PostgreSQL database, and PyPI package (portopt). Live at optimizer.silviobaratto.com.',
+      tags: ['Angular 21', 'FastAPI', 'skfolio', 'PostgreSQL', 'PyPI', 'Quant Finance', 'Production'],
+      link: 'https://optimizer.silviobaratto.com',
       highlighted: true,
     },
     {
@@ -209,6 +217,20 @@ export class SideProjectsComponent {
     },
     // Other projects (alphabetical)
     {
+      title: 'Benchmark Numerical Analysis',
+      description: 'Benchmarking framework evaluating frontier LLMs (GPT-5.2, Claude Opus 4.6, Sonnet 4.6, Gemini 3.1 Pro) on numerical analysis problems. Validates LLM outputs against pre-computed expected values with automated pytest testing.',
+      tags: ['Python', 'LLM Evaluation', 'Numerical Analysis', 'pytest'],
+      link: 'https://github.com/SilvioBaratto/benchmark-numerical-analysis',
+      highlighted: false,
+    },
+    {
+      title: 'Bingo Probability Analysis',
+      description: 'Probabilistic study of Italian Bingo (Tombola) using hypergeometric distributions and Monte Carlo methods. Analyzes winning probabilities across different game configurations.',
+      tags: ['Python', 'Probability', 'Monte Carlo', 'Statistics'],
+      link: 'https://github.com/SilvioBaratto/bingo-probability-analysis',
+      highlighted: false,
+    },
+    {
       title: 'Cucu Reinforcement Learning',
       description: 'PPO agent discovering optimal strategies for Cucu, a traditional Italian card game with incomplete information. Features curriculum learning, Monte Carlo baseline analysis, multi-agent self-play (4-8 players), and game visualization with animated GIF/MP4 rendering.',
       tags: ['PyTorch', 'PettingZoo', 'Stable Baselines3', 'PPO', 'Multi-Agent RL'],
@@ -220,6 +242,13 @@ export class SideProjectsComponent {
       description: 'Lightweight text prediction system that learns from WhatsApp conversations to suggest words as you type. Pure Python implementation with zero dependencies, achieving ~100k words/second training speed. Features real-time terminal UI and privacy-focused local processing.',
       tags: ['Python', 'NLP', 'Markov Chains', 'Text Prediction', 'WhatsApp'],
       link: 'https://github.com/SilvioBaratto/markov_chain_text_prediction',
+      highlighted: false,
+    },
+    {
+      title: 'Project Initializer',
+      description: 'CLI tool for scaffolding full-stack projects with support for FastAPI or NestJS backends, Angular frontends, and Docker configuration. Optional authentication setup with token-based or Supabase auth.',
+      tags: ['Python', 'CLI', 'FastAPI', 'NestJS', 'Angular', 'Docker'],
+      link: 'https://github.com/SilvioBaratto/project-initializer',
       highlighted: false,
     },
     {

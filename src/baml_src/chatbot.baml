@@ -116,23 +116,19 @@ function StreamChatWithSilvio(
        - Standardized fit/predict interfaces similar to scikit-learn for easy model training
        - Production-ready library for quantitative finance and time series analysis
 
-    2. Roldan Hedge Fund: Quantitative Portfolio Optimization Platform
-       - Production-ready quantitative finance platform combining AI-powered stock analysis with advanced portfolio optimization
-       - AI-Powered Stock Signal Generation:
-         * Uses BAML with OpenAI GPT to analyze stocks across 6 factors: Valuation, Momentum, Quality, Growth, Technical, and Analyst metrics
-         * Classifies stocks into 5 signal categories: large_decline, small_decline, neutral, small_gain, large_gain
-         * Generates confidence scores and risk-adjusted recommendations
-       - Macro Regime Analysis:
-         * Automatically classifies business cycle regime (Early Cycle, Mid Cycle, Late Cycle, Recession)
-         * Analyzes economic indicators: ISM PMI, yield curves, credit spreads, VIX
-         * Provides recession probability forecasts (6-month and 12-month horizons)
-         * Recommends sector allocations based on macro environment
-       - Multi-Strategy Portfolio Optimization:
-         * Implements 5 optimization methods: Mean-Variance (Markowitz), Black-Litterman (with AI-generated market views), Risk Parity, Hierarchical Risk Parity (HRP), Minimum CVaR (downside risk optimization)
-         * Enforces institutional-grade constraints (position limits, sector caps, diversification rules)
-       - Data Pipeline: Fetches trading universe from Trading212 API, enriches with yfinance data (fundamentals, technicals, financials)
-       - Tech Stack: FastAPI, SQLAlchemy 2.0, Supabase PostgreSQL, BAML for type-safe LLM calls, Riskfolio-Lib
-       - Bridges quantitative finance, machine learning, and modern portfolio theory for institutional-grade investment analysis
+    2. Optimizer: Quantitative Portfolio Construction Platform (github.com/SilvioBaratto/optimizer)
+       - Silvio's most starred project (122 stars) — live at optimizer.silviobaratto.com
+       - PyPI package: portopt
+       - Built on skfolio and scikit-learn
+       - Features:
+         * 13 optimization models (Mean-Variance, Black-Litterman, Risk Parity, HRP, CVaR, and more)
+         * HMM regime blending for market state detection
+         * Walk-forward cross-validation for robust backtesting
+         * Vine copula scenario generation for stress testing
+         * 8 investability screens with hysteresis
+         * 17 factors with IC analysis and Newey-West t-stats
+       - Angular 21 dashboard with FastAPI backend and PostgreSQL database
+       - Successor to earlier Roldan Hedge Fund concept, significantly more sophisticated
 
     3. Dietologo AI (diet_generator): AI-powered diet management application for meal planning and grocery management
        - GitHub: https://github.com/SilvioBaratto/diet_generator
@@ -206,9 +202,11 @@ function StreamChatWithSilvio(
     9. ClipCraft: AI-powered content generation platform for social media
        - GitHub: https://github.com/SilvioBaratto/clipcraft
        - Generates TikTok scripts, carousel posts, and animated social media content
-       - Full-stack application with modular API and frontend
+       - NestJS backend with Claude Opus 4.6 for intelligent content creation
+       - Playwright for server-side rendering of visual content (1920×1080 animations, 1080×1350 carousels)
+       - Angular 21 frontend with modern UI
        - Docker Compose deployment with GitHub Actions CI/CD
-       - Tech Stack: TypeScript, Angular, Docker
+       - Tech Stack: NestJS, Angular 21, Claude Opus 4.6, Playwright, Docker
 
     10. Tinder Matching Simulator: AI-powered dating simulation platform
         - GitHub: https://github.com/SilvioBaratto/tinder-llm
@@ -246,17 +244,38 @@ function StreamChatWithSilvio(
         - Streaming pipeline for memory optimization
         - Tech Stack: Ollama, Qdrant vector database, Python, Docker
 
-    14. Enterprise AI Projects:
-        - RAG systems for enterprise knowledge bases
-        - Legal tech AI platforms for document classification
-        - Privacy-first anonymization systems
+    14. ITAL-IA: AI chatbot for Italian regions
+        - GitHub: https://github.com/SilvioBaratto/ITAL-IA
+        - Live site: italia.silviobaratto.com
+        - Scraped knowledge base with per-region content (currently Friuli Venezia Giulia)
+        - Real-time SSE streaming for conversational responses
+        - RAG pipeline with Qdrant vector search
+        - Points of interest bookmarking system
+        - Tech Stack: NestJS 11, Angular 21, Supabase, Qdrant, BAML, GPT-5 Mini
+
+    15. Benchmark Numerical Analysis: LLM evaluation framework
+        - GitHub: https://github.com/SilvioBaratto/benchmark-numerical-analysis
+        - Benchmarks frontier LLMs (GPT-5.2, Claude Opus 4.6, Sonnet 4.6, Gemini 3.1 Pro)
+        - Tests performance on numerical analysis problems
+        - Automated validation with pytest against expected values
+
+    16. Project Initializer: CLI scaffolding tool
+        - GitHub: https://github.com/SilvioBaratto/project-initializer
+        - CLI tool for scaffolding full-stack projects
+        - Supports FastAPI or NestJS backends, Angular frontends, Docker configuration
+        - Optional authentication setup (token-based or Supabase auth)
+
+    17. Bingo Probability Analysis: Probabilistic study of Italian Tombola
+        - GitHub: https://github.com/SilvioBaratto/bingo-probability-analysis
+        - Hypergeometric distributions and Monte Carlo methods
+        - Analyzes winning probabilities across different game configurations
 
     **Technical Stack:**
     - Frontend: Angular, React, Tailwind CSS (responsive and modern UI design)
-    - Backend: Python, FastAPI, Flask, SQLAlchemy (with Supabase/PostgreSQL)
-    - AI/ML: PyTorch, LlamaIndex, BAML, RAG Systems, NLP, LLM (OpenAI, Anthropic)
-    - DevOps & Database: Docker, Azure App Service, PostgreSQL, Supabase, CI/CD
-    - Additional Tools: Git, Fly.io deployment, Streamlit
+    - Backend: Python, FastAPI, NestJS, Flask, SQLAlchemy (with Supabase/PostgreSQL)
+    - AI/ML: PyTorch, LlamaIndex, BAML, RAG Systems, NLP, LLM (OpenAI, Anthropic), skfolio, scikit-learn
+    - DevOps & Database: Docker, Azure App Service, PostgreSQL, Supabase, Qdrant, CI/CD, Playwright
+    - Additional Tools: Git, Fly.io deployment, Vercel
 
     {% if conversation_history %}
     ## Previous Conversation:
@@ -292,6 +311,13 @@ function StreamChatWithSilvio(
     - label: "Briscola RL on GitHub", url: https://github.com/SilvioBaratto/briscola-1-vs-1
     - label: "Cucu RL on GitHub", url: https://github.com/SilvioBaratto/cucu-reinforcement-learning
     - label: "LocalRAG on GitHub", url: https://github.com/SilvioBaratto/localrag
+    - label: "Optimizer on GitHub", url: https://github.com/SilvioBaratto/optimizer
+    - label: "Optimizer Live", url: https://optimizer.silviobaratto.com
+    - label: "ITAL-IA on GitHub", url: https://github.com/SilvioBaratto/ITAL-IA
+    - label: "ITAL-IA Live", url: https://italia.silviobaratto.com
+    - label: "Benchmark Numerical Analysis on GitHub", url: https://github.com/SilvioBaratto/benchmark-numerical-analysis
+    - label: "Project Initializer on GitHub", url: https://github.com/SilvioBaratto/project-initializer
+    - label: "Bingo Probability on GitHub", url: https://github.com/SilvioBaratto/bingo-probability-analysis
     - label: "Dietologo AI Live", url: https://diet.silviobaratto.com
     - label: "LinkedIn", url: https://linkedin.com/in/silvioangelobarattoroldan
     - label: "TikTok", url: https://www.tiktok.com/@neuroespresso
