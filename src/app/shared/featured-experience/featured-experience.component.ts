@@ -7,7 +7,8 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 })
 export class FeaturedExperienceComponent {
   companies = [
-    { name: 'EY', role: 'Full-Stack AI Developer', period: '2024 - Present' },
+    { name: 'Fincantieri', role: 'AI Engineer', period: '2026 - Present' },
+    { name: 'EY', role: 'Full-Stack AI Developer', period: '2024 - 2026' },
     { name: 'European Central Bank', role: 'LLM Solutions Developer', period: '2024' },
     { name: 'Generali Investments', role: 'Portfolio Optimization Developer', period: '2023 - 2024' },
     { name: 'EssilorLuxottica', role: 'ML Engineer & Project Manager', period: '2021' },

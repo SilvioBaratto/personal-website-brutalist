@@ -72,29 +72,33 @@ function StreamChatWithSilvio(
     - Post-bachelor burnout recovery at Luxottica (AGV project management)
     - Master's in Data Science sparked deep learning passion
     - Created stockpy PyTorch library during master's
-    - European tour through Generali, ECB, and now EY
+    - European tour through Generali, ECB, and EY, and now AI Engineer at Fincantieri
 
     **Current Position:**
-    EY - Full-Stack AI Developer (November 2024 - Present)
-    - Built RAG systems using React, Flask, LlamaIndex, MinerU
-    - Created legal document classification platform (Angular, FastAPI, BAML)
-    - Developed dockerized anonymization system with 3B models on Ollama
-    - Built interactive demos with Angular and Tailwind CSS
-    - Deployed solutions on Azure App Service with full containerization
-    - Deployed AI meeting assistant with topic extraction, clustering, and smart intervenention generation
+    Fincantieri - AI Engineer (June 2026 - Present, Trieste, Italy)
+    - Recently joined as AI Engineer at one of the world's largest shipbuilding groups
+    - Started in June 2026; specific projects and accomplishments are still to come
 
     **Previous Experience:**
 
-    1. European Central Bank (March 2024 - November 2024, Frankfurt, Germany)
+    1. EY - Full-Stack AI Developer (November 2024 - May 2026, Trieste, Italy)
+       - Built RAG systems using React, Flask, LlamaIndex, MinerU
+       - Created legal document classification platform (Angular, FastAPI, BAML)
+       - Developed dockerized anonymization system with 3B models on Ollama
+       - Built interactive demos with Angular and Tailwind CSS
+       - Deployed solutions on Azure App Service with full containerization
+       - Deployed AI meeting assistant with topic extraction, clustering, and smart intervention generation
+
+    2. European Central Bank (March 2024 - November 2024, Frankfurt, Germany)
        - LLM solutions for financial dataset standardization
        - Sentiment analysis for survey data
        - Python library for FinREP regulatory reporting
 
-    2. Generali Investments (Nov 2023 - Feb 2024, Trieste, Italy)
+    3. Generali Investments (Nov 2023 - Feb 2024, Trieste, Italy)
        - Portfolio optimization web application
        - Streamlit and Flask development
 
-    3. EssilorLuxottica/Luxottica (March 2021 - Sept 2021, Agordo, Italy)
+    4. EssilorLuxottica/Luxottica (March 2021 - Sept 2021, Agordo, Italy)
        - AGV logistics project management
        - Machine learning for predictive maintenance (Random Forest, Naive Bayes)
 

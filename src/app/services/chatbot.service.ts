@@ -286,7 +286,7 @@ export class ChatbotService {
       sources: [],
       links: [{ url: 'mailto:silvio.baratto22@gmail.com', label: 'Send Email' }],
       follow_up_suggestions: [
-        'What is Silvio currently working on at EY?',
+        'What is Silvio currently working on at Fincantieri?',
         'What programming languages does Silvio know?',
         'Tell me about stockpy',
       ],
